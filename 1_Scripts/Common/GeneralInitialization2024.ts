@@ -1,18 +1,17 @@
 import { _decorator } from 'cc';
-const { ccclass } = _decorator;
-
-import { gfGeneralInitialization } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGeneralInitialization';
-import GameConfig from '../Config/Config2024';
-import EventEmitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
-import NetworkParser from '../../../../cc-common/cc30-fishbase/Scripts/Network/gfNetworkParser';
 import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
-import MainFSM from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainFSM';
-import MainController from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainController';
-import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
-import Localize from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfLocalize';
+import EventEmitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import FishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
-import PoolManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfPoolManager';
+import { gfGeneralInitialization } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGeneralInitialization';
+import Localize from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfLocalize';
+import MainController from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainController';
+import MainFSM from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainFSM';
 import NodePoolConfig from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfNodePoolConfig';
+import PoolManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfPoolManager';
+import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import NetworkParser from '../../../../cc-common/cc30-fishbase/Scripts/Network/gfNetworkParser';
+import GameConfig from '../Config/Config2024';
+const { ccclass } = _decorator;
 
 @ccclass('GeneralInitialization2024')
 export class GeneralInitialization2024 extends gfGeneralInitialization {

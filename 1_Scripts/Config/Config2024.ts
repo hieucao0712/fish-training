@@ -8,7 +8,7 @@ export default class Config2024 extends gfBaseConfig {
         Config2024.instance = this;
         this.GameId = '2024';
         this.GameVersion = '0.0.1';
-        this.IPMasterName = 'IPMaster2'
+        this.IPMasterName = 'IPMaster2';
         this.RoomVersion = '10';
         this.SceneName.Lobby = 'ktfLobby2024';
         this.SceneName.Game1 = 'ktfGame2024';
