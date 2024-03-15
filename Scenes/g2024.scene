@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "gTraining",
+    "_name": "g2024",
     "_objFlags": 0,
     "_native": "",
     "scene": {
@@ -315,9 +315,15 @@
       "__uuid__": "21bacc95-8838-4ac6-a509-f037aba2fdba",
       "__expectedType__": "cc.Prefab"
     },
-    "GameNormal": null,
+    "GameNormal": {
+      "__uuid__": "62fba813-54e8-4ccd-bd41-5c4de8456fa3",
+      "__expectedType__": "cc.Prefab"
+    },
     "GameVIP": null,
-    "Lobby": null,
+    "Lobby": {
+      "__uuid__": "946fe868-9591-40a0-8b98-6bc1424b65f0",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": "b51j06HoxMpaVrh9sNAEPv"
   },
   {
