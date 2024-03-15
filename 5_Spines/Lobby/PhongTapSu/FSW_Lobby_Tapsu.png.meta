@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "4db59ede-17d0-4b57-b4b5-64c4c6dcc1e6",
+  "uuid": "c4caaf8b-125b-42b4-b458-7c37aca6a2f3",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "4db59ede-17d0-4b57-b4b5-64c4c6dcc1e6@6c48a",
+      "uuid": "c4caaf8b-125b-42b4-b458-7c37aca6a2f3@6c48a",
       "displayName": "FSW_Lobby_Tapsu",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "4db59ede-17d0-4b57-b4b5-64c4c6dcc1e6",
+        "imageUuidOrDatabaseUri": "c4caaf8b-125b-42b4-b458-7c37aca6a2f3",
         "visible": true
       },
       "ver": "1.0.22",
@@ -36,7 +36,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "texture",
-    "redirect": "4db59ede-17d0-4b57-b4b5-64c4c6dcc1e6@6c48a",
+    "redirect": "c4caaf8b-125b-42b4-b458-7c37aca6a2f3@6c48a",
     "fixAlphaTransparencyArtifacts": false
   }
 }
