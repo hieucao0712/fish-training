@@ -20,7 +20,9 @@
     ],
     "_active": true,
     "_components": [],
-    "_prefab": null,
+    "_prefab": {
+      "__id__": 12
+    },
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -168,7 +170,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 389.96610169491527,
+    "_orthoHeight": 546.3910969793322,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -405,6 +407,14 @@
     "_alignMode": 2,
     "_lockFlags": 0,
     "_id": "c5V1EV8IpMtrIvY1OE9t2u"
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": null,
+    "asset": null,
+    "fileId": "73e4a2f4-3a02-469a-ba56-c3d2374d8f66",
+    "instance": null,
+    "targetOverrides": null
   },
   {
     "__type__": "cc.SceneGlobals",
