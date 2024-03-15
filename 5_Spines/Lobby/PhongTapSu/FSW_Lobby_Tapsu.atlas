@@ -1,167 +1,153 @@
 
 FSW_Lobby_Tapsu.png
-size: 600,600
+size: 1388,420
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Board
+BG
   rotate: false
-  xy: 2, 228
-  size: 257, 370
-  orig: 257, 370
+  xy: 2, 2
+  size: 282, 416
+  orig: 282, 416
   offset: 0, 0
   index: -1
-Eye1
+Shark
   rotate: false
-  xy: 454, 105
-  size: 33, 33
-  orig: 35, 35
-  offset: 1, 1
+  xy: 286, 127
+  size: 236, 291
+  orig: 236, 291
+  offset: 0, 0
   index: -1
-Eye1_1
+eye_1
+  rotate: true
+  xy: 956, 153
+  size: 42, 41
+  orig: 42, 41
+  offset: 0, 0
+  index: -1
+eye_2
+  rotate: true
+  xy: 904, 144
+  size: 51, 50
+  orig: 51, 50
+  offset: 0, 0
+  index: -1
+fish_1
+  rotate: true
+  xy: 286, 8
+  size: 117, 126
+  orig: 117, 126
+  offset: 0, 0
+  index: -1
+fx/Liquid_00
+  rotate: true
+  xy: 712, 140
+  size: 278, 91
+  orig: 278, 91
+  offset: 0, 0
+  index: -1
+fx/Liquid_01
+  rotate: true
+  xy: 524, 134
+  size: 284, 88
+  orig: 284, 88
+  offset: 0, 0
+  index: -1
+fx/Liquid_02
+  rotate: true
+  xy: 614, 137
+  size: 281, 96
+  orig: 281, 96
+  offset: 0, 0
+  index: -1
+fx/Liquid_03
+  rotate: true
+  xy: 805, 141
+  size: 277, 97
+  orig: 277, 97
+  offset: 0, 0
+  index: -1
+fx_2/Fire_00
+  rotate: true
+  xy: 1219, 33
+  size: 111, 81
+  orig: 111, 81
+  offset: 0, 0
+  index: -1
+fx_2/Fire_01
+  rotate: true
+  xy: 1012, 7
+  size: 197, 100
+  orig: 197, 100
+  offset: 0, 0
+  index: -1
+fx_2/Fire_02
+  rotate: true
+  xy: 993, 206
+  size: 212, 105
+  orig: 212, 105
+  offset: 0, 0
+  index: -1
+fx_2/Fire_03
+  rotate: true
+  xy: 1100, 207
+  size: 211, 108
+  orig: 211, 108
+  offset: 0, 0
+  index: -1
+fx_2/Fire_04
   rotate: false
-  xy: 295, 2
-  size: 36, 25
-  orig: 36, 25
+  xy: 804, 27
+  size: 206, 111
+  orig: 206, 111
   offset: 0, 0
   index: -1
-Eye1_2
+fx_2/Fire_05
   rotate: false
-  xy: 333, 3
-  size: 35, 24
-  orig: 35, 24
+  xy: 414, 13
+  size: 204, 112
+  orig: 204, 112
   offset: 0, 0
   index: -1
-Fish_Noc1
+fx_2/Fire_06
   rotate: true
-  xy: 395, 299
-  size: 114, 124
-  orig: 114, 124
+  xy: 1114, 12
+  size: 193, 103
+  orig: 193, 103
   offset: 0, 0
   index: -1
-Glitter1_1
-  rotate: true
-  xy: 295, 29
-  size: 31, 73
-  orig: 31, 73
-  offset: 0, 0
-  index: -1
-Glitter1_2
-  rotate: true
-  xy: 521, 330
-  size: 87, 64
-  orig: 87, 64
-  offset: 0, 0
-  index: -1
-Glitter1_3
+fx_2/Fire_07
   rotate: false
-  xy: 513, 148
-  size: 79, 60
-  orig: 79, 60
+  xy: 1219, 146
+  size: 163, 87
+  orig: 163, 87
   offset: 0, 0
   index: -1
-Glitter1_4
+fx_2/Fire_08
   rotate: true
-  xy: 513, 210
-  size: 87, 75
-  orig: 87, 75
-  offset: 0, 0
-  index: -1
-Glitter2_1
-  rotate: true
-  xy: 295, 62
-  size: 174, 78
-  orig: 174, 78
-  offset: 0, 0
-  index: -1
-Glitter2_3
-  rotate: true
-  xy: 489, 106
-  size: 32, 55
-  orig: 32, 55
-  offset: 0, 0
-  index: -1
-Glitter2_4
-  rotate: false
-  xy: 437, 419
-  size: 87, 75
-  orig: 87, 75
-  offset: 0, 0
-  index: -1
-Glitter3_1
-  rotate: true
-  xy: 261, 238
-  size: 58, 113
-  orig: 58, 113
-  offset: 0, 0
-  index: -1
-Glitter3_2
-  rotate: false
-  xy: 375, 25
-  size: 156, 77
-  orig: 156, 77
-  offset: 0, 0
-  index: -1
-Glitter3_3
-  rotate: false
-  xy: 454, 140
-  size: 57, 157
-  orig: 57, 157
-  offset: 0, 0
-  index: -1
-Hand_shark
-  rotate: true
-  xy: 526, 426
-  size: 68, 50
-  orig: 68, 50
-  offset: 0, 0
-  index: -1
-Shark1
-  rotate: true
-  xy: 2, 24
-  size: 202, 291
-  orig: 202, 291
-  offset: 0, 0
-  index: -1
-Shark_head_2
-  rotate: false
-  xy: 261, 298
-  size: 132, 115
-  orig: 132, 115
+  xy: 734, 26
+  size: 112, 68
+  orig: 112, 68
   offset: 0, 0
   index: -1
 gun
   rotate: false
-  xy: 261, 415
+  xy: 1210, 235
   size: 174, 183
   orig: 174, 183
   offset: 0, 0
   index: -1
-loa
-  rotate: false
-  xy: 533, 31
-  size: 65, 73
-  orig: 65, 73
-  offset: 0, 0
-  index: -1
-loa_detaill
+rocket
   rotate: true
-  xy: 533, 8
-  size: 21, 52
-  orig: 21, 52
+  xy: 620, 2
+  size: 133, 112
+  orig: 133, 112
   offset: 0, 0
   index: -1
-rocket1
-  rotate: false
-  xy: 437, 496
-  size: 101, 102
-  orig: 101, 102
-  offset: 0, 0
-  index: -1
-tap_su1
+tap_su
   rotate: true
-  xy: 376, 104
-  size: 192, 76
-  orig: 192, 76
+  xy: 904, 197
+  size: 221, 87
+  orig: 221, 87
   offset: 0, 0
   index: -1
