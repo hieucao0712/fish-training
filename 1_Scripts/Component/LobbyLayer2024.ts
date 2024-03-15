@@ -1,7 +1,7 @@
 
 import { _decorator, EventKeyboard, KeyCode, input, Input, UITransform, tween, Node } from 'cc';
 import { gfLobbyLayer } from '../../../../cc-common/cc30-fishbase/Scripts/Components/gfLobbyLayer';
-// import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
+import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
 import { formatMoney, loadAvatarFacebook, setOpacity } from '../../../../cc-common/cc-share/common/utils';
 import {formatUserName, registerEvent} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
 import EventsCode from '../Common/EventsCode2024';
@@ -11,7 +11,7 @@ import { gfWallet } from '../../../../cc-common/cc30-fishbase/Scripts/Components
 import DataStore2024 from '../Common/DataStore2024';
 const { ccclass, property } = _decorator;
 
-@ccclass('LobbyLayer1998')
+@ccclass('LobbyLayer2024')
 export class LobbyLayer2024 extends gfLobbyLayer {
     @property(gfWallet) wallet: gfWallet = null;
 

@@ -3000,7 +3000,9 @@
       "__uuid__": "eb87eefc-0576-43a2-bfe8-438b00bdef72",
       "__expectedType__": "cc.SpriteAtlas"
     },
-    "wallet": null,
+    "wallet": {
+      "__id__": 113
+    },
     "fadeNode": {
       "__id__": 8
     },
