@@ -2,7 +2,7 @@
 import gfBaseEvents from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 import { mergeTwoObject } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 
-let EventsCode1998 = {
+let EventsCode2024 = {
     SOUND:{
         ACTIVE_FREEZE: "ACTIVE_FREEZE",
         ADD_ITEM: "ADD_ITEM",
@@ -32,5 +32,5 @@ let EventsCode1998 = {
     }
 };
 
-EventsCode1998 = mergeTwoObject(gfBaseEvents, EventsCode1998);
-export default EventsCode1998;
+EventsCode2024 = mergeTwoObject(gfBaseEvents, EventsCode2024);
+export default EventsCode2024;
