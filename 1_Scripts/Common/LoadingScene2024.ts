@@ -1,7 +1,8 @@
 import { _decorator } from 'cc';
+const { ccclass } = _decorator;
+
 import { gfLoadingScene } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfLoadingScene';
 import GameConfig from '../Config/Config2024';
-const { ccclass } = _decorator;
 
 @ccclass('LoadingScene2024')
 export class LoadingScene2024 extends gfLoadingScene {
