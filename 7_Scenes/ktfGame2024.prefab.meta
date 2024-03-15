@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "21bacc95-8838-4ac6-a509-f037aba2fdba",
+  "uuid": "62fba813-54e8-4ccd-bd41-5c4de8456fa3",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "ktfLoading"
+    "syncNodeName": "ktfGame2024"
   }
 }
