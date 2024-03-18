@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "6133c61e-fa4b-4e83-88c2-7080580ffc82",
+  "uuid": "872f0767-7f5c-41d2-8b22-51baf4cebd7c",
   "files": [
     ".json",
     ".png"
@@ -38,14 +38,14 @@
     },
     "6c48a": {
       "importer": "texture",
-      "uuid": "6133c61e-fa4b-4e83-88c2-7080580ffc82@6c48a",
+      "uuid": "872f0767-7f5c-41d2-8b22-51baf4cebd7c@6c48a",
       "displayName": "Text_CaLon",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "6133c61e-fa4b-4e83-88c2-7080580ffc82",
+        "imageUuidOrDatabaseUri": "872f0767-7f5c-41d2-8b22-51baf4cebd7c",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -62,7 +62,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "6133c61e-fa4b-4e83-88c2-7080580ffc82@f9941",
+      "uuid": "872f0767-7f5c-41d2-8b22-51baf4cebd7c@f9941",
       "displayName": "Text_CaLon",
       "id": "f9941",
       "name": "spriteFrame",
@@ -142,7 +142,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "6133c61e-fa4b-4e83-88c2-7080580ffc82@6c48a",
+        "imageUuidOrDatabaseUri": "872f0767-7f5c-41d2-8b22-51baf4cebd7c@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -157,6 +157,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "6133c61e-fa4b-4e83-88c2-7080580ffc82@f9941"
+    "redirect": "872f0767-7f5c-41d2-8b22-51baf4cebd7c@f9941"
   }
 }

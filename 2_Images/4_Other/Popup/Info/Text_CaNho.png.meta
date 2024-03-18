@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "27b8141a-7ca9-4f96-88a8-4cef67c674e3",
+  "uuid": "dc01fd41-ec31-4a16-a460-2436f3bd5f74",
   "files": [
     ".json",
     ".png"
@@ -38,14 +38,14 @@
     },
     "6c48a": {
       "importer": "texture",
-      "uuid": "27b8141a-7ca9-4f96-88a8-4cef67c674e3@6c48a",
+      "uuid": "dc01fd41-ec31-4a16-a460-2436f3bd5f74@6c48a",
       "displayName": "Text_CaNho",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "27b8141a-7ca9-4f96-88a8-4cef67c674e3",
+        "imageUuidOrDatabaseUri": "dc01fd41-ec31-4a16-a460-2436f3bd5f74",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -62,7 +62,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "27b8141a-7ca9-4f96-88a8-4cef67c674e3@f9941",
+      "uuid": "dc01fd41-ec31-4a16-a460-2436f3bd5f74@f9941",
       "displayName": "Text_CaNho",
       "id": "f9941",
       "name": "spriteFrame",
@@ -142,7 +142,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "27b8141a-7ca9-4f96-88a8-4cef67c674e3@6c48a",
+        "imageUuidOrDatabaseUri": "dc01fd41-ec31-4a16-a460-2436f3bd5f74@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -157,6 +157,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "27b8141a-7ca9-4f96-88a8-4cef67c674e3@f9941"
+    "redirect": "dc01fd41-ec31-4a16-a460-2436f3bd5f74@f9941"
   }
 }
