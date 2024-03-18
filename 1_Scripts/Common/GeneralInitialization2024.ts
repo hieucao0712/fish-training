@@ -6,11 +6,11 @@ import { gfGeneralInitialization } from '../../../../cc-common/cc30-fishbase/Scr
 import Localize from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfLocalize';
 import MainController from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainController';
 import MainFSM from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainFSM';
-import NodePoolConfig from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfNodePoolConfig';
 import PoolManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfPoolManager';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 import NetworkParser from '../../../../cc-common/cc30-fishbase/Scripts/Network/gfNetworkParser';
 import GameConfig from '../Config/Config2024';
+import NodePoolConfig from './NodePoolConfig2024';
 const { ccclass } = _decorator;
 
 @ccclass('GeneralInitialization2024')

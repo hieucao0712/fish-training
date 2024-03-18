@@ -1,0 +1,118 @@
+
+Fish_1990.png
+size: 2001,1540
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+17_x30x100/body
+  rotate: false
+  xy: 836, 504
+  size: 241, 62
+  orig: 241, 62
+  offset: 0, 0
+  index: -1
+17_x30x100/fin1
+  rotate: false
+  xy: 535, 2
+  size: 107, 15
+  orig: 107, 15
+  offset: 0, 0
+  index: -1
+17_x30x100/fin1_1
+  rotate: true
+  xy: 1672, 370
+  size: 98, 14
+  orig: 98, 14
+  offset: 0, 0
+  index: -1
+17_x30x100/fin2
+  rotate: false
+  xy: 923, 2
+  size: 133, 15
+  orig: 133, 15
+  offset: 0, 0
+  index: -1
+17_x30x100/fin2_2
+  rotate: false
+  xy: 1876, 733
+  size: 120, 16
+  orig: 120, 16
+  offset: 0, 0
+  index: -1
+17_x30x100/fin3
+  rotate: false
+  xy: 1748, 577
+  size: 150, 17
+  orig: 150, 17
+  offset: 0, 0
+  index: -1
+17_x30x100/fin3_3
+  rotate: false
+  xy: 403, 2
+  size: 130, 15
+  orig: 130, 15
+  offset: 0, 0
+  index: -1
+17_x30x100/fin4
+  rotate: true
+  xy: 1640, 695
+  size: 175, 30
+  orig: 175, 30
+  offset: 0, 0
+  index: -1
+17_x30x100/fin4_4
+  rotate: false
+  xy: 1094, 399
+  size: 135, 20
+  orig: 135, 20
+  offset: 0, 0
+  index: -1
+17_x30x100/fin_big
+  rotate: false
+  xy: 1197, 1063
+  size: 125, 118
+  orig: 125, 118
+  offset: 0, 0
+  index: -1
+17_x30x100/fin_center
+  rotate: true
+  xy: 1966, 1344
+  size: 194, 31
+  orig: 194, 31
+  offset: 0, 0
+  index: -1
+17_x30x100/horn
+  rotate: true
+  xy: 1980, 319
+  size: 24, 19
+  orig: 24, 19
+  offset: 0, 0
+  index: -1
+17_x30x100/shadow
+  rotate: false
+  xy: 923, 19
+  size: 201, 170
+  orig: 201, 170
+  offset: 0, 0
+  index: -1
+17_x30x100/tail1
+  rotate: false
+  xy: 644, 4
+  size: 101, 13
+  orig: 101, 13
+  offset: 0, 0
+  index: -1
+17_x30x100/tail2
+  rotate: false
+  xy: 1861, 597
+  size: 101, 22
+  orig: 101, 22
+  offset: 0, 0
+  index: -1
+17_x30x100/tail3
+  rotate: false
+  xy: 747, 2
+  size: 101, 13
+  orig: 101, 13
+  offset: 0, 0
+  index: -1

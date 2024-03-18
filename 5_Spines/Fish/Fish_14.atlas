@@ -1,0 +1,97 @@
+
+Fish_1990.png
+size: 2001,1540
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+14_x30/cangphai1
+  rotate: false
+  xy: 1721, 1145
+  size: 48, 22
+  orig: 48, 22
+  offset: 0, 0
+  index: -1
+14_x30/cangphai2
+  rotate: false
+  xy: 1603, 220
+  size: 67, 51
+  orig: 67, 51
+  offset: 0, 0
+  index: -1
+14_x30/cangphai3
+  rotate: false
+  xy: 1802, 62
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+14_x30/cangphai4
+  rotate: false
+  xy: 1845, 371
+  size: 51, 80
+  orig: 51, 80
+  offset: 0, 0
+  index: -1
+14_x30/cangtrai1
+  rotate: false
+  xy: 1776, 219
+  size: 47, 57
+  orig: 47, 57
+  offset: 0, 0
+  index: -1
+14_x30/cangtrai2
+  rotate: true
+  xy: 1825, 215
+  size: 64, 38
+  orig: 64, 38
+  offset: 0, 0
+  index: -1
+14_x30/chan1
+  rotate: true
+  xy: 1560, 357
+  size: 111, 39
+  orig: 111, 39
+  offset: 0, 0
+  index: -1
+14_x30/chan2
+  rotate: false
+  xy: 1774, 833
+  size: 96, 64
+  orig: 96, 64
+  offset: 0, 0
+  index: -1
+14_x30/chan3
+  rotate: true
+  xy: 1610, 470
+  size: 97, 64
+  orig: 97, 64
+  offset: 0, 0
+  index: -1
+14_x30/chan4
+  rotate: true
+  xy: 1395, 81
+  size: 110, 39
+  orig: 110, 39
+  offset: 0, 0
+  index: -1
+14_x30/mat
+  rotate: true
+  xy: 1746, 68
+  size: 28, 54
+  orig: 28, 54
+  offset: 0, 0
+  index: -1
+14_x30/shadow
+  rotate: false
+  xy: 1523, 1002
+  size: 144, 123
+  orig: 144, 123
+  offset: 0, 0
+  index: -1
+14_x30/vo
+  rotate: false
+  xy: 1297, 421
+  size: 120, 151
+  orig: 120, 151
+  offset: 0, 0
+  index: -1

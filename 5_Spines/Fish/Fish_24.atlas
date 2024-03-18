@@ -1,0 +1,62 @@
+
+Fish_1990.png
+size: 2001,1540
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+24_x100_x500/Body
+  rotate: false
+  xy: 2, 6
+  size: 228, 246
+  orig: 228, 246
+  offset: 0, 0
+  index: -1
+24_x100_x500/Body_Under
+  rotate: false
+  xy: 1456, 3
+  size: 24, 76
+  orig: 24, 76
+  offset: 0, 0
+  index: -1
+24_x100_x500/Hand
+  rotate: false
+  xy: 1479, 562
+  size: 61, 112
+  orig: 61, 112
+  offset: 0, 0
+  index: -1
+24_x100_x500/Head
+  rotate: true
+  xy: 786, 397
+  size: 105, 126
+  orig: 105, 126
+  offset: 0, 0
+  index: -1
+24_x100_x500/Leg
+  rotate: true
+  xy: 1921, 76
+  size: 34, 43
+  orig: 34, 43
+  offset: 0, 0
+  index: -1
+24_x100_x500/Sparkle
+  rotate: false
+  xy: 1921, 112
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+24_x100_x500/Tail
+  rotate: false
+  xy: 1324, 1129
+  size: 208, 50
+  orig: 208, 50
+  offset: 0, 0
+  index: -1
+24_x100_x500/shadow_golden
+  rotate: false
+  xy: 1094, 421
+  size: 201, 151
+  orig: 201, 151
+  offset: 0, 0
+  index: -1
