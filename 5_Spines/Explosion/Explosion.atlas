@@ -1,0 +1,104 @@
+
+Explosion.png
+size: 475,250
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1e3b8e1dcf4f93d07746b316d5b9701264d392241f2c8-1HF8nF_fw658
+  rotate: false
+  xy: 278, 5
+  size: 59, 52
+  orig: 59, 52
+  offset: 0, 0
+  index: -1
+Light
+  rotate: true
+  xy: 372, 11
+  size: 58, 59
+  orig: 58, 59
+  offset: 0, 0
+  index: -1
+PressureThick
+  rotate: false
+  xy: 381, 156
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+PressureThin
+  rotate: false
+  xy: 142, 2
+  size: 86, 86
+  orig: 86, 86
+  offset: 0, 0
+  index: -1
+Ray
+  rotate: true
+  xy: 381, 141
+  size: 13, 91
+  orig: 13, 91
+  offset: 0, 0
+  index: -1
+Sparkle
+  rotate: false
+  xy: 282, 59
+  size: 88, 88
+  orig: 88, 88
+  offset: 0, 0
+  index: -1
+ccc
+  rotate: false
+  xy: 282, 149
+  size: 97, 99
+  orig: 97, 99
+  offset: 0, 0
+  index: -1
+dsda
+  rotate: false
+  xy: 372, 71
+  size: 78, 68
+  orig: 78, 68
+  offset: 0, 0
+  index: -1
+fuck
+  rotate: false
+  xy: 230, 39
+  size: 46, 49
+  orig: 46, 49
+  offset: 0, 0
+  index: -1
+lua/sparks_04_00000
+  rotate: false
+  xy: 2, 170
+  size: 138, 78
+  orig: 138, 78
+  offset: 0, 0
+  index: -1
+lua/sparks_04_00001
+  rotate: false
+  xy: 2, 90
+  size: 138, 78
+  orig: 138, 78
+  offset: 0, 0
+  index: -1
+lua/sparks_04_00002
+  rotate: false
+  xy: 142, 170
+  size: 138, 78
+  orig: 138, 78
+  offset: 0, 0
+  index: -1
+lua/sparks_04_00003
+  rotate: false
+  xy: 2, 10
+  size: 138, 78
+  orig: 138, 78
+  offset: 0, 0
+  index: -1
+lua/sparks_04_00004
+  rotate: false
+  xy: 142, 90
+  size: 138, 78
+  orig: 138, 78
+  offset: 0, 0
+  index: -1
