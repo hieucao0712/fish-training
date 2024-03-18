@@ -27,7 +27,14 @@
       "borderBottom": 23,
       "borderLeft": 14,
       "borderRight": 14,
-      "subMetas": {}
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
     },
     "6c48a": {
       "importer": "texture",
