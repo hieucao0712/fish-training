@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "06571b4e-2745-45ec-a2d4-526cd8e17627",
+  "uuid": "11103833-95b2-4fdc-92fa-c700e056a1f1",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "06571b4e-2745-45ec-a2d4-526cd8e17627@6c48a",
+      "uuid": "11103833-95b2-4fdc-92fa-c700e056a1f1@6c48a",
       "displayName": "Panel_Light",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "06571b4e-2745-45ec-a2d4-526cd8e17627",
+        "imageUuidOrDatabaseUri": "11103833-95b2-4fdc-92fa-c700e056a1f1",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "06571b4e-2745-45ec-a2d4-526cd8e17627@f9941",
+      "uuid": "11103833-95b2-4fdc-92fa-c700e056a1f1@f9941",
       "displayName": "Panel_Light",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "06571b4e-2745-45ec-a2d4-526cd8e17627@6c48a",
+        "imageUuidOrDatabaseUri": "11103833-95b2-4fdc-92fa-c700e056a1f1@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "06571b4e-2745-45ec-a2d4-526cd8e17627@f9941"
+    "redirect": "11103833-95b2-4fdc-92fa-c700e056a1f1@f9941"
   }
 }

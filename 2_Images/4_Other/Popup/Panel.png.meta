@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "b5be7588-7990-41a2-8c2d-2acd3b3fcf19",
+  "uuid": "28c81455-c080-4042-af7e-b4b11e959d39",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "b5be7588-7990-41a2-8c2d-2acd3b3fcf19@6c48a",
+      "uuid": "28c81455-c080-4042-af7e-b4b11e959d39@6c48a",
       "displayName": "Panel",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "b5be7588-7990-41a2-8c2d-2acd3b3fcf19",
+        "imageUuidOrDatabaseUri": "28c81455-c080-4042-af7e-b4b11e959d39",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "b5be7588-7990-41a2-8c2d-2acd3b3fcf19@f9941",
+      "uuid": "28c81455-c080-4042-af7e-b4b11e959d39@f9941",
       "displayName": "Panel",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b5be7588-7990-41a2-8c2d-2acd3b3fcf19@6c48a",
+        "imageUuidOrDatabaseUri": "28c81455-c080-4042-af7e-b4b11e959d39@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "b5be7588-7990-41a2-8c2d-2acd3b3fcf19@f9941"
+    "redirect": "28c81455-c080-4042-af7e-b4b11e959d39@f9941"
   }
 }

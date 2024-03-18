@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "1a67047b-0cd2-454a-ac4a-b6e375520656",
+  "uuid": "60aba9f3-fd4b-49b4-857b-f43e0afa753d",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "1a67047b-0cd2-454a-ac4a-b6e375520656@6c48a",
+      "uuid": "60aba9f3-fd4b-49b4-857b-f43e0afa753d@6c48a",
       "displayName": "AmThanh",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "1a67047b-0cd2-454a-ac4a-b6e375520656",
+        "imageUuidOrDatabaseUri": "60aba9f3-fd4b-49b4-857b-f43e0afa753d",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "1a67047b-0cd2-454a-ac4a-b6e375520656@f9941",
+      "uuid": "60aba9f3-fd4b-49b4-857b-f43e0afa753d@f9941",
       "displayName": "AmThanh",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "1a67047b-0cd2-454a-ac4a-b6e375520656@6c48a",
+        "imageUuidOrDatabaseUri": "60aba9f3-fd4b-49b4-857b-f43e0afa753d@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "1a67047b-0cd2-454a-ac4a-b6e375520656@f9941"
+    "redirect": "60aba9f3-fd4b-49b4-857b-f43e0afa753d@f9941"
   }
 }

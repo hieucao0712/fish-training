@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "ef1a1f42-02f6-4289-9b75-a7bd1c3c0540",
+  "uuid": "88c143b3-e8d2-4670-b686-a91956d6b512",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "ef1a1f42-02f6-4289-9b75-a7bd1c3c0540@6c48a",
+      "uuid": "88c143b3-e8d2-4670-b686-a91956d6b512@6c48a",
       "displayName": "Ic_Towed",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "ef1a1f42-02f6-4289-9b75-a7bd1c3c0540",
+        "imageUuidOrDatabaseUri": "88c143b3-e8d2-4670-b686-a91956d6b512",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "ef1a1f42-02f6-4289-9b75-a7bd1c3c0540@f9941",
+      "uuid": "88c143b3-e8d2-4670-b686-a91956d6b512@f9941",
       "displayName": "Ic_Towed",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ef1a1f42-02f6-4289-9b75-a7bd1c3c0540@6c48a",
+        "imageUuidOrDatabaseUri": "88c143b3-e8d2-4670-b686-a91956d6b512@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "ef1a1f42-02f6-4289-9b75-a7bd1c3c0540@f9941"
+    "redirect": "88c143b3-e8d2-4670-b686-a91956d6b512@f9941"
   }
 }

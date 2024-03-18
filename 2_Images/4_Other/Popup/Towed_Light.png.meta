@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "5175822b-0e94-4160-a077-95b0de98bf05",
+  "uuid": "e60e2277-da7a-4015-b5a8-2ffe0576630b",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "5175822b-0e94-4160-a077-95b0de98bf05@6c48a",
+      "uuid": "e60e2277-da7a-4015-b5a8-2ffe0576630b@6c48a",
       "displayName": "Towed_Light",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "5175822b-0e94-4160-a077-95b0de98bf05",
+        "imageUuidOrDatabaseUri": "e60e2277-da7a-4015-b5a8-2ffe0576630b",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "5175822b-0e94-4160-a077-95b0de98bf05@f9941",
+      "uuid": "e60e2277-da7a-4015-b5a8-2ffe0576630b@f9941",
       "displayName": "Towed_Light",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "5175822b-0e94-4160-a077-95b0de98bf05@6c48a",
+        "imageUuidOrDatabaseUri": "e60e2277-da7a-4015-b5a8-2ffe0576630b@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "5175822b-0e94-4160-a077-95b0de98bf05@f9941"
+    "redirect": "e60e2277-da7a-4015-b5a8-2ffe0576630b@f9941"
   }
 }

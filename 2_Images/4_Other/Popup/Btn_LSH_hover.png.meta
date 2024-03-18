@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "d30912ba-5c29-4587-a6fb-870f2364942a",
+  "uuid": "6de6d60e-3d69-46d5-82cc-728a37cb7580",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "d30912ba-5c29-4587-a6fb-870f2364942a@6c48a",
+      "uuid": "6de6d60e-3d69-46d5-82cc-728a37cb7580@6c48a",
       "displayName": "Btn_LSH_hover",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "d30912ba-5c29-4587-a6fb-870f2364942a",
+        "imageUuidOrDatabaseUri": "6de6d60e-3d69-46d5-82cc-728a37cb7580",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "d30912ba-5c29-4587-a6fb-870f2364942a@f9941",
+      "uuid": "6de6d60e-3d69-46d5-82cc-728a37cb7580@f9941",
       "displayName": "Btn_LSH_hover",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "d30912ba-5c29-4587-a6fb-870f2364942a@6c48a",
+        "imageUuidOrDatabaseUri": "6de6d60e-3d69-46d5-82cc-728a37cb7580@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.11",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "d30912ba-5c29-4587-a6fb-870f2364942a@f9941"
+    "redirect": "6de6d60e-3d69-46d5-82cc-728a37cb7580@f9941"
   }
 }
