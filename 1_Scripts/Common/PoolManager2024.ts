@@ -1,5 +1,4 @@
-import gfPoolManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfPoolManager';
-import { POOL_TYPE } from '../../../cc30-fish4-1993/1_Script/Common/PoolManager1993';
+import gfPoolManager, { POOL_TYPE } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfPoolManager';
 
 export default class PoolManager2024 extends gfPoolManager {
     public static instance: PoolManager2024 = null;
