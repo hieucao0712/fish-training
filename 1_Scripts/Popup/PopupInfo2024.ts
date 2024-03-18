@@ -70,7 +70,7 @@ export class PopupInfo2024 extends GfPopupInfo {
         super.showWithEffect();
         let scalePopup = new Vec3(1,1,1);
         if(checkTablet() || sys.platform === sys.Platform.DESKTOP_BROWSER) {
-            scalePopup = new Vec3(0.7,0.7,1);
+            scalePopup = new Vec3(1,1,1);
         }
         this.contents.setScale(scalePopup);
     };
