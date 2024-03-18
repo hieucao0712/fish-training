@@ -14679,6 +14679,14 @@
       {
         "__uuid__": "89b2a006-42e7-4ca7-9374-aa9d3a010b36",
         "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "6c3f03de-f65f-4fe0-aee2-cd0004f5d760",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "025259a9-52eb-4d1f-87fd-851fa85f7038",
+        "__expectedType__": "cc.Prefab"
       }
     ],
     "nodePoolAssetPrefab": {
