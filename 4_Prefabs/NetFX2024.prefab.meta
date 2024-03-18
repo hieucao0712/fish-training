@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "d013f876-c1a0-4b64-945c-3dcc318f6224",
+  "uuid": "89b2a006-42e7-4ca7-9374-aa9d3a010b36",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "PopupInfo"
+    "syncNodeName": "NetFX2024"
   }
 }

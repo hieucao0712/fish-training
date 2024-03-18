@@ -7,7 +7,7 @@ export class SpineFish2024 extends gfBaseFish {
     @property(sp.Skeleton)
     protected fishAnim: sp.Skeleton = null;
 
-    initAssets(config: any): void {
+    initAssets(config: any) {
         if (!this.fishAnim) {
             this.fishAnim = this.node.getChildByName('mainFish').getComponent(sp.Skeleton);
         }
@@ -32,27 +32,27 @@ export class SpineFish2024 extends gfBaseFish {
         }
     }
 
-    playEffectDie(): void {
+    playEffectDie() {
         this.fishAnim.timeScale = 2;
     }
 
-    resetColor(): void {
+    resetColor() {
         this.fishAnim.color = this.NORMAL_COLOR;
     }
 
-    setColor(color: Color): void {
+    setColor(color: Color) {
         this.fishAnim.color = color;
     }
 
-    changeAnimationSpeed(x: number = 0.5): void {
+    changeAnimationSpeed(x: number = 0.5) {
         this.fishAnim.timeScale *= x;
     }
 
-    resetAnimationSpeed(): void {
+    resetAnimationSpeed() {
         this.fishAnim.timeScale = 1;
     }
 
-    unuse(): void {
+    unuse() {
         super.unuse();
         this.fishAnim.node.angle = 0;
         this.fishAnim.node.scale = v3(1, 1);
