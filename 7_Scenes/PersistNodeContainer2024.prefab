@@ -4045,8 +4045,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -4578,8 +4578,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -5111,8 +5111,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -5644,8 +5644,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -7475,12 +7475,20 @@
     "__prefab": {
       "__id__": 342
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "41bed95e-0762-4bd1-9019-dceb2274c6b8",
       "__expectedType__": "cc.JsonAsset"
     },
-    "gameObjectPrefabs": [],
+    "gameObjectPrefabs": [
+      {
+        "__uuid__": "932c6b81-86fe-44bb-9956-dc0a22c62df6",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "42adc601-848f-4716-896d-c6c9da383f8f",
+        "__expectedType__": "cc.Prefab"
+      }
+    ],
     "nodePoolAssetPrefab": {
       "__uuid__": "3332b6e1-b8fc-4d56-8714-6a0e20f5ead5",
       "__expectedType__": "cc.Prefab"
