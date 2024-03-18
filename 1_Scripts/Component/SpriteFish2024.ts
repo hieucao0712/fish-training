@@ -10,7 +10,7 @@ export class SpriteFish2024 extends gfBaseFish {
     protected _clipName: string;
     private _baseSpeed: number;
 
-    initAssets(config: any): void {
+    initAssets(config: any) {
         if (!this.fishAnim) {
             this.fishAnim = this.node.getChildByName('mainFish').getComponent(Animation);
         }
@@ -25,23 +25,23 @@ export class SpriteFish2024 extends gfBaseFish {
         this._baseSpeed = config.asset.speed;
     }
 
-    playEffectDie(): void {
+    playEffectDie() {
         this.fishAnim.getState(this._clipName).speed = this._baseSpeed * 2;
     }
 
-    resetColor(): void {
+    resetColor() {
         this.fishAnim.getComponent(Sprite).color = this.NORMAL_COLOR;
     }
 
-    setColor(color: Color): void {
+    setColor(color: Color) {
         this.fishAnim.getComponent(Sprite).color = color;
     }
 
-    changeAnimationSpeed(x: number = 0.5): void {
+    changeAnimationSpeed(x: number = 0.5) {
         this.fishAnim.getState(this._clipName).speed *= x;
     }
 
-    resetAnimationSpeed(): void {
+    resetAnimationSpeed() {
         if (this.fishAnim.clips.length > 0) {
             this.fishAnim.getState(this._clipName).speed = this._baseSpeed;
         }
