@@ -1,4 +1,5 @@
 import { _decorator } from 'cc';
+import { gfAutoFireController } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfAutoFireController';
 import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
 import EventEmitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import FishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
@@ -45,6 +46,8 @@ export class GeneralInitialization2024 extends gfGeneralInitialization {
         new FishManager();
         new PoolManager(this.gameObjectPrefabs);
         new NodePoolConfig(this.nodePoolAssetPrefab);
+
+        new gfAutoFireController();
     }
 
     loginGame() {
