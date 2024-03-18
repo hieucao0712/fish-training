@@ -1,5 +1,5 @@
-import { GfPopupPrompt } from '../../../../cc-common/cc30-fishbase/Scripts/Components/Popup/gfPopupPrompt';
-import { checkTablet } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities'
+import { GfPopupPrompt } from '../../../../../cc-common/cc30-fishbase/Scripts/Components/Popup/gfPopupPrompt';
+import { checkTablet } from '../../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities'
 import { _decorator, Component, Node, sys, Vec3 } from 'cc';
 
 const { ccclass } = _decorator;
