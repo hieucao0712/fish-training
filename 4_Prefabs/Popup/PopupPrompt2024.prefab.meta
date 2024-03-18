@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "847f1ede-6d8d-43ad-894d-ee2b8f44e366",
+  "uuid": "e198ac1c-6e13-4a88-b520-63abf9c35a5c",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "PopupSetting"
+    "syncNodeName": "PopupPrompt2024"
   }
 }
