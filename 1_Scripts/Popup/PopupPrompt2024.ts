@@ -8,6 +8,10 @@ const { ccclass } = _decorator;
 @ccclass('PopupPrompt2024')
 export class PopupPrompt2024 extends GfPopupPrompt {
 
+    protected initLanguage() {
+        
+    }
+
     showWithEffect() {
         super.showWithEffect();
         let scalePopup = new Vec3(1,1,1);
