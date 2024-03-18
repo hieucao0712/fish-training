@@ -5054,8 +5054,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": null,
+      "y": null
     },
     "_id": ""
   },
@@ -7754,7 +7754,16 @@
     "gunNode": {
       "__id__": 192
     },
-    "backgroundGunFrame": [],
+    "backgroundGunFrame": [
+      {
+        "__uuid__": "1d3fa152-8342-46f5-a75a-fea07a4adc67@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "3bb60b25-9c92-4f5c-aced-5fc7bedcadcc@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      }
+    ],
     "backgroundGun": {
       "__id__": 152
     },
@@ -9373,8 +9382,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": null,
+      "y": null
     },
     "_id": ""
   },
@@ -12070,7 +12079,16 @@
     "gunNode": {
       "__id__": 386
     },
-    "backgroundGunFrame": [],
+    "backgroundGunFrame": [
+      {
+        "__uuid__": "1d3fa152-8342-46f5-a75a-fea07a4adc67@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "3bb60b25-9c92-4f5c-aced-5fc7bedcadcc@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      }
+    ],
     "backgroundGun": {
       "__id__": 346
     },
@@ -13260,8 +13278,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": null,
+      "y": null
     },
     "_id": ""
   },
@@ -15690,7 +15708,16 @@
     "gunNode": {
       "__id__": 562
     },
-    "backgroundGunFrame": [],
+    "backgroundGunFrame": [
+      {
+        "__uuid__": "1d3fa152-8342-46f5-a75a-fea07a4adc67@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "3bb60b25-9c92-4f5c-aced-5fc7bedcadcc@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      }
+    ],
     "backgroundGun": {
       "__id__": 540
     },
@@ -16880,8 +16907,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": null,
+      "y": null
     },
     "_id": ""
   },
@@ -19307,7 +19334,16 @@
     "gunNode": {
       "__id__": 726
     },
-    "backgroundGunFrame": [],
+    "backgroundGunFrame": [
+      {
+        "__uuid__": "1d3fa152-8342-46f5-a75a-fea07a4adc67@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "3bb60b25-9c92-4f5c-aced-5fc7bedcadcc@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      }
+    ],
     "backgroundGun": {
       "__id__": 704
     },
