@@ -1,0 +1,90 @@
+
+Fish_1990.png
+size: 2001,1540
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+27_Laser/Glow
+  rotate: true
+  xy: 1639, 2
+  size: 56, 55
+  orig: 56, 55
+  offset: 0, 0
+  index: -1
+27_Laser/LaserGUn
+  rotate: false
+  xy: 1077, 574
+  size: 204, 101
+  orig: 204, 101
+  offset: 0, 0
+  index: -1
+27_Laser/body
+  rotate: false
+  xy: 1070, 677
+  size: 171, 123
+  orig: 171, 123
+  offset: 0, 0
+  index: -1
+27_Laser/body2
+  rotate: false
+  xy: 1388, 193
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+27_Laser/fin
+  rotate: false
+  xy: 1934, 193
+  size: 52, 32
+  orig: 52, 32
+  offset: 0, 0
+  index: -1
+27_Laser/fin2
+  rotate: false
+  xy: 1746, 98
+  size: 39, 66
+  orig: 39, 66
+  offset: 0, 0
+  index: -1
+27_Laser/fin2_2
+  rotate: false
+  xy: 1639, 60
+  size: 39, 71
+  orig: 39, 71
+  offset: 0, 0
+  index: -1
+27_Laser/fin_elip
+  rotate: true
+  xy: 1865, 238
+  size: 43, 31
+  orig: 43, 31
+  offset: 0, 0
+  index: -1
+27_Laser/mouth
+  rotate: false
+  xy: 1393, 713
+  size: 154, 154
+  orig: 154, 154
+  offset: 0, 0
+  index: -1
+27_Laser/shadow
+  rotate: true
+  xy: 1249, 1186
+  size: 139, 116
+  orig: 139, 116
+  offset: 0, 0
+  index: -1
+27_Laser/tail
+  rotate: false
+  xy: 1672, 701
+  size: 99, 41
+  orig: 99, 41
+  offset: 0, 0
+  index: -1
+27_Laser/tail2
+  rotate: false
+  xy: 1899, 498
+  size: 98, 25
+  orig: 98, 25
+  offset: 0, 0
+  index: -1

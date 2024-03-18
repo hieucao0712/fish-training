@@ -1,0 +1,41 @@
+
+Fish_1990.png
+size: 2001,1540
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+18_x80/body
+  rotate: false
+  xy: 573, 397
+  size: 211, 167
+  orig: 211, 167
+  offset: 0, 0
+  index: -1
+18_x80/body copy 2
+  rotate: true
+  xy: 578, 184
+  size: 211, 167
+  orig: 211, 167
+  offset: 0, 0
+  index: -1
+18_x80/glow
+  rotate: false
+  xy: 1980, 453
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+18_x80/shadow
+  rotate: true
+  xy: 747, 184
+  size: 211, 167
+  orig: 211, 167
+  offset: 0, 0
+  index: -1
+18_x80/shadow_all
+  rotate: true
+  xy: 1672, 744
+  size: 129, 100
+  orig: 129, 100
+  offset: 0, 0
+  index: -1
