@@ -260,7 +260,7 @@
       "__id__": 13
     },
     "tag": 0,
-    "_group": 1,
+    "_group": 2,
     "_density": 1,
     "_sensor": false,
     "_friction": 0.2,
@@ -310,6 +310,7 @@
       "__id__": 0
     },
     "fileId": "39WHazlKJII7pT9Whfo8RB",
+    "instance": null,
     "targetOverrides": null
   }
 ]

@@ -4120,7 +4120,7 @@
       "__id__": 140
     },
     "component": "",
-    "_componentId": "985e2soiIlHAZjWkOtJszlk",
+    "_componentId": "360ccqhzylDG7P/NxKItgll",
     "handler": "onBtnMinus",
     "customEventData": ""
   },
@@ -4328,7 +4328,7 @@
       "__id__": 140
     },
     "component": "",
-    "_componentId": "53ffflFBBhP7KzpIBzR/K/9",
+    "_componentId": "360ccqhzylDG7P/NxKItgll",
     "handler": "onBtnPlus",
     "customEventData": ""
   },
@@ -28728,6 +28728,10 @@
       },
       {
         "__uuid__": "025259a9-52eb-4d1f-87fd-851fa85f7038",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "173fbb05-10e5-4670-a2fb-39ebe1465200",
         "__expectedType__": "cc.Prefab"
       }
     ],
