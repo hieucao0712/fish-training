@@ -1,13 +1,1 @@
-{
-  "ver": "1.1.43",
-  "importer": "prefab",
-  "imported": true,
-  "uuid": "847f1ede-6d8d-43ad-894d-ee2b8f44e366",
-  "files": [
-    ".json"
-  ],
-  "subMetas": {},
-  "userData": {
-    "syncNodeName": "PopupSetting2024"
-  }
-}
+{"ver":"1.1.43","importer":"prefab","imported":true,"uuid":"077de9d8-9618-4454-b939-55183f7c000b","files":[".json"],"subMetas":{},"userData":{"syncNodeName":"PopupSetting2024"}}

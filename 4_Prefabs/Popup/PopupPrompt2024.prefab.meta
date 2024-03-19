@@ -1,13 +1,1 @@
-{
-  "ver": "1.1.43",
-  "importer": "prefab",
-  "imported": true,
-  "uuid": "e198ac1c-6e13-4a88-b520-63abf9c35a5c",
-  "files": [
-    ".json"
-  ],
-  "subMetas": {},
-  "userData": {
-    "syncNodeName": "PopupPrompt2024"
-  }
-}
+{"ver":"1.1.43","importer":"prefab","imported":true,"uuid":"41d001cf-2766-44f0-96e5-ea9aca34c6c0","files":[".json"],"subMetas":{},"userData":{"syncNodeName":"PopupPrompt2024"}}
