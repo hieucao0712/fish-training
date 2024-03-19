@@ -3,9 +3,6 @@ import gfBaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfB
 export default class Config2024 extends gfBaseConfig {
     public static instance: Config2024 = null;
 
-    POPUP = {
-        
-    }
     constructor() {
         super();
         Config2024.instance = this;
@@ -15,6 +12,7 @@ export default class Config2024 extends gfBaseConfig {
         this.RoomVersion = '10';
         this.SceneName.Lobby = 'ktfLobby2024';
         this.SceneName.Game1 = 'ktfGame2024';
+        this.NOTIFY_JACKPOT.array_type_notify_jackpot = [];
     }
 
     destroy() {
