@@ -27,7 +27,7 @@
       }
     ],
     "_prefab": {
-      "__id__": 49
+      "__id__": 51
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -236,7 +236,14 @@
         "__id__": 48
       }
     ],
-    "labelCoin": [],
+    "labelCoin": [
+      {
+        "__id__": 49
+      },
+      {
+        "__id__": 50
+      }
+    ],
     "_id": ""
   },
   {
@@ -586,6 +593,22 @@
       "__expectedType__": "sp.SkeletonData"
     },
     "_name": "43"
+  },
+  {
+    "__type__": "gfLabelCoinAsset",
+    "font": {
+      "__uuid__": "e2304d0f-2e3c-4cca-a19b-29fe7b739b63",
+      "__expectedType__": "cc.BitmapFont"
+    },
+    "_name": "1"
+  },
+  {
+    "__type__": "gfLabelCoinAsset",
+    "font": {
+      "__uuid__": "81897874-ecc3-43f3-82ef-a9d81edec43c",
+      "__expectedType__": "cc.BitmapFont"
+    },
+    "_name": "0"
   },
   {
     "__type__": "cc.PrefabInfo",

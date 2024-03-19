@@ -260,7 +260,7 @@
       "__id__": 13
     },
     "tag": 0,
-    "_group": 1,
+    "_group": 2,
     "_density": 1,
     "_sensor": false,
     "_friction": 0.2,
@@ -282,7 +282,7 @@
     "fileId": "2clylhsh1BzaC2VoIL/E+e"
   },
   {
-    "__type__": "415ddMUVLpKXrUmkq65B1gm",
+    "__type__": "e1abeHfbDROX5IZHc7PVztn",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -299,7 +299,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "bfbiIVILdEgISz3vVonGr8"
+    "fileId": "160HCJ9UNNO7IGWBjYRdzq"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -310,6 +310,7 @@
       "__id__": 0
     },
     "fileId": "39WHazlKJII7pT9Whfo8RB",
+    "instance": null,
     "targetOverrides": null
   }
 ]

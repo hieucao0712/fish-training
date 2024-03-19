@@ -67,7 +67,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "mainFish",
+    "_name": "mainSpine",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -260,7 +260,7 @@
     "fileId": "fbxflty4hD6KSzbW+LVe0k"
   },
   {
-    "__type__": "29454OiGC5OaLiUFq4msUkX",
+    "__type__": "047f1peYURI1KxycP6Q3Bb6",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -277,7 +277,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "a8F46UKfNECYMtbzG1DNNT"
+    "fileId": "e7DjcFgoBP87H2dm+YYSOb"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -288,6 +288,7 @@
       "__id__": 0
     },
     "fileId": "2evrTkO0JJx6ZCmFgWHBms",
+    "instance": null,
     "targetOverrides": null
   }
 ]
