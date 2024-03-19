@@ -28718,7 +28718,6 @@
     "__prefab": {
       "__id__": 1300
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "41bed95e-0762-4bd1-9019-dceb2274c6b8",
       "__expectedType__": "cc.JsonAsset"
@@ -28730,6 +28729,26 @@
       },
       {
         "__uuid__": "42adc601-848f-4716-896d-c6c9da383f8f",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "8290675a-7827-467c-ae81-d03f2e438533",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "7f532b05-5b9d-44bd-9913-ded43fae70b4",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "89b2a006-42e7-4ca7-9374-aa9d3a010b36",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "6c3f03de-f65f-4fe0-aee2-cd0004f5d760",
+        "__expectedType__": "cc.Prefab"
+      },
+      {
+        "__uuid__": "025259a9-52eb-4d1f-87fd-851fa85f7038",
         "__expectedType__": "cc.Prefab"
       }
     ],
