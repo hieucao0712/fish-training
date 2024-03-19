@@ -22,18 +22,18 @@ export class PopupInfo2024 extends GfPopupInfo {
     private _currentTabId = 0;
 
     initLanguage() {
-        this.popupTitle = Localize.instance.popupTitle.info;
+
     };
 
     show(){
         super.show();
         this.setInitialized(true);
         this.fish.getComponent(ScrollView).scrollToTop(0);
+        this.feature.getComponent(ScrollView).scrollToTop(0);
         this.onClickButton(null, 0);
     };
 
     onClickButton(event, data) {
-        console.warn(data);
         const tabId = parseInt(data);
         if(this._currentTabId === tabId) {
             return;
@@ -46,6 +46,7 @@ export class PopupInfo2024 extends GfPopupInfo {
             case 0:
                 this.updateStateButton(this.buttonFeature, true);
                 this.feature.active = true;
+                this.feature.getComponent(ScrollView).scrollToTop(0);
                 break;
             case 1:
                 this.updateStateButton(this.buttonFish, true);
