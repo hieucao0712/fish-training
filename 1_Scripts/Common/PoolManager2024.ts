@@ -1,4 +1,5 @@
 import gfPoolManager, { POOL_TYPE } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfPoolManager';
+import NodePoolConfig from './NodePoolConfig2024';
 
 export default class PoolManager2024 extends gfPoolManager {
     public static instance: PoolManager2024 = null;
@@ -18,5 +19,20 @@ export default class PoolManager2024 extends gfPoolManager {
         this.initPool(POOL_TYPE.SmallExplosion, 'SmallExplosion2024', 'gfExplosionSpine', 50);
         this.initPool(POOL_TYPE.BigExplosion, 'BigExplosion2024', 'gfExplosionSpine', 20);
         this.initPool(POOL_TYPE.LabelCoin, 'LabelCoin2024', 'gfCoinLabel', 5);
+    }
+
+    getNetFXConfig(data) {
+        const { SkillID } = data;
+        let kind = null;
+        let config = null;
+        if (SkillID) {
+            kind = 1;
+            config = NodePoolConfig.instance.getNetFXConfig(kind);
+        }
+        if (!config) {
+            kind = 0;
+            config = NodePoolConfig.instance.getNetFXConfig(kind);
+        }
+        return config;
     }
 }
