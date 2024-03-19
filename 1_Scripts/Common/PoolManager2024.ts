@@ -17,5 +17,6 @@ export default class PoolManager2024 extends gfPoolManager {
         this.initPool(POOL_TYPE.NetFX, 'NetFX2024', 'NetFX2024', 5);
         this.initPool(POOL_TYPE.SmallExplosion, 'SmallExplosion2024', 'gfExplosionSpine', 50);
         this.initPool(POOL_TYPE.BigExplosion, 'BigExplosion2024', 'gfExplosionSpine', 20);
+        this.initPool(POOL_TYPE.LabelCoin, 'LabelCoin2024', 'gfCoinLabel', 5);
     }
 }

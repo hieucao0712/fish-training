@@ -2,6 +2,7 @@ import { _decorator, SpriteFrame, Sprite, tween, v3, Button, Tween} from 'cc';
 import { gfPlayer } from '../../../../cc-common/cc30-fishbase/Scripts/Components/gfPlayer';
 import { loadAvatarFacebook, formatMoney, setOpacity } from '../../../../cc-common/cc-share/common/utils';
 import { stopAllActions, delay, call, scaleTo} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper";
+import gfDataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
 const { ccclass, property } = _decorator;
 
 @ccclass('Player2024')
@@ -26,6 +27,29 @@ export class Player2024 extends gfPlayer {
  
 
     _updateGun() {
+        if (this.btnMinus) {
+            this.btnMinus.getComponent(Button).interactable = !(this.getGunIndex() === 0);
+            this.btnMinus.getComponent(Sprite).grayscale = !this.btnMinus.getComponent(Button).interactable;
+        }
+        if (this.btnPlus) {
+            this.btnPlus.getComponent(Button).interactable = !(this.getGunIndex() === gfDataStore.instance.getTotalGun() - 1);
+            this.btnPlus.getComponent(Sprite).grayscale = !this.btnPlus.getComponent(Button).interactable;
+        }
+        this._gunValue = gfDataStore.instance.getGunValue()[this.getGunIndex()];
+        this.txtBet.string = formatMoney(this._gunValue);
+        this._playEffectChangeGun();
+        if (this.isMe && (gfDataStore.instance.getSelfInfo().skillLock)) {
+            if (this.btnPlus) {
+                this.btnPlus.getComponent(Button).interactable = false;
+                this.btnPlus.getComponent(Sprite).grayscale = true;
+            }
+            if (this.btnMinus) {
+                this.btnMinus.getComponent(Button).interactable = false;
+                this.btnMinus.getComponent(Sprite).grayscale = true;
+            }
+
+        }
+        console.warn('MEOMEO',gfDataStore.instance.getTotalGun())
     }
 
 
