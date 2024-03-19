@@ -137,7 +137,6 @@ export class HUDController2024 extends gfHUDController {
     }
 
     onTogglePress(toggle: any, data: any): void {
-        console.warn('CHECK_DATA', data)
         this.fishNotifyImg.active = false;
         const toggleCheck = toggle.isChecked;
         if (toggleCheck) {
