@@ -1,11 +1,10 @@
 import { _decorator, Button, Vec3, tween, SpriteFrame, Sprite, v3, Node } from 'cc';
 import { gfHUDController } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfHUDController';
-import ReferenceManager2024 from '../Common/ReferenceManager2024';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import gfBaseEvents from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 import { gfAutoFireController } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfAutoFireController';
 import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
-import GameConfig from '../Config/Config2024';
+import gfReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 
 const TIME_SHOW_HIDE = 0.15;
 const TARGET_STATE = {
@@ -41,13 +40,10 @@ export class HUDController2024 extends gfHUDController {
     }
 
     updateLockFishImg(fishKind = 0) {
-        const { FISH_KIND } = GameConfig.instance;
-        if(fishKind === FISH_KIND.BOMB) {
-            this._scaleFactor = 0.9;
-        } else if(fishKind === FISH_KIND.LASER_CRAB) {
-            this._scaleFactor = 0.8;
+        if(fishKind === 20) {
+            this._scaleFactor = 0.5;
         } else {
-            this._scaleFactor = 1.0;
+            this._scaleFactor = 0.6
         }
         this.listNodeAuto[TARGET_STATE.AUTO_ONE].getComponents(Button)[0].getComponent(Sprite).spriteFrame = this.listSpriteFrame[STATE.TARGET];
         super.updateLockFishImg(fishKind);
@@ -135,12 +131,13 @@ export class HUDController2024 extends gfHUDController {
 
     onToggleIdle(): void {
         super.onToggleIdle();
-        const player = ReferenceManager2024.instance.getSelfPlayer();
+        const player = gfReferenceManager.instance.getSelfPlayer();
         if(!player || !player.checkUpdateGunByWallet()) return;
         this.onAnimShow();
     }
 
     onTogglePress(toggle: any, data: any): void {
+        console.warn('CHECK_DATA', data)
         this.fishNotifyImg.active = false;
         const toggleCheck = toggle.isChecked;
         if (toggleCheck) {
