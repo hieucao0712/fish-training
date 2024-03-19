@@ -1,0 +1,272 @@
+
+FX_Lazer.png
+size: 496,818
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Beam
+  rotate: true
+  xy: 312, 736
+  size: 80, 154
+  orig: 80, 154
+  offset: 0, 0
+  index: -1
+Beam - Copy
+  rotate: true
+  xy: 2, 736
+  size: 80, 308
+  orig: 80, 308
+  offset: 0, 0
+  index: -1
+Beam Line Side
+  rotate: true
+  xy: 2, 372
+  size: 2, 105
+  orig: 2, 105
+  offset: 0, 0
+  index: -1
+Ray
+  rotate: false
+  xy: 468, 671
+  size: 24, 145
+  orig: 24, 145
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0000
+  rotate: true
+  xy: 2, 248
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0001
+  rotate: true
+  xy: 2, 125
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0002
+  rotate: true
+  xy: 2, 2
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0003
+  rotate: false
+  xy: 114, 264
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0004
+  rotate: false
+  xy: 237, 264
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0005
+  rotate: false
+  xy: 360, 259
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0006
+  rotate: false
+  xy: 114, 152
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0007
+  rotate: false
+  xy: 237, 152
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/circle/Elem0008
+  rotate: false
+  xy: 360, 147
+  size: 121, 110
+  orig: 121, 110
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000000
+  rotate: true
+  xy: 2, 664
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000001
+  rotate: true
+  xy: 220, 664
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000002
+  rotate: true
+  xy: 2, 592
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000003
+  rotate: true
+  xy: 220, 592
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000004
+  rotate: true
+  xy: 2, 520
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000005
+  rotate: true
+  xy: 220, 520
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000006
+  rotate: true
+  xy: 2, 448
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000007
+  rotate: true
+  xy: 220, 448
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000008
+  rotate: true
+  xy: 2, 376
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/mid/Elements - Sparks 039 Shot Right Loop noCT noRSZ_000000009
+  rotate: true
+  xy: 220, 376
+  size: 70, 216
+  orig: 70, 216
+  offset: 0, 0
+  index: -1
+new1/start/Elem0000
+  rotate: true
+  xy: 438, 611
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0001
+  rotate: true
+  xy: 438, 551
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0002
+  rotate: true
+  xy: 438, 491
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0003
+  rotate: true
+  xy: 438, 431
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0004
+  rotate: true
+  xy: 438, 371
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0005
+  rotate: true
+  xy: 114, 87
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0006
+  rotate: true
+  xy: 114, 27
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0007
+  rotate: true
+  xy: 172, 87
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0008
+  rotate: true
+  xy: 172, 27
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0009
+  rotate: false
+  xy: 230, 94
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0010
+  rotate: false
+  xy: 290, 94
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0011
+  rotate: true
+  xy: 230, 34
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0012
+  rotate: true
+  xy: 288, 34
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0013
+  rotate: true
+  xy: 346, 34
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1
+new1/start/Elem0014
+  rotate: false
+  xy: 404, 89
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: -1

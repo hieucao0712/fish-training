@@ -1,0 +1,90 @@
+
+FSW_PopupWin.png
+size: 281,542
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Lv0/Lon
+  rotate: false
+  xy: 2, 470
+  size: 132, 70
+  orig: 132, 70
+  offset: 0, 0
+  index: -1
+Lv1/Lon
+  rotate: false
+  xy: 2, 470
+  size: 132, 70
+  orig: 132, 70
+  offset: 0, 0
+  index: -1
+Lv0/Thang
+  rotate: false
+  xy: 2, 143
+  size: 265, 106
+  orig: 265, 106
+  offset: 0, 0
+  index: -1
+Lv1/Thang
+  rotate: false
+  xy: 2, 143
+  size: 265, 106
+  orig: 265, 106
+  offset: 0, 0
+  index: -1
+Lv2/Thang
+  rotate: false
+  xy: 2, 143
+  size: 265, 106
+  orig: 265, 106
+  offset: 0, 0
+  index: -1
+Lv3/Thang
+  rotate: false
+  xy: 2, 143
+  size: 265, 106
+  orig: 265, 106
+  offset: 0, 0
+  index: -1
+Lv0/wheel
+  rotate: false
+  xy: 136, 405
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+Lv1/wheel
+  rotate: false
+  xy: 136, 405
+  size: 135, 135
+  orig: 135, 135
+  offset: 0, 0
+  index: -1
+Lv2/Lon
+  rotate: false
+  xy: 2, 251
+  size: 262, 80
+  orig: 262, 80
+  offset: 0, 0
+  index: -1
+Lv2/wheel
+  rotate: false
+  xy: 140, 2
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+Lv3/Lon
+  rotate: false
+  xy: 2, 333
+  size: 274, 70
+  orig: 274, 70
+  offset: 0, 0
+  index: -1
+Lv3/wheel
+  rotate: false
+  xy: 2, 5
+  size: 136, 136
+  orig: 136, 136
+  offset: 0, 0
+  index: -1

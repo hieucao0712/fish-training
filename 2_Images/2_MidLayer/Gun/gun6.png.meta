@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "7b6f3088-2861-4179-a1bb-7fd0864eabe6",
+  "uuid": "11e7a7ac-dfe9-4bf1-85c4-3df328aaf575",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "7b6f3088-2861-4179-a1bb-7fd0864eabe6@6c48a",
+      "uuid": "11e7a7ac-dfe9-4bf1-85c4-3df328aaf575@6c48a",
       "displayName": "gun6",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7b6f3088-2861-4179-a1bb-7fd0864eabe6",
+        "imageUuidOrDatabaseUri": "11e7a7ac-dfe9-4bf1-85c4-3df328aaf575",
         "visible": false
       },
       "ver": "1.0.22",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "7b6f3088-2861-4179-a1bb-7fd0864eabe6@f9941",
+      "uuid": "11e7a7ac-dfe9-4bf1-85c4-3df328aaf575@f9941",
       "displayName": "gun6",
       "id": "f9941",
       "name": "spriteFrame",
@@ -56,7 +56,7 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7b6f3088-2861-4179-a1bb-7fd0864eabe6@6c48a",
+        "imageUuidOrDatabaseUri": "11e7a7ac-dfe9-4bf1-85c4-3df328aaf575@6c48a",
         "atlasUuid": "",
         "pixelsToUnit": 100,
         "pivotX": 0.5,
@@ -128,7 +128,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "7b6f3088-2861-4179-a1bb-7fd0864eabe6@f9941",
+    "redirect": "11e7a7ac-dfe9-4bf1-85c4-3df328aaf575@f9941",
     "fixAlphaTransparencyArtifacts": false
   }
 }

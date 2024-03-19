@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "11ffa4cb-bedf-4248-98ba-278c445f1f64",
+  "uuid": "b78be9ca-481b-4a82-917f-6eb564afd1c8",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "11ffa4cb-bedf-4248-98ba-278c445f1f64@6c48a",
+      "uuid": "b78be9ca-481b-4a82-917f-6eb564afd1c8@6c48a",
       "displayName": "gun3",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "11ffa4cb-bedf-4248-98ba-278c445f1f64",
+        "imageUuidOrDatabaseUri": "b78be9ca-481b-4a82-917f-6eb564afd1c8",
         "visible": false
       },
       "ver": "1.0.22",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "11ffa4cb-bedf-4248-98ba-278c445f1f64@f9941",
+      "uuid": "b78be9ca-481b-4a82-917f-6eb564afd1c8@f9941",
       "displayName": "gun3",
       "id": "f9941",
       "name": "spriteFrame",
@@ -56,7 +56,7 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "11ffa4cb-bedf-4248-98ba-278c445f1f64@6c48a",
+        "imageUuidOrDatabaseUri": "b78be9ca-481b-4a82-917f-6eb564afd1c8@6c48a",
         "atlasUuid": "",
         "pixelsToUnit": 100,
         "pivotX": 0.5,
@@ -128,7 +128,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "11ffa4cb-bedf-4248-98ba-278c445f1f64@f9941",
+    "redirect": "b78be9ca-481b-4a82-917f-6eb564afd1c8@f9941",
     "fixAlphaTransparencyArtifacts": false
   }
 }
