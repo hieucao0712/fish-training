@@ -3,6 +3,9 @@ import gfBaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfB
 export default class Config2024 extends gfBaseConfig {
     public static instance: Config2024 = null;
 
+    POPUP = {
+        
+    }
     constructor() {
         super();
         Config2024.instance = this;
