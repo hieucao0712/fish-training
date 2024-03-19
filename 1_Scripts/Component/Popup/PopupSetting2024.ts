@@ -10,10 +10,8 @@ const { ccclass, property } = _decorator;
 @ccclass('PopupSetting2024')
 export class PopupSetting2024 extends GfPopupSettingSlider {
 
-    @property(Slider) musicSlider: Slider = null;
     @property(Node) musicBar: Node = null;
 
-    @property(Slider) soundSlider: Slider = null;
     @property(Node) soundBar: Node = null;
 
 
@@ -39,7 +37,7 @@ export class PopupSetting2024 extends GfPopupSettingSlider {
     }
 
     updateVolume(obj: number){
-        const progress = (obj == 0)? this.soundSlider.progress:this.musicSlider.progress;
+        const progress = (obj == 0)? this.sfxSliderNode.getComponent(Slider).progress:this.bgmSliderNode.getComponent(Slider).progress;
         gfEventEmitter.instance.emit(gfBaseEvents.SOUND.UPDATE_MUSIC_VOL, progress);
         const bar = (obj == 0)? this.soundBar:this.musicBar
         bar.getComponent(UITransform).setContentSize(new Size(320*progress, 35));
