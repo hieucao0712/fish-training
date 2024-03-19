@@ -1,12 +1,7 @@
 import { _decorator, SpriteFrame, Sprite, tween, v3, Button, Tween } from "cc";
 import { gfPlayer } from "../../../../cc-common/cc30-fishbase/Scripts/Components/gfPlayer";
 import { loadAvatarFacebook, formatMoney, setOpacity } from "../../../../cc-common/cc-share/common/utils";
-import {
-    stopAllActions,
-    delay,
-    call,
-    scaleTo,
-} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper";
+import {stopAllActions, delay, call, scaleTo } from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper";
 import DataStore from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore";
 const { ccclass, property } = _decorator;
 
