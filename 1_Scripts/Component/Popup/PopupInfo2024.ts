@@ -14,14 +14,10 @@ export class PopupInfo2024 extends GfPopupInfo {
     buttonFish: Button;
     @property(Button)
     buttonFeature: Button;
-    @property(Button)
-    buttonDragon: Button;
     @property(Node)
     fish: Node = null;
     @property(Node)
     feature: Node = null;
-    @property(Node)
-    dragon: Node = null;
 
     private _currentTabId = 0;
 
@@ -32,7 +28,6 @@ export class PopupInfo2024 extends GfPopupInfo {
     show(){
         super.show();
         this.setInitialized(true);
-        this.dragon.getComponent(ScrollView).scrollToTop(0);
         this.fish.getComponent(ScrollView).scrollToTop(0);
         this.onClickButton(null, 0);
     };
@@ -57,11 +52,6 @@ export class PopupInfo2024 extends GfPopupInfo {
                 this.fish.active = true;
                 this.fish.getComponent(ScrollView).scrollToTop(0);
                 break;
-            case 2:
-                this.updateStateButton(this.buttonDragon, true);
-                this.dragon.active = true;
-                this.dragon.getComponent(ScrollView).scrollToTop(0);
-                break;
         }
 
     };
@@ -78,20 +68,12 @@ export class PopupInfo2024 extends GfPopupInfo {
     hideAllButton() {
         this.updateStateButton(this.buttonFish, false);
         this.updateStateButton(this.buttonFeature, false);
-        this.updateStateButton(this.buttonDragon, false);
         this.fish.active = false;
         this.feature.active = false;
-        this.dragon.active = false;
-
     };
 
     updateStateButton(button, active) {
         button.node.getChildByName("checkmark").active = active;
-        // if(active) {
-        //     button.node.getChildByName('Background').y = 0;
-        // } else {
-        //     button.node.getChildByName('Background').y = 1.1;
-        // }
     };
 
     onClick(){
