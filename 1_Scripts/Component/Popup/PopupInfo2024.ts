@@ -21,10 +21,6 @@ export class PopupInfo2024 extends GfPopupInfo {
 
     private _currentTabId = 0;
 
-    initLanguage() {
-
-    };
-
     show(){
         super.show();
         this.setInitialized(true);
