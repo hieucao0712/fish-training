@@ -1,10 +1,10 @@
 import { _decorator, Component, Node, Button, Vec3, sys, ScrollView, warn } from 'cc';
-import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
-import { checkTablet } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities'
-import Localize from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfLocalize';
-import Config2024 from '../Config/Config2024';
-import { GfPopupInfo } from '../../../../cc-common/cc30-fishbase/Scripts/Components/Popup/gfPopupInfo';
-import gfBaseEvents from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
+import Emitter from '../../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
+import { checkTablet } from '../../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities'
+import Localize from '../../../../../cc-common/cc30-fishbase/Scripts/Common/gfLocalize';
+import Config2024 from '../../Config/Config2024';
+import { GfPopupInfo } from '../../../../../cc-common/cc30-fishbase/Scripts/Components/Popup/gfPopupInfo';
+import gfBaseEvents from '../../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 const { ccclass, property } = _decorator;
 
 
