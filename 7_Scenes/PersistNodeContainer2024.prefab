@@ -36971,7 +36971,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": -10,
       "z": 0
     },
     "_lrot": {
@@ -37849,7 +37849,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 11.025,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -37889,7 +37889,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 736,
-      "height": 260.79999999999995
+      "height": 182.56
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -37923,13 +37923,13 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Bạn bị mời ra khỏi bàn\ndo không có thao tác trong\nmột khoảng thời gian.",
+    "_string": "Bạn đang sở hữu súng Laser tại phòng Khám Phá Đại Dương\nVui lòng sử dụng trước khi đổi phòng",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 42,
-    "_fontSize": 42,
+    "_actualFontSize": 40,
+    "_fontSize": 40,
     "_fontFamily": "Arial",
-    "_lineHeight": 80,
+    "_lineHeight": 56,
     "_overflow": 3,
     "_enableWrapText": true,
     "_font": null,
@@ -42485,6 +42485,8 @@
       "__id__": 0
     },
     "fileId": "82f4ZhBWdCMJ2m0FDFUh1C",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -43400,6 +43402,8 @@
       "__id__": 0
     },
     "fileId": "59y7blYylIXISOYtgR0NIt",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -43617,6 +43621,8 @@
       "__id__": 0
     },
     "fileId": "d3cPCRcq5K/5tNKeuOVueZ",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -43834,6 +43840,8 @@
       "__id__": 0
     },
     "fileId": "59+b/QrG9PXaPkS4WXAxoV",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -45028,7 +45036,6 @@
     "__prefab": {
       "__id__": 2021
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "41bed95e-0762-4bd1-9019-dceb2274c6b8",
       "__expectedType__": "cc.JsonAsset"
