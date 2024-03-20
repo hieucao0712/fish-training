@@ -140,7 +140,7 @@
     },
     "_premultipliedAlpha": true,
     "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultAnimation": "explosion big",
     "_enableBatch": false,
     "_sockets": [],
     "_debugMesh": false,
