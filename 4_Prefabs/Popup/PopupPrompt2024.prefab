@@ -1361,7 +1361,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 736,
-      "height": 143.44
+      "height": 260.79999999999995
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1398,11 +1398,11 @@
     "_string": "Bạn bị mời ra khỏi bàn\ndo không có thao tác trong\nmột khoảng thời gian.",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 31,
-    "_fontSize": 30,
+    "_actualFontSize": 42,
+    "_fontSize": 42,
     "_fontFamily": "Arial",
-    "_lineHeight": 44,
-    "_overflow": 2,
+    "_lineHeight": 80,
+    "_overflow": 3,
     "_enableWrapText": true,
     "_font": null,
     "_isSystemFontUsed": true,
@@ -1427,8 +1427,6 @@
       "__id__": 0
     },
     "fileId": "danYoIj5FFE5gp8dWDLV1Z",
-    "instance": null,
-    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
