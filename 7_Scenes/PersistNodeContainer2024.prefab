@@ -3219,15 +3219,14 @@
     "playOnLoad": true,
     "_clips": [
       {
-        "__uuid__": "b9dbf264-4414-4be6-8e9f-4ca40278a0d1",
-        "__expectedType__": "cc.AnimationClip"
-      },
-      {
         "__uuid__": "de398667-3244-4f1f-9387-ff66611eaa56",
         "__expectedType__": "cc.AnimationClip"
       }
     ],
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "de398667-3244-4f1f-9387-ff66611eaa56",
+      "__expectedType__": "cc.AnimationClip"
+    },
     "_id": ""
   },
   {
@@ -41827,7 +41826,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "textTitle",
+    "_name": "TitlieText",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1845
@@ -41848,7 +41847,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 218.122,
+      "y": 215,
       "z": 0
     },
     "_lrot": {
@@ -41899,7 +41898,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "83hoKQrCBFC4K0dbX3r3bj"
+    "fileId": "023y/9sVpInoYx6mtpoMsO"
   },
   {
     "__type__": "cc.Label",
@@ -41941,12 +41940,12 @@
     "_isBold": false,
     "_isUnderline": false,
     "_underlineHeight": 2,
-    "_cacheMode": 0,
+    "_cacheMode": 1,
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "dbYpUosZ5Nx5JeN9JFqKrF"
+    "fileId": "f956H+jxhH0ZX/x4TLmN0z"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -41956,7 +41955,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "d3Xgk2nBNIP6gkc7TeH3b/",
+    "fileId": "f4zKsbeAhA5LtZNdBsSg2o",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -44230,9 +44229,7 @@
     "__prefab": {
       "__id__": 1970
     },
-    "popupTitle": {
-      "__id__": 1858
-    },
+    "popupTitle": null,
     "contents": {
       "__id__": 1845
     },
@@ -44978,7 +44975,6 @@
     "__prefab": {
       "__id__": 2016
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "41bed95e-0762-4bd1-9019-dceb2274c6b8",
       "__expectedType__": "cc.JsonAsset"
