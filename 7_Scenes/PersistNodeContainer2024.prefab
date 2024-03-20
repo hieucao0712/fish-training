@@ -41474,7 +41474,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0.242,
-      "y": -33.36,
+      "y": -32.103,
       "z": 0
     },
     "_lrot": {
@@ -41879,8 +41879,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -1,
-      "y": 111.12,
+      "x": -0.213,
+      "y": 121,
       "z": 0
     },
     "_lrot": {
@@ -41925,7 +41925,7 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 1
     },
     "_id": ""
   },
@@ -43626,7 +43626,7 @@
     "pageIndexView": {
       "__id__": 1878
     },
-    "itemPerPage": 5,
+    "itemPerPage": 8,
     "loading": {
       "__id__": 1895
     },
@@ -44404,6 +44404,7 @@
     "__prefab": {
       "__id__": 1993
     },
+    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "41bed95e-0762-4bd1-9019-dceb2274c6b8",
       "__expectedType__": "cc.JsonAsset"
