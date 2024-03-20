@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "d19e5de1-b0df-47fd-8035-e793f03570c2",
+  "uuid": "43d10112-a657-444d-be0b-9a45d98b9fc0",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "NotifyController"
+    "syncNodeName": "NotifyMessage"
   }
 }

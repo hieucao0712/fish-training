@@ -144,7 +144,7 @@
     "__prefab": {
       "__id__": 7
     },
-    "animationName": "explosion small",
+    "animationName": "explosion big",
     "_id": ""
   },
   {
@@ -160,6 +160,7 @@
       "__id__": 0
     },
     "fileId": "7f5Ivb00NFBqpLJTr4D78E",
+    "instance": null,
     "targetOverrides": null
   }
 ]
