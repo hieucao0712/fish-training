@@ -1,3 +1,4 @@
+import { v3 } from 'cc';
 import gfBaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseConfig';
 
 export default class Config2024 extends gfBaseConfig {
@@ -12,7 +13,12 @@ export default class Config2024 extends gfBaseConfig {
         this.RoomVersion = '10';
         this.SceneName.Lobby = 'ktfLobby2024';
         this.SceneName.Game1 = 'ktfGame2024';
+
         this.NOTIFY_JACKPOT.array_type_notify_jackpot = [];
+        this.NOTIFY_MESSAGE.position = {
+            [this.SceneName.Game1]: v3(0, 320),
+            [this.SceneName.Lobby]: v3(0, 320),
+        };
     }
 
     destroy() {

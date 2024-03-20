@@ -1,11 +1,14 @@
-import { _decorator, director, tween, Tween, Vec3 } from 'cc';
+import { _decorator } from 'cc';
 import gfDataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
-import gfBaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseConfig';
 import { GfNotifyMessage } from '../../../../cc-common/cc30-fishbase/Scripts/Components/gfNotifyMessage';
-const { ccclass, property } = _decorator;
+import GameConfig from '../Config/Config2024';
+const { ccclass } = _decorator;
 
 @ccclass('NotifyMessage2024')
 export class NotifyMessage2024 extends GfNotifyMessage {
+    protected validateData(data: any): boolean {
+        return data.type !== GameConfig.instance.NOTIFY_TYPE.MESSAGE_EVENT && super.validateData(data);
+    }
 
     public onBeforeSceneChange() {
         this._lstMessage = [];
@@ -14,9 +17,8 @@ export class NotifyMessage2024 extends GfNotifyMessage {
     }
 
     protected onStackMessage() {
-        const position = gfBaseConfig.instance.NOTIFY_MESSAGE.position[gfDataStore.instance.getCurrentSceneName()];
+        const position = GameConfig.instance.NOTIFY_MESSAGE.position[gfDataStore.instance.getCurrentSceneName()];
         this.node.setPosition(position.x, position.y);
         super.onStackMessage();
     }
 }
-
