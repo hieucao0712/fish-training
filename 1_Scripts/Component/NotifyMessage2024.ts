@@ -5,7 +5,7 @@ import { GfNotifyMessage } from '../../../../cc-common/cc30-fishbase/Scripts/Com
 const { ccclass, property } = _decorator;
 
 @ccclass('NotifyMessage2024')
-export class NotifyMessage1998 extends GfNotifyMessage {
+export class NotifyMessage2024 extends GfNotifyMessage {
 
     public onBeforeSceneChange() {
         this._lstMessage = [];
