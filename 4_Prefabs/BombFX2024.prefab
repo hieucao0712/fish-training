@@ -8,13 +8,13 @@
       "__id__": 1
     },
     "optimizationPolicy": 0,
-    "asyncLoadAssets": false,
     "persistent": false
   },
   {
     "__type__": "cc.Node",
     "_name": "BombFX2024",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": null,
     "_children": [],
     "_active": true,
@@ -51,6 +51,7 @@
       "y": 2.5,
       "z": 2.5
     },
+    "_mobility": 0,
     "_layer": 33554432,
     "_euler": {
       "__type__": "cc.Vec3",
@@ -95,8 +96,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": null,
+      "y": null
     },
     "_id": ""
   },
@@ -115,7 +116,6 @@
     "__prefab": {
       "__id__": 7
     },
-    "_visFlags": 0,
     "_customMaterial": null,
     "_srcBlendFactor": 2,
     "_dstBlendFactor": 4,
@@ -127,7 +127,6 @@
       "a": 255
     },
     "loop": false,
-    "_premultipliedAlpha": true,
     "_timeScale": 1,
     "_useTint": false,
     "_preCacheMode": 0,
@@ -136,11 +135,13 @@
     "_debugBones": false,
     "_debugSlots": false,
     "_skeletonData": {
-      "__uuid__": "68c19957-ced3-4424-aa64-0c459025b6cd",
+      "__uuid__": "e0656911-da32-4bd9-af7b-736c084ffb2a",
       "__expectedType__": "sp.SkeletonData"
     },
+    "_premultipliedAlpha": true,
     "defaultSkin": "default",
-    "defaultAnimation": "explosion big",
+    "defaultAnimation": "",
+    "_enableBatch": false,
     "_sockets": [],
     "_debugMesh": false,
     "_id": ""
@@ -157,6 +158,8 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "c46/YsCPVOJYA4mWEpNYRx"
+    "fileId": "c46/YsCPVOJYA4mWEpNYRx",
+    "instance": null,
+    "targetOverrides": null
   }
 ]

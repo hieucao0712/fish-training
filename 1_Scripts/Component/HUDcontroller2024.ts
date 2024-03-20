@@ -35,7 +35,7 @@ export class HUDController2024 extends gfHUDController {
     onLoad() {
         super.onLoad();
         this._scaleFactor = 1.1;
-        this._posButton = [new Vec3(-114, -230, 1), new Vec3(24, -230, 1), new Vec3(-44, -158, 1), new Vec3(-44, -307, 1)];
+        this._posButton = [new Vec3(-68, -230), new Vec3(68, -230), new Vec3(0, -158), new Vec3(0, -307)];
         this.stopTarget();
     }
 

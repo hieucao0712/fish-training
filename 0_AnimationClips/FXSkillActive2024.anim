@@ -1,8 +1,11 @@
 [
   {
     "__type__": "cc.AnimationClip",
-    "_name": "FXSkillActive1998",
+    "_name": "FXSkillActive2024",
     "_objFlags": 0,
+    "__editorExtras__": {
+      "embeddedPlayerGroups": []
+    },
     "_native": "",
     "sample": 30,
     "speed": 1,
@@ -16,7 +19,8 @@
       }
     ],
     "_exoticAnimation": null,
-    "_events": []
+    "_events": [],
+    "_embeddedPlayers": []
   },
   {
     "__type__": "cc.animation.ObjectTrack",
@@ -24,7 +28,8 @@
       "__type__": "cc.animation.TrackBinding",
       "path": {
         "__id__": 2
-      }
+      },
+      "proxy": null
     },
     "_channel": {
       "__id__": 4
@@ -61,27 +66,27 @@
     ],
     "_values": [
       {
-        "__uuid__": "bef3fe62-d813-44b4-9fa2-c6cbe932969d@f9941",
+        "__uuid__": "0ed9ac16-179a-4aac-91e6-a687b4bc2e33@f9941",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "3b9f3407-3ced-47f9-817e-b5cfc0fcde54@f9941",
+        "__uuid__": "11ad5600-c7b8-43b8-8fd6-7854a4f6dfc3@f9941",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "7c27c4d9-ba99-4cde-a220-95f10fae2f24@f9941",
+        "__uuid__": "30525c5e-4ad3-4470-8491-63ac3db0643c@f9941",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "efdc7624-23d2-447e-91c0-968677adf96d@f9941",
+        "__uuid__": "a8451e84-ca0b-493f-a65f-0f8ce96fe45b@f9941",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "a3cec7c7-2c6e-415f-95ec-1083a84702c0@f9941",
+        "__uuid__": "08eb524a-106e-4da1-a61e-449e04563c8c@f9941",
         "__expectedType__": "cc.SpriteFrame"
       },
       {
-        "__uuid__": "5d33e9a3-7c8c-4a50-b14a-d0383fa04698@f9941",
+        "__uuid__": "d2654df8-132f-4932-aea2-4deb1f587f4f@f9941",
         "__expectedType__": "cc.SpriteFrame"
       }
     ]
