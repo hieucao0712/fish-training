@@ -7,7 +7,7 @@ export default class Config2024 extends gfBaseConfig {
     constructor() {
         super();
         Config2024.instance = this;
-        this.GameId = '2024';
+        this.GameId = '1998';
         this.GameVersion = '0.0.1';
         this.IPMasterName = 'IPMaster2';
         this.RoomVersion = '10';
