@@ -40908,7 +40908,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "39d92656-a696-4649-abf0-10982d7689ff@f9941",
+      "__uuid__": "c9de03d8-b054-4f01-95f7-c460c4a14c4e@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -45036,6 +45036,7 @@
     "__prefab": {
       "__id__": 2021
     },
+    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "41bed95e-0762-4bd1-9019-dceb2274c6b8",
       "__expectedType__": "cc.JsonAsset"
