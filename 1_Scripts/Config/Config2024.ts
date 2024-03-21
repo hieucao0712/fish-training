@@ -19,6 +19,8 @@ export default class Config2024 extends gfBaseConfig {
             [this.SceneName.Game1]: v3(0, 320),
             [this.SceneName.Lobby]: v3(0, 320),
         };
+
+        this.SOUND_SLIDER = true;
     }
 
     destroy() {
