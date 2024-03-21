@@ -40,11 +40,9 @@ export class HUDController2024 extends gfHUDController {
     }
 
     updateLockFishImg(fishKind = 0) {
-        if(fishKind === 20) {
+        if(fishKind) {
             this._scaleFactor = 0.5;
-        } else {
-            this._scaleFactor = 0.6
-        }
+        } 
         this.listNodeAuto[TARGET_STATE.AUTO_ONE].getComponents(Button)[0].getComponent(Sprite).spriteFrame = this.listSpriteFrame[STATE.TARGET];
         super.updateLockFishImg(fishKind);
     }
