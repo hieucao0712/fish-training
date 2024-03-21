@@ -631,14 +631,14 @@
     "_string": "",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 19,
+    "_actualFontSize": 20,
     "_fontSize": 19,
     "_fontFamily": "Arial",
     "_lineHeight": 26.666667,
     "_overflow": 2,
     "_enableWrapText": true,
     "_font": {
-      "__uuid__": "1bc7bd74-73e1-4a4c-86a3-94f5c5d33181",
+      "__uuid__": "a1123c14-23f4-454a-92b3-ca7c6efa560e",
       "__expectedType__": "cc.BitmapFont"
     },
     "_isSystemFontUsed": false,
