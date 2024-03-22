@@ -2,12 +2,12 @@
   "ver": "1.1.43",
   "importer": "prefab",
   "imported": true,
-  "uuid": "f0bca340-69b6-43e3-9fde-921ce54a394c",
+  "uuid": "42c48081-81af-4fc7-ab5d-16564ed29ad5",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "Normal"
+    "syncNodeName": "NotifyJackpot"
   }
 }

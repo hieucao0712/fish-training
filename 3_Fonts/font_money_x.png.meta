@@ -2,6 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
+
   "uuid": "f58da096-658c-4524-bbcc-a1d69646f604",
   "files": [
     ".json",
@@ -10,6 +11,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
+
       "uuid": "f58da096-658c-4524-bbcc-a1d69646f604@6c48a",
       "displayName": "font_money_x",
       "id": "6c48a",
@@ -17,6 +19,7 @@
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
+
         "imageUuidOrDatabaseUri": "f58da096-658c-4524-bbcc-a1d69646f604",
         "minfilter": "linear",
         "magfilter": "linear",
@@ -56,6 +59,7 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
+
         "imageUuidOrDatabaseUri": "f58da096-658c-4524-bbcc-a1d69646f604@6c48a",
         "atlasUuid": "",
         "pixelsToUnit": 100,
@@ -128,6 +132,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
+
     "redirect": "f58da096-658c-4524-bbcc-a1d69646f604@f9941",
     "fixAlphaTransparencyArtifacts": false
   }
