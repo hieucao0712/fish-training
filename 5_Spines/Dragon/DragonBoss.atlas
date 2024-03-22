@@ -1,0 +1,209 @@
+
+DragonBoss.png
+size: 1513,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm Armor
+  rotate: false
+  xy: 1370, 2
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+Arm Left
+  rotate: true
+  xy: 1486, 80
+  size: 41, 25
+  orig: 41, 25
+  offset: 0, 0
+  index: -1
+Arm Right
+  rotate: false
+  xy: 1407, 149
+  size: 103, 88
+  orig: 103, 88
+  offset: 0, 0
+  index: -1
+Back Armor
+  rotate: true
+  xy: 1226, 97
+  size: 46, 126
+  orig: 46, 126
+  offset: 0, 0
+  index: -1
+Beard Long
+  rotate: false
+  xy: 2, 15
+  size: 215, 5
+  orig: 215, 5
+  offset: 0, 0
+  index: -1
+Beard Nose
+  rotate: false
+  xy: 1407, 8
+  size: 43, 24
+  orig: 43, 24
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 72
+  size: 977, 65
+  orig: 977, 65
+  offset: 0, 0
+  index: -1
+Body Glow
+  rotate: false
+  xy: 2, 139
+  size: 1040, 128
+  orig: 1040, 128
+  offset: 0, 0
+  index: -1
+Forearm Armor
+  rotate: false
+  xy: 1407, 34
+  size: 72, 34
+  orig: 72, 34
+  offset: 0, 0
+  index: -1
+Forearm Left
+  rotate: false
+  xy: 1189, 11
+  size: 99, 29
+  orig: 99, 29
+  offset: 0, 0
+  index: -1
+Fur Back
+  rotate: false
+  xy: 2, 22
+  size: 880, 48
+  orig: 880, 48
+  offset: 0, 0
+  index: -1
+Hair 1
+  rotate: true
+  xy: 1370, 41
+  size: 85, 33
+  orig: 85, 33
+  offset: 0, 0
+  index: -1
+Hair 2
+  rotate: true
+  xy: 1333, 2
+  size: 93, 35
+  orig: 93, 35
+  offset: 0, 0
+  index: -1
+Hair 3
+  rotate: false
+  xy: 1088, 16
+  size: 99, 30
+  orig: 99, 30
+  offset: 0, 0
+  index: -1
+Hair 4
+  rotate: false
+  xy: 1226, 69
+  size: 105, 26
+  orig: 105, 26
+  offset: 0, 0
+  index: -1
+Hair 5
+  rotate: false
+  xy: 1407, 239
+  size: 104, 28
+  orig: 104, 28
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 1226, 145
+  size: 136, 63
+  orig: 136, 63
+  offset: 0, 0
+  index: -1
+Head Armor
+  rotate: false
+  xy: 1405, 70
+  size: 79, 51
+  orig: 79, 51
+  offset: 0, 0
+  index: -1
+Horn Left
+  rotate: false
+  xy: 1088, 48
+  size: 103, 37
+  orig: 103, 37
+  offset: 0, 0
+  index: -1
+Horn Right
+  rotate: false
+  xy: 884, 25
+  size: 126, 45
+  orig: 126, 45
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: false
+  xy: 1226, 210
+  size: 179, 57
+  orig: 179, 57
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 1364, 128
+  size: 80, 41
+  orig: 80, 41
+  offset: 0, 0
+  index: -1
+Parts Glow
+  rotate: false
+  xy: 1044, 87
+  size: 180, 180
+  orig: 180, 180
+  offset: 0, 0
+  index: -1
+Shoulder Armor
+  rotate: false
+  xy: 981, 88
+  size: 41, 49
+  orig: 41, 49
+  offset: 0, 0
+  index: -1
+Tail Long Above
+  rotate: false
+  xy: 1407, 123
+  size: 102, 24
+  orig: 102, 24
+  offset: 0, 0
+  index: -1
+Tail Long Below
+  rotate: false
+  xy: 1193, 42
+  size: 102, 25
+  orig: 102, 25
+  offset: 0, 0
+  index: -1
+Tail Short Above
+  rotate: false
+  xy: 219, 2
+  size: 63, 18
+  orig: 63, 18
+  offset: 0, 0
+  index: -1
+Tail Short Below
+  rotate: false
+  xy: 284, 3
+  size: 63, 17
+  orig: 63, 17
+  offset: 0, 0
+  index: -1
+Thigh Armor
+  rotate: false
+  xy: 1012, 2
+  size: 74, 83
+  orig: 74, 83
+  offset: 0, 0
+  index: -1
