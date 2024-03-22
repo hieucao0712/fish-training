@@ -3442,10 +3442,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 1
+    },
     "component": "",
-    "_componentId": "",
-    "handler": "",
+    "_componentId": "03659k9cpZEo5al3Xa3mPEo",
+    "handler": "onRoomNormalClick",
     "customEventData": ""
   },
   {
