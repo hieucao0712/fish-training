@@ -4,7 +4,7 @@ import gfBaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfB
 export default class Config2024 extends gfBaseConfig {
     public static instance: Config2024 = null;
     BOSS_PREFAB_NAME = {
-        DRAGON : 'Dragon2024',
+        DRAGON: 'Dragon2024',
     };
 
     constructor() {
