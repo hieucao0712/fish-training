@@ -2423,34 +2423,21 @@
     "nestedPrefabInstanceRoots": null
   },
   {
-    "__type__": "6b39by/0YhE5oXAt15mp7BE",
+    "__type__": "19509ojFHpC3I+RerlbqxpU",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 5
     },
-    "_enabled": false,
+    "_enabled": true,
     "__prefab": {
       "__id__": 101
-    },
-    "ballTrayPrefab": {
-      "__uuid__": "f503b619-94cf-4fdd-92ad-867cd13a4ab9",
-      "__expectedType__": "cc.Prefab"
-    },
-    "dragonDieSmallExplosionPrefab": {
-      "__uuid__": "1195ebf3-a7ee-48d5-b5b0-888fedfde0b8",
-      "__expectedType__": "cc.Prefab"
-    },
-    "jackpotStarPrefab": null,
-    "cutSceneJackpotPrefab": {
-      "__uuid__": "f8228a32-6641-497a-b353-4204d920a603",
-      "__expectedType__": "cc.Prefab"
     },
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "8bWEqnc09N9pzuspnZg0+U"
+    "fileId": "35KHHnZHtFgK57T312fH2i"
   },
   {
     "__type__": "cc.PrefabInfo",
