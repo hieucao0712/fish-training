@@ -1,236 +1,180 @@
 
 FSW_Lobby_Phongvip.png
-size: 907,905
+size: 1009,867
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-22
-  rotate: false
-  xy: 735, 25
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
 Beard
-  rotate: false
-  xy: 793, 375
+  rotate: true
+  xy: 804, 109
   size: 58, 174
   orig: 58, 174
   offset: 0, 0
   index: -1
 Eye Ball
-  rotate: false
-  xy: 129, 9
+  rotate: true
+  xy: 956, 626
   size: 75, 49
   orig: 75, 49
   offset: 0, 0
   index: -1
 Eye Brown
   rotate: true
-  xy: 416, 261
+  xy: 404, 12
   size: 55, 124
   orig: 55, 124
   offset: 0, 0
   index: -1
 Eye Lid Above
   rotate: true
-  xy: 416, 318
+  xy: 277, 2
   size: 65, 125
   orig: 65, 125
   offset: 0, 0
   index: -1
 Eye Lid Below
   rotate: true
-  xy: 308, 99
+  xy: 530, 2
   size: 30, 89
   orig: 30, 89
   offset: 0, 0
   index: -1
 Fire 1
   rotate: false
-  xy: 212, 645
+  xy: 276, 607
   size: 338, 258
   orig: 338, 258
   offset: 0, 0
   index: -1
 Fire 2
   rotate: false
-  xy: 552, 645
+  xy: 276, 347
   size: 338, 258
   orig: 338, 258
   offset: 0, 0
   index: -1
 Fire 3
   rotate: false
-  xy: 212, 385
+  xy: 616, 607
   size: 338, 258
   orig: 338, 258
   offset: 0, 0
   index: -1
 Forehead
   rotate: false
-  xy: 853, 387
+  xy: 956, 703
   size: 42, 162
   orig: 42, 162
   offset: 0, 0
   index: -1
 Hair
-  rotate: true
-  xy: 552, 260
+  rotate: false
+  xy: 864, 169
   size: 135, 194
   orig: 135, 194
   offset: 0, 0
   index: -1
 Head
   rotate: true
-  xy: 153, 261
+  xy: 277, 69
   size: 122, 261
   orig: 122, 261
   offset: 0, 0
   index: -1
 Horn 1
   rotate: true
-  xy: 552, 397
+  xy: 276, 193
   size: 152, 239
   orig: 152, 239
   offset: 0, 0
   index: -1
 Horn 2
-  rotate: false
-  xy: 748, 246
+  rotate: true
+  xy: 540, 34
   size: 157, 127
   orig: 157, 127
   offset: 0, 0
   index: -1
 Jaw
-  rotate: false
-  xy: 2, 12
+  rotate: true
+  xy: 804, 32
   size: 75, 118
   orig: 75, 118
   offset: 0, 0
   index: -1
 Jaw Cover
   rotate: false
-  xy: 206, 4
+  xy: 957, 574
   size: 50, 50
   orig: 50, 50
   offset: 0, 0
   index: -1
 Jaw Horn
-  rotate: true
-  xy: 397, 147
+  rotate: false
+  xy: 621, 11
   size: 45, 21
   orig: 45, 21
   offset: 0, 0
   index: -1
-Khung_phongvip1
-  rotate: false
-  xy: 2, 406
-  size: 208, 497
-  orig: 208, 497
-  offset: 0, 0
-  index: -1
 Nose
-  rotate: false
-  xy: 129, 60
+  rotate: true
+  xy: 924, 29
   size: 78, 69
   orig: 78, 69
   offset: 0, 0
   index: -1
-Sanrong
-  rotate: false
-  xy: 153, 194
-  size: 274, 65
-  orig: 274, 65
-  offset: 0, 0
-  index: -1
 Tooth Above
-  rotate: false
-  xy: 889, 219
+  rotate: true
+  xy: 616, 347
   size: 16, 25
   orig: 16, 25
   offset: 0, 0
   index: -1
 Tooth Below
   rotate: true
-  xy: 153, 392
+  xy: 2, 7
   size: 12, 28
   orig: 12, 28
   offset: 0, 0
   index: -1
-banner1
+banner
   rotate: false
-  xy: 552, 551
-  size: 323, 92
-  orig: 323, 92
-  offset: 0, 0
-  index: -1
-bot
-  rotate: false
-  xy: 153, 131
-  size: 242, 61
-  orig: 242, 61
+  xy: 2, 21
+  size: 273, 100
+  orig: 273, 100
   offset: 0, 0
   index: -1
 coin1
   rotate: true
-  xy: 543, 70
+  xy: 672, 175
   size: 188, 190
   orig: 188, 190
   offset: 0, 0
   index: -1
 coin2
   rotate: false
-  xy: 399, 13
+  xy: 669, 41
   size: 133, 132
   orig: 133, 132
   offset: 0, 0
   index: -1
-icon
+khung
   rotate: false
-  xy: 258, 11
-  size: 43, 43
-  orig: 43, 43
+  xy: 2, 123
+  size: 272, 742
+  orig: 272, 742
   offset: 0, 0
   index: -1
-phao
-  rotate: false
-  xy: 2, 132
-  size: 149, 272
-  orig: 149, 272
-  offset: 0, 0
-  index: -1
-sa0_xanhla
-  rotate: false
-  xy: 209, 94
-  size: 97, 35
-  orig: 97, 35
-  offset: 0, 0
-  index: -1
-sao_do
-  rotate: false
-  xy: 429, 213
-  size: 112, 46
-  orig: 112, 46
-  offset: 0, 0
-  index: -1
-sao_vang
+nen
   rotate: true
-  xy: 79, 3
-  size: 127, 48
-  orig: 127, 48
-  offset: 0, 0
-  index: -1
-sao_xanhduong
-  rotate: false
-  xy: 209, 56
-  size: 96, 36
-  orig: 96, 36
+  xy: 616, 365
+  size: 240, 339
+  orig: 240, 339
   offset: 0, 0
   index: -1
 sparkle
-  rotate: false
-  xy: 735, 91
+  rotate: true
+  xy: 517, 193
   size: 152, 153
   orig: 152, 153
   offset: 0, 0
