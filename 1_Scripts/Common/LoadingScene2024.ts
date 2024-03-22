@@ -14,8 +14,9 @@ export class LoadingScene2024 extends gfLoadingScene {
 
     setGameAndLobbyPrefab(gameNormalPrefab: any, gameVIPPrefab: any, lobbyPrefab: any, persistNodePrefab: any) {
         this.initGameConfig();
-        GameConfig.instance.ScenePrefabs[GameConfig.instance.SceneName.Game1] = gameNormalPrefab;
         GameConfig.instance.ScenePrefabs[GameConfig.instance.SceneName.Lobby] = lobbyPrefab;
+        GameConfig.instance.ScenePrefabs[GameConfig.instance.SceneName.Game1] = gameNormalPrefab;
+        GameConfig.instance.ScenePrefabs[GameConfig.instance.SceneName.Game3] = gameVIPPrefab;
         this.persistNodePrefab = persistNodePrefab;
         this.isLoadByPrefab = true;
     }
