@@ -20909,7 +20909,7 @@
       "__expectedType__": "cc.TTFFont"
     },
     "moneyFont": {
-      "__uuid__": "61559561-b98b-4db9-9866-5e571f8b41b4",
+      "__uuid__": "a97f9fce-d06b-44ca-a368-3df5fe8a631c",
       "__expectedType__": "cc.BitmapFont"
     },
     "mainAnim": {
@@ -45217,7 +45217,8 @@
     "asset": null,
     "fileId": "efXckrlotMmo+ERjypBkHx",
     "instance": null,
-    "targetOverrides": null
+    "targetOverrides": null,
+    "nestedPrefabInstanceRoots": null
   },
   {
     "__type__": "cc.SceneGlobals",
