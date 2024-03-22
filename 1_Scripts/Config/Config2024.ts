@@ -3,6 +3,9 @@ import gfBaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfB
 
 export default class Config2024 extends gfBaseConfig {
     public static instance: Config2024 = null;
+    BOSS_PREFAB_NAME = {
+        DRAGON : 'Dragon2024',
+    };
 
     constructor() {
         super();
@@ -11,6 +14,7 @@ export default class Config2024 extends gfBaseConfig {
         this.GameVersion = '0.0.1';
         this.IPMasterName = 'IPMaster7';
         this.RoomVersion = '10';
+        this.RoomKind.VIP ='3';
         this.SceneName.Lobby = 'ktfLobby2024';
         this.SceneName.Game1 = 'ktfGame2024';
         this.SceneName.Game3 = 'ktfDragon2024';
