@@ -14,11 +14,14 @@ export default class Config2024 extends gfBaseConfig {
         this.GameVersion = '0.0.1';
         this.IPMasterName = 'IPMaster2';
         this.RoomVersion = '10';
-        // this.RoomKind.VIP = '3';
+        this.RoomKind.VIP = '3';
         this.SceneName.Lobby = 'ktfLobby2024';
         this.SceneName.Game1 = 'ktfGame2024';
         this.SceneName.Game2 = 'ktfDragon2024'
+        this.ClientType = "1";
         this.LoadGameByPrefab = true;
+        this.IsNewLogin = false;
+
 
         this.NOTIFY_JACKPOT.array_type_notify_jackpot = [];
         this.NOTIFY_MESSAGE.position = {
