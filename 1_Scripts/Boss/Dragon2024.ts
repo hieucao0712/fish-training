@@ -1,4 +1,4 @@
-import {ParticleSystem, _decorator } from 'cc';
+import {Node, ParticleSystem, _decorator } from 'cc';
 const {ccclass, property } = _decorator;
 
 import { gfDragon } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragon';

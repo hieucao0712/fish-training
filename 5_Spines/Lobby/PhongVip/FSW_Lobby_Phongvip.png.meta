@@ -8,30 +8,6 @@
     ".png"
   ],
   "subMetas": {
-    "6c48a": {
-      "importer": "texture",
-      "uuid": "b66be9fc-5b73-434b-a5a1-9e6201c7180d@6c48a",
-      "displayName": "FSW_Lobby_Phongvip",
-      "id": "6c48a",
-      "name": "texture",
-      "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "b66be9fc-5b73-434b-a5a1-9e6201c7180d",
-        "isUuid": true,
-        "visible": false,
-        "minfilter": "linear",
-        "magfilter": "linear",
-        "mipfilter": "none",
-        "anisotropy": 0
-      },
-      "ver": "1.0.22",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
     "f9941": {
       "importer": "sprite-frame",
       "uuid": "b66be9fc-5b73-434b-a5a1-9e6201c7180d@f9941",
@@ -118,6 +94,30 @@
         "atlasUuid": ""
       },
       "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "b66be9fc-5b73-434b-a5a1-9e6201c7180d@6c48a",
+      "displayName": "FSW_Lobby_Phongvip",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "b66be9fc-5b73-434b-a5a1-9e6201c7180d",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
