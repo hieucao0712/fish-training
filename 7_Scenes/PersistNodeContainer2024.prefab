@@ -1880,6 +1880,14 @@
       {
         "__uuid__": "15571480-9aa6-4333-821a-50b36a414d09@f9941",
         "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "bf964672-d499-44e8-8be9-483be1c0c8ea@f9941",
+        "__expectedType__": "cc.SpriteFrame"
+      },
+      {
+        "__uuid__": "e8c94c67-f0af-4ec8-b0f8-72b3c9f66e2d@f9941",
+        "__expectedType__": "cc.SpriteFrame"
       }
     ],
     "background1": {
@@ -45064,7 +45072,6 @@
     "__prefab": {
       "__id__": 2030
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "d650335f-9703-4e12-b2e6-58172ce5904f",
       "__expectedType__": "cc.JsonAsset"
@@ -90672,7 +90679,6 @@
     "__prefab": {
       "__id__": 4064
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "d650335f-9703-4e12-b2e6-58172ce5904f",
       "__expectedType__": "cc.JsonAsset"
