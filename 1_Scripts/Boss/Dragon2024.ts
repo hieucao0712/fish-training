@@ -1,16 +1,16 @@
-import {Node, ParticleSystem, _decorator } from 'cc';
+import {Node, ParticleSystem2D, _decorator } from 'cc';
 const {ccclass, property } = _decorator;
 
 import { gfDragon } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragon';
 
 @ccclass('Dragon2024')
 export class Dragon2024 extends gfDragon {
-    @property(ParticleSystem)
-    arrDust : ParticleSystem[] = [];
-    @property(ParticleSystem)
-    arrSmoke : ParticleSystem[] = [];
-    @property(ParticleSystem)
-    arrElectro : ParticleSystem[] = [];
+    @property(ParticleSystem2D)
+    arrDust : ParticleSystem2D[] = [];
+    @property(ParticleSystem2D)
+    arrSmoke : ParticleSystem2D[] = [];
+    @property(ParticleSystem2D)
+    arrElectro : ParticleSystem2D[] = [];
     @property(Node)
     nodeDust: Node[] = [];
     @property(Node)
