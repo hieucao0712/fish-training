@@ -2,7 +2,8 @@
   "ver": "1.0.6",
   "importer": "bitmap-font",
   "imported": true,
-  "uuid": "61559561-b98b-4db9-9866-5e571f8b41b4",
+
+  "uuid": "a97f9fce-d06b-44ca-a368-3df5fe8a631c",
   "files": [
     ".json"
   ],
@@ -229,6 +230,7 @@
       }
     },
     "fontSize": 32,
-    "textureUuid": "60e6155c-1e52-4151-9126-1c0e23fd74d0"
+
+    "textureUuid": "f58da096-658c-4524-bbcc-a1d69646f604"
   }
 }

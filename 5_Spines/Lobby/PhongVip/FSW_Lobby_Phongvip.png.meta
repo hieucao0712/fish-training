@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "b9bc9a7a-e93b-48dc-90b5-a5a53d5e27d6",
+  "uuid": "edcfb60f-a4bf-4948-8aba-35da2d1dcbc0",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "b9bc9a7a-e93b-48dc-90b5-a5a53d5e27d6@6c48a",
+      "uuid": "edcfb60f-a4bf-4948-8aba-35da2d1dcbc0@6c48a",
       "displayName": "FSW_Lobby_Phongvip",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b9bc9a7a-e93b-48dc-90b5-a5a53d5e27d6",
+        "imageUuidOrDatabaseUri": "edcfb60f-a4bf-4948-8aba-35da2d1dcbc0",
         "visible": true
       },
       "ver": "1.0.22",
@@ -36,7 +36,7 @@
   "userData": {
     "hasAlpha": true,
     "type": "texture",
-    "redirect": "b9bc9a7a-e93b-48dc-90b5-a5a53d5e27d6@6c48a",
+    "redirect": "edcfb60f-a4bf-4948-8aba-35da2d1dcbc0@6c48a",
     "fixAlphaTransparencyArtifacts": false
   }
 }
