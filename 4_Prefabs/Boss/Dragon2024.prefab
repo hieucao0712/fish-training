@@ -6849,11 +6849,11 @@
     },
     "loop": true,
     "_timeScale": 1,
-    "_useTint": true,
+    "_useTint": false,
     "_preCacheMode": 0,
     "_cacheMode": 0,
     "_defaultCacheMode": 0,
-    "_debugBones": true,
+    "_debugBones": false,
     "_debugSlots": false,
     "_skeletonData": {
       "__uuid__": "1a193560-9b0e-42c7-bcec-550d7718adba",

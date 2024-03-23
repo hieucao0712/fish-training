@@ -12,9 +12,10 @@ export class EffectDragon2024 extends gfDragonEffectLayer {
         Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, "JackpotWinPopup2024", this.endData);
     }
 
-    protected onDragonBallDropped(data: any): void {
+    onDragonBallDropped(data) {
+        console.warn(data)
         Emitter.instance.emit(DragonEvent.SOUND.DRAGON_DROP_BALL);
-        super.onDragonBallDropped(data);   
+        super.onDragonBallDropped(data);  
     }
 }
 
