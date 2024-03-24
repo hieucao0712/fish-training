@@ -25,6 +25,12 @@ export class Dragon2024 extends gfDragon {
         In_L: "Swim In",
         In_R: "Swim In"
     }
+
+    playPlasmaEffect () {
+        
+    }
+
+    
 }
 
 

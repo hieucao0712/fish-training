@@ -14,7 +14,7 @@ export class EffectDragon2024 extends gfDragonEffectLayer {
 
     protected onDragonBallDropped(data: any): void {
         Emitter.instance.emit(DragonEvent.SOUND.DRAGON_DROP_BALL);
-        super.onDragonBallDropped(data);   
+        super.onDragonBallDropped(data);  
     }
 }
 

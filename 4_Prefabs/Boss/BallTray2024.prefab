@@ -966,12 +966,12 @@
     "playOnLoad": true,
     "_clips": [
       {
-        "__uuid__": "411904a6-eafc-4bb7-beb8-4d8db8eb90ab",
+        "__uuid__": "ab74e9e6-ab10-43dd-baf9-e6aad44644e9",
         "__expectedType__": "cc.AnimationClip"
       }
     ],
     "_defaultClip": {
-      "__uuid__": "411904a6-eafc-4bb7-beb8-4d8db8eb90ab",
+      "__uuid__": "ab74e9e6-ab10-43dd-baf9-e6aad44644e9",
       "__expectedType__": "cc.AnimationClip"
     },
     "_id": ""
@@ -1419,6 +1419,8 @@
       "__id__": 0
     },
     "fileId": "07J7YFxfBD+o7D6SFiMlMy",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -1503,6 +1505,8 @@
       "__id__": 0
     },
     "fileId": "27lyMjK6FOZ7n+WzCdAQYl",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -1677,6 +1681,7 @@
       "__id__": 0
     },
     "fileId": "c46/YsCPVOJYA4mWEpNYRx",
-    "instance": null
+    "instance": null,
+    "targetOverrides": null
   }
 ]
