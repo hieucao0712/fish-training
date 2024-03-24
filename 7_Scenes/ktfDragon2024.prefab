@@ -477,8 +477,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": null,
+      "y": null
     },
     "_id": ""
   },
@@ -2605,7 +2605,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "0",
     "asset": {
       "__uuid__": "8e10ffc8-37e5-4e21-88ce-0cf533830c05@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2613,7 +2613,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "1",
     "asset": {
       "__uuid__": "3165a84a-0736-4378-832d-b7f3bf928b0f@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2621,7 +2621,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "2",
     "asset": {
       "__uuid__": "afdd38ad-617b-44fe-986f-0b9a4e842c3f@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2629,7 +2629,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "3",
     "asset": {
       "__uuid__": "b36ae098-dece-4eed-ad75-346fcda21011@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2637,7 +2637,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "4",
     "asset": {
       "__uuid__": "334b06ee-203c-4f2d-81bc-481c9ba1369c@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2645,7 +2645,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "5",
     "asset": {
       "__uuid__": "2b237db8-c46e-45af-9c7e-e5902b26c667@f9941",
       "__expectedType__": "cc.SpriteFrame"
@@ -2653,7 +2653,7 @@
   },
   {
     "__type__": "gfRoomSpriteFrame",
-    "_name": "",
+    "_name": "6",
     "asset": {
       "__uuid__": "5e8debbd-0969-4394-98be-a22feb5042ad@f9941",
       "__expectedType__": "cc.SpriteFrame"
