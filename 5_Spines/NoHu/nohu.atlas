@@ -1,0 +1,216 @@
+
+nohu.png
+size: 2972,772
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm Armor
+  rotate: false
+  xy: 2866, 98
+  size: 104, 111
+  orig: 104, 111
+  offset: 0, 0
+  index: -1
+Arm Left
+  rotate: false
+  xy: 2320, 105
+  size: 121, 75
+  orig: 121, 75
+  offset: 0, 0
+  index: -1
+Arm Right
+  rotate: false
+  xy: 1634, 166
+  size: 306, 264
+  orig: 306, 264
+  offset: 0, 0
+  index: -1
+Back Armor
+  rotate: true
+  xy: 1942, 293
+  size: 137, 376
+  orig: 137, 376
+  offset: 0, 0
+  index: -1
+Beard Long
+  rotate: false
+  xy: 943, 415
+  size: 643, 15
+  orig: 643, 15
+  offset: 0, 0
+  index: -1
+Beard Nose
+  rotate: false
+  xy: 1933, 2
+  size: 128, 71
+  orig: 128, 71
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 576
+  size: 2917, 194
+  orig: 2917, 194
+  offset: 0, 0
+  index: -1
+Body Glow
+  rotate: false
+  xy: 2, 308
+  size: 939, 122
+  orig: 939, 122
+  offset: 0, 0
+  index: -1
+Forearm Armor
+  rotate: false
+  xy: 312, 34
+  size: 215, 100
+  orig: 215, 100
+  offset: 0, 0
+  index: -1
+Forearm Left
+  rotate: true
+  xy: 2543, 133
+  size: 297, 86
+  orig: 297, 86
+  offset: 0, 0
+  index: -1
+Fur Back
+  rotate: false
+  xy: 2, 432
+  size: 2627, 142
+  orig: 2627, 142
+  offset: 0, 0
+  index: -1
+Hair 1
+  rotate: true
+  xy: 2870, 211
+  size: 255, 100
+  orig: 255, 100
+  offset: 0, 0
+  index: -1
+Hair 2
+  rotate: false
+  xy: 2631, 468
+  size: 278, 106
+  orig: 278, 106
+  offset: 0, 0
+  index: -1
+Hair 3
+  rotate: false
+  xy: 1634, 74
+  size: 297, 90
+  orig: 297, 90
+  offset: 0, 0
+  index: -1
+Hair 4
+  rotate: false
+  xy: 1933, 75
+  size: 314, 79
+  orig: 314, 79
+  offset: 0, 0
+  index: -1
+Hair 5
+  rotate: true
+  xy: 2631, 154
+  size: 312, 84
+  orig: 312, 84
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 539, 117
+  size: 407, 189
+  orig: 407, 189
+  offset: 0, 0
+  index: -1
+Head Armor
+  rotate: true
+  xy: 2717, 229
+  size: 237, 151
+  orig: 237, 151
+  offset: 0, 0
+  index: -1
+Horn Left
+  rotate: false
+  xy: 2, 23
+  size: 308, 111
+  orig: 308, 111
+  offset: 0, 0
+  index: -1
+Horn Right
+  rotate: false
+  xy: 1942, 156
+  size: 376, 135
+  orig: 376, 135
+  offset: 0, 0
+  index: -1
+Hu
+  rotate: true
+  xy: 1344, 38
+  size: 375, 288
+  orig: 375, 288
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: false
+  xy: 2, 136
+  size: 535, 170
+  orig: 535, 170
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 2443, 9
+  size: 239, 122
+  orig: 239, 122
+  offset: 0, 0
+  index: -1
+No
+  rotate: false
+  xy: 948, 101
+  size: 394, 312
+  orig: 394, 312
+  offset: 0, 0
+  index: -1
+Shoulder Armor
+  rotate: true
+  xy: 2717, 103
+  size: 124, 147
+  orig: 124, 147
+  offset: 0, 0
+  index: -1
+Tail Long Above
+  rotate: false
+  xy: 836, 26
+  size: 305, 73
+  orig: 305, 73
+  offset: 0, 0
+  index: -1
+Tail Long Below
+  rotate: false
+  xy: 529, 41
+  size: 305, 74
+  orig: 305, 74
+  offset: 0, 0
+  index: -1
+Tail Short Above
+  rotate: false
+  xy: 1143, 45
+  size: 187, 54
+  orig: 187, 54
+  offset: 0, 0
+  index: -1
+Tail Short Below
+  rotate: false
+  xy: 2063, 21
+  size: 189, 52
+  orig: 189, 52
+  offset: 0, 0
+  index: -1
+Thigh Armor
+  rotate: false
+  xy: 2320, 182
+  size: 221, 248
+  orig: 221, 248
+  offset: 0, 0
+  index: -1

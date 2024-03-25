@@ -477,8 +477,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -2449,7 +2449,7 @@
       "__expectedType__": "cc.Prefab"
     },
     "cutSceneJackpotPrefab": {
-      "__uuid__": "f8228a32-6641-497a-b353-4204d920a603",
+      "__uuid__": "f321b695-6c71-4b8d-9272-b85135b0de27",
       "__expectedType__": "cc.Prefab"
     },
     "_id": ""
