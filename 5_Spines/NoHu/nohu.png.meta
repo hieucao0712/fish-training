@@ -1,0 +1,70 @@
+{
+  "ver": "1.0.25",
+  "importer": "image",
+  "imported": true,
+  "uuid": "f37fd8d5-6763-495f-81ee-3c898c54b833",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "nohu": {
+      "ver": "1.0.4",
+      "uuid": "c7b4ab29-ded9-4bd3-a372-ee1043ecc859",
+      "rawTextureUuid": "4a9b0d28-768f-421e-bdb7-1c4340b85fbf",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0.5,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 2968,
+      "height": 767,
+      "rawWidth": 2972,
+      "rawHeight": 772,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {},
+      "importer": "*",
+      "imported": false,
+      "files": [],
+      "userData": {},
+      "displayName": "",
+      "id": "",
+      "name": ""
+    },
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "f37fd8d5-6763-495f-81ee-3c898c54b833@6c48a",
+      "displayName": "nohu",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "f37fd8d5-6763-495f-81ee-3c898c54b833",
+        "visible": true
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "redirect": "f37fd8d5-6763-495f-81ee-3c898c54b833@6c48a",
+    "fixAlphaTransparencyArtifacts": false
+  }
+}
