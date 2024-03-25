@@ -5,11 +5,11 @@ import EventEmitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfE
 import FishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
 import { gfGeneralInitialization } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGeneralInitialization';
 import Localize from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfLocalize';
-import MainController from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainController';
 import MainFSM from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainFSM';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 import NetworkParser from '../../../../cc-common/cc30-fishbase/Scripts/Network/gfNetworkParser';
 import GameConfig from '../Config/Config2024';
+import MainController from './MainController2024';
 import NodePoolConfig from './NodePoolConfig2024';
 import PoolManager from './PoolManager2024';
 const { ccclass } = _decorator;
