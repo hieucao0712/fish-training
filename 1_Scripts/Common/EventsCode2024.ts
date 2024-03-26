@@ -36,7 +36,20 @@ let EventsCode2024 = {
         START_EFFECT_ONE_FOR_ALL    : "START_EFFECT_ONE_FOR_ALL",
         END_EFFECT                  : "END_EFFECT",
         EFFECT_DIE                  : "EFFECT_DIE"
-    }
+    },
+    EFFECT_LAYER: {
+        EFFECT_MINI_BOSS_DIE        :       "EFFECT_MINI_BOSS_DIE",
+        SCAN_MINI_BOSS              :       "SCAN_MINI_BOSS",
+        SCAN_TRANSITION             :       "SCAN_TRANSITION",
+        SHOW_POPUP_WIN_JACKPOT      :       "SHOW_POPUP_WIN_JACKPOT"
+    },
+    GAME_LAYER: {
+        CATCH_FISH_BY_PLASMA        :       "CATCH_FISH_BY_PLASMA",
+        CATCH_FISH_BY_LIGHTING      :       "CATCH_FISH_BY_LIGHTING",
+        DROP_ITEM                   :       "GAME_DROP_ITEM",
+        UPDATE_WALLET_OTHER_USER    :       "UPDATE_WALLET_OTHER_USER",
+    },
+    
 };
 
 EventsCode2024 = mergeTwoObject(gfBaseEvents, EventsCode2024);
