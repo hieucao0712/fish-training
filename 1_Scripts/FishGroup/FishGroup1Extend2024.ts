@@ -27,11 +27,11 @@ export class FishGroup1Extend2024 extends Component {
         const points = [];
         const startX = 0;
         const endX = AppSize.Width;
-        const a = -AppSize.Height / (endX * endX); // Inverted 'a' for upward parabola
+        const a = -AppSize.Height / (endX * endX); 
 
         for (let i = 0; i < count; ++i) {
             const x = startX + (endX - startX) * (i / (count - 1));
-            const y = a * x * x + AppSize.Height; // Adjusted for bottom to top movement
+            const y = a * x * x + AppSize.Height; 
             points.push(v2(x, y));
         }
         return points;
