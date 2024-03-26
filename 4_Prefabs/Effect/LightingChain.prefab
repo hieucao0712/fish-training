@@ -160,11 +160,11 @@
       "a": 255
     },
     "loop": true,
-    "_timeScale": 1,
+    "_timeScale": 3,
     "_useTint": false,
-    "_preCacheMode": 0,
-    "_cacheMode": 0,
-    "_defaultCacheMode": 0,
+    "_preCacheMode": 1,
+    "_cacheMode": 1,
+    "_defaultCacheMode": 1,
     "_debugBones": false,
     "_debugSlots": false,
     "_skeletonData": {
@@ -173,8 +173,8 @@
     },
     "_premultipliedAlpha": false,
     "defaultSkin": "default",
-    "defaultAnimation": "<None>",
-    "_enableBatch": false,
+    "defaultAnimation": "animation",
+    "_enableBatch": true,
     "_sockets": [],
     "_debugMesh": false,
     "_id": ""

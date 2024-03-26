@@ -1,5 +1,5 @@
 import { _decorator, Component, instantiate, Prefab, v2, Node, v3 } from 'cc';
-import { registerEvent, removeEvents } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
+import { getPositionInOtherNode, getRotation, registerEvent, removeEvents } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
 import ReferenceManager from '../Common/ReferenceManager2024';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
