@@ -1,4 +1,4 @@
-import { _decorator, Component, instantiate, Prefab, v2, Node, v3 } from 'cc';
+import { _decorator, Component, instantiate, Prefab, v2, Node, v3, UITransform } from 'cc';
 import { getPositionInOtherNode, getRotation, registerEvent, removeEvents } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
 import ReferenceManager from '../Common/ReferenceManager2024';
@@ -18,7 +18,7 @@ export class LightningChainEffect2024 extends Component {
     protected onLoad(): void {
         registerEvent(EventCode.LIGHTING_CHAIN.START_EFFECT, this.playEffectLighting, this);
         registerEvent(EventCode.LIGHTING_CHAIN.START_EFFECT_ONE_FOR_ALL, this.playEffectLightingOneForAll, this);
-        registerEvent(EventCode.COMMON.GAME_SHOW, this.resetOnExit, this);
+        registerEvent(EventCode["COMMON"].GAME_SHOW, this.resetOnExit, this);
     }
 
 
@@ -36,8 +36,8 @@ export class LightningChainEffect2024 extends Component {
             const startPos = getPositionInOtherNode(this.node, player.gun);
             player.gun.angle = getRotation(endPos, startPos);
             const lighting = this._getLighting();
-            lighting.setPosition(this.node.convertToNodeSpaceAR(player.gun.convertToWorldSpaceAR(v2(0, 0))));
-            lighting.playEffectLight(null, fishTarget, this._onCompleteFirstLighting.bind(this, fishTarget, listFishRight, listFishLeft, infoReward, fishTarget, ListFish.length), isDie);
+            lighting.setPosition(this.node.getComponent(UITransform).convertToNodeSpaceAR(player.gun.getComponent(UITransform).convertToWorldSpaceAR(v3(0, 0))));
+            lighting["playEffectLight"](null, fishTarget, this._onCompleteFirstLighting.bind(this, fishTarget, listFishRight, listFishLeft, infoReward, fishTarget, ListFish.length), isDie);
         } else {
             this._sendEndEffect(infoReward);
         }
@@ -49,8 +49,8 @@ export class LightningChainEffect2024 extends Component {
         listBonusFish.forEach(info => {
             const fish = FishManager.instance.getFishById(info.FishID);
             const lighting = this._getLighting();
-            lighting.setPosition(this.node.convertToNodeSpaceAR(infoTargetFrom.node.convertToWorldSpaceAR(v2(0, 0))));
-            lighting.playEffectLight(infoTargetFrom, fish, null, true, true);
+            lighting.setPosition(this.node.getComponent(UITransform).convertToNodeSpaceAR(infoTargetFrom.node.convertToWorldSpaceAR(v2(0, 0))));
+            lighting["playEffectLight"](infoTargetFrom, fish, null, true, true);
         });
     }
 
@@ -137,10 +137,10 @@ export class LightningChainEffect2024 extends Component {
             const fishInfoRight = listFishRight.shift();
 
             if (fishInfoLeft && lightingLeft.parent) {
-                lightingLeft.playEffectLight(fishTarget, fishInfoLeft, this._onCompleteLighting.bind(this, fishInfoLeft, listFishLeft, infoRewardEndLeft), true);
+                lightingLeft["playEffectLight"](fishTarget, fishInfoLeft, this._onCompleteLighting.bind(this, fishInfoLeft, listFishLeft, infoRewardEndLeft), true);
             }
             if (fishInfoRight && lightingRight.parent){
-                lightingRight.playEffectLight(fishTarget, fishInfoRight, this._onCompleteLighting.bind(this, fishInfoRight, listFishRight, infoRewardEndRight), true);
+                lightingRight["playEffectLight"](fishTarget, fishInfoRight, this._onCompleteLighting.bind(this, fishInfoRight, listFishRight, infoRewardEndRight), true);
             }
 
 
@@ -198,7 +198,7 @@ export class LightningChainEffect2024 extends Component {
 
     _sendEndEffect(infoReward) {
         Emitter.instance.emit(EventCode.LIGHTING_CHAIN.END_EFFECT, infoReward);
-        Emitter.instance.emit(EventCode.GAME_LAYER.CATCH_FISH_BY_LIGHTING, infoReward);
+        Emitter.instance.emit(EventCode["GAME_LAYER"].CATCH_FISH_BY_LIGHTING, infoReward);
         Emitter.instance.emit(EventCode.LIGHTING_CHAIN.EFFECT_DIE, infoReward);
     }
 
