@@ -19,18 +19,21 @@ export class FishGroup2Extend2024 extends Component {
 
     static createFishLine(fishCount, yCoord, space, speed, xOffset = 0) {
         const { AppSize } = GameConfig.instance;
-        let RIGHT = -200;
-        let LEFT = AppSize.Width + 200;
-        const flip = -FishGroupData.flipCoord;
-        if (FishGroupData.isFlipped()) {
+        let LEFT = -200;
+        let RIGHT = AppSize.Width + 200;
+        if (FishGroupData.isFlipped()) { 
             [LEFT, RIGHT] = [RIGHT, LEFT];
             yCoord = AppSize.Height - yCoord;
         }
         const distance = Math.abs(RIGHT - LEFT) + fishCount * space - xOffset;
-
+    
         for (let i = 0; i < fishCount; ++i) {
-            const startX = LEFT - (i * space - xOffset) * flip;
-            FishGroupHelper.createSimpleMovingFish(v2(startX, yCoord), v2(startX + distance * flip, yCoord), 0, speed);
+            const startX = RIGHT + (i * space - xOffset) * FishGroupData.flipCoord; 
+            FishGroupHelper.createSimpleMovingFish(
+                v2(startX, yCoord),
+                v2(startX - distance * FishGroupData.flipCoord, yCoord), 
+                0,
+                speed);
         }
     }
 }

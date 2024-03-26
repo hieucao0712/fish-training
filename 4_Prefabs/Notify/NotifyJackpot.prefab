@@ -456,7 +456,7 @@
       "__expectedType__": "cc.TTFFont"
     },
     "moneyFont": {
-      "__uuid__": "a1123c14-23f4-454a-92b3-ca7c6efa560e",
+      "__uuid__": "a97f9fce-d06b-44ca-a368-3df5fe8a631c",
       "__expectedType__": "cc.BitmapFont"
     },
     "mainAnim": {
