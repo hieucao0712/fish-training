@@ -21,6 +21,7 @@ export class FishGroup1Extend2024 extends Component {
         });
     }
 
+
     static createParabolFishGroup({
         fishCount, startPos, numberStep, distanceX, radius, speed }) {
         const distanceMini = distanceX * 1.25 / numberStep;

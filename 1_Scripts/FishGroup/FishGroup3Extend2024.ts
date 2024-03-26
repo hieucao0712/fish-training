@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, v2 } from "cc";
+
 import FishGroupHelper from "../../../../cc-common/cc30-fishbase/Modules/FishGroup/gfFishGroupHelper";
 import GameConfig from "../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseConfig";
 import FishGroupData from "../../../../cc-common/cc30-fishbase/Modules/FishGroup/gfFishGroupData";
@@ -10,6 +11,7 @@ const SPEED_WAVE = 100;
 const PAD_X = 60;
 const PAD_Y = 30;
 @ccclass("FishGroup3Extend2024")
+
 export class FishGroup3Extend2024 extends Component {
 
     static create() {
