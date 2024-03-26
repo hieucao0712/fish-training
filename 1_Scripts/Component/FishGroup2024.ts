@@ -9,7 +9,7 @@ const { ccclass, property } = _decorator;
 @ccclass('FishGroup2024')
 export class FishGroup2024 extends gfFishGroupMgr {
     createFishGroup1(){
-        FishGroup1Extend2024.create(); // parabol
+        FishGroup4Extend2024.create(); // parabol
     }
     createFishGroup2(){
         FishGroup2Extend2024.create(); // 2 duong song song 
