@@ -16,7 +16,6 @@ export class LightingChain2024 extends Component {
         this.node["reset"] = this.reset.bind(this);
         this.node["getTimeMove"] = this.getTimeMove.bind(this);
         registerEvent(EventCode["COMMON"].GAME_SHOW, this.reset, this);
-        console.error(this.spine.getComponent(sp.Skeleton));
     }
 
     playEffectLight(infoTargetFrom, infoTargetTo, callBack, isDie = true, isFishDead = false) {
