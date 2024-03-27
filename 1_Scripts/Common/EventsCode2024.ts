@@ -67,6 +67,7 @@ let EventsCode2024 = {
 
     GAME_LAYER: {
         REMOVE_FISH: "REMOVE_FISH",
+        CATCH_FISH_BY_LIGHTING: "CATCH_FISH_BY_LIGHTING",
     }
 };
 
