@@ -4769,7 +4769,7 @@
       "__uuid__": "86542125-fcb8-4a54-bc80-d525a74c9dc7",
       "__expectedType__": "cc.Prefab"
     },
-    "bossKind": 32,
+    "bossKind": 45,
     "bossEffectLayer": {
       "__id__": 100
     }
