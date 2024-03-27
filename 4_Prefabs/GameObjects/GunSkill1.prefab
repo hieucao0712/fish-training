@@ -192,8 +192,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 523.44,
-      "height": 2232.21
+      "width": 256.24,
+      "height": 288.33
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -277,7 +277,7 @@
       "b": 255,
       "a": 255
     },
-    "loop": false,
+    "loop": true,
     "_timeScale": 1,
     "_useTint": false,
     "_preCacheMode": 0,
@@ -286,12 +286,12 @@
     "_debugBones": false,
     "_debugSlots": false,
     "_skeletonData": {
-      "__uuid__": "313d6c79-ac8a-4161-950b-c9ee4f4c5de5",
+      "__uuid__": "d4f0d45c-b2da-4682-a44e-c0cc88978bb0",
       "__expectedType__": "sp.SkeletonData"
     },
     "_premultipliedAlpha": false,
     "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultAnimation": "lazer_idle",
     "_enableBatch": false,
     "_sockets": [],
     "_debugMesh": false,
