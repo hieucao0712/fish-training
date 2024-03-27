@@ -8,7 +8,7 @@ const { ccclass, property } = _decorator;
 export class FishGroup2Extend2024 extends Component {
     static create() {
         const { AppSize } = GameConfig.instance;
-        const fishCount = [50, 50, 50, 2, 1, 3, 1];
+        const fishCount = [100,100,100,1,3,2];
         const Y1 = 220;
         const space = 100;
         const speed = 120;
