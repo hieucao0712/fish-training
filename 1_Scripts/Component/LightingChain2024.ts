@@ -1,6 +1,6 @@
-import { _decorator, Component, Node, sp, sys, tween, v2 } from 'cc';
+import { _decorator, Component, Node, sp, sys, tween, v2, Skeleton, UITransform, v3 } from 'cc';
 import FishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
-import { registerEvent, removeEvents } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
+import { getPositionInOtherNode, getRotation, registerEvent, removeEvents, v2Distance } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
 import { call, delay, scaleTo, stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
 import { getRandomInt } from '../../../../cc-common/cc-share/common/utils';
@@ -10,12 +10,13 @@ const { ccclass, property } = _decorator;
 export class LightingChain2024 extends Component {
     @property (Node)
     spine: Node = null;
-
+    callBack = null;
     onLoad() {
-        this.node.playEffectLight = this.playEffectLight.bind(this);
-        this.node.reset = this.reset.bind(this);
-        this.node.getTimeMove = this.getTimeMove.bind(this);
-        registerEvent(EventCode.COMMON.GAME_SHOW, this.reset, this);
+        this.node["playEffectLight"] = this.playEffectLight.bind(this);
+        this.node["reset"] = this.reset.bind(this);
+        this.node["getTimeMove"] = this.getTimeMove.bind(this);
+        registerEvent(EventCode["COMMON"].GAME_SHOW, this.reset, this);
+        console.error(this.spine.getComponent(sp.Skeleton));
     }
 
     playEffectLight(infoTargetFrom, infoTargetTo, callBack, isDie = true, isFishDead = false) {
@@ -109,11 +110,9 @@ export class LightingChain2024 extends Component {
         }
         const endPos = infoTargetTo.getLockPositionByNodeSpace(this.node.parent);
         const startPos = this.node.getPosition();
-
-        const distance = v2Distance(this.node.convertToWorldSpaceAR(v2(0, 0)), endPos);
+        const distance = v2Distance(this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(0,0,0)), endPos);
         const point = getPositionInOtherNode(this.node.parent, infoTargetTo.node);
         const angle = getRotation(endPos, startPos) - 90;
-
         const size = distance / 330;
 
         const timeMove = distance / 3000;
