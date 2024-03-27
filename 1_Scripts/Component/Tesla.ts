@@ -11,6 +11,7 @@ import { getPostionInOtherNode } from '../../../../cc-common/cc-share/common/uti
 import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
 import EventCode from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
+import EventsCode2024 from '../Common/EventsCode2024';
 
 const { ccclass, property } = _decorator;
 @ccclass('Tesla')
@@ -41,7 +42,7 @@ export class Tesla extends gfLaserGun {
         idTargetFish = listCatchLaser.length > 0 ? listCatchLaser[0] : -1;
         const data = {
             Angle: player.getGunAngle(),
-            ListFish: listFish.length > 0 ? listFish : [-1],
+            ListFish: listCatchLaser.length > 0 ? listCatchLaser : [-1],
             SkillID: this._skillID,
             Targetfish: idTargetFish
         };
@@ -90,6 +91,8 @@ export class Tesla extends gfLaserGun {
                 this.onAfterGunFire(callback);
             })
             .start();
+
+        Emitter.instance.emit(EventsCode2024.FISH_LAYER.CATCH_FISH_BY_SKILL, data);
     }
 
     playAnimationShow(data, callback) {
