@@ -1,4 +1,4 @@
-import { _decorator, Component, instantiate, Prefab, v2, Node, v3, UITransform } from 'cc';
+import { _decorator, Component, instantiate, Prefab, v2, v3, UITransform } from 'cc';
 import { getPositionInOtherNode, getRotation, registerEvent, removeEvents } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
 import ReferenceManager from '../Common/ReferenceManager2024';
@@ -198,7 +198,7 @@ export class LightningChainEffect2024 extends Component {
 
     _sendEndEffect(infoReward) {
         Emitter.instance.emit(EventCode.LIGHTING_CHAIN.END_EFFECT, infoReward);
-        Emitter.instance.emit(EventCode["GAME_LAYER"].CATCH_FISH_BY_LIGHTING, infoReward);
+        Emitter.instance.emit(EventCode.GAME_LAYER.CATCH_FISH_BY_LIGHTING, infoReward);
         Emitter.instance.emit(EventCode.LIGHTING_CHAIN.EFFECT_DIE, infoReward);
     }
 
