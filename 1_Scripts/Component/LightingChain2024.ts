@@ -16,7 +16,6 @@ export class LightingChain2024 extends Component {
         this.node["reset"] = this.reset.bind(this);
         this.node["getTimeMove"] = this.getTimeMove.bind(this);
         registerEvent(EventCode["COMMON"].GAME_SHOW, this.reset, this);
-        console.error(this.spine.getComponent(sp.Skeleton));
     }
 
     playEffectLight(infoTargetFrom, infoTargetTo, callBack, isDie = true, isFishDead = false) {
@@ -55,7 +54,7 @@ export class LightingChain2024 extends Component {
             let dt = getRandomInt(0, duration * 10) / 10;
             this.spine.getComponent(sp.Skeleton).setAnimation(0, 'animation', true);
             this.spine.getComponent(sp.Skeleton).timeScale = size;
-            sys.isNative ? this.spine.getComponent(sp.Skeleton)._updateRealtime(dt) : this.spine.getComponent(sp.Skeleton).update(dt);
+            sys.isNative ? this.spine.getComponent(sp.Skeleton)['_updateRealtime'](dt) : this.spine.getComponent(sp.Skeleton).updateAnimation(dt);
             
             tween(this.spine).
             sequence(
@@ -85,12 +84,12 @@ export class LightingChain2024 extends Component {
                                 this.node.destroy();
                             });
                         })
-                    )
+                    ).start();
                     if (typeof this.callBack === 'function'){
                         this.callBack();
                     }
                 })
-            )
+            ).start();
         } else {
             if (typeof this.callBack === 'function')
                 this.callBack();
