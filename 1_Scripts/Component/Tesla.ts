@@ -1,11 +1,7 @@
-import { _decorator, Component, Node, SkeletalAnimation, Skeleton, sp, tween } from 'cc';
-// import { gfLaserGun } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfLaserGun';
+import { _decorator, sp, tween } from 'cc';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
-// import DataStore from '../Common/DataStore2024';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 import FishManager from '../Common/FishManager2024';
-import GameConfig from '../Config/Config2024';
-import { gfBaseGunSkill } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfBaseGunSkill';
 import { gfLaserGun } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfLaserGun';
 import { getPostionInOtherNode } from '../../../../cc-common/cc-share/common/utils';
 import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
@@ -44,7 +40,7 @@ export class Tesla extends gfLaserGun {
             Angle: player.getGunAngle(),
             ListFish: listCatchLaser.length > 0 ? listCatchLaser : [-1],
             SkillID: this._skillID,
-            Targetfish: idTargetFish
+            TargetFish: idTargetFish
         };
         DataStore.instance.setLockGun(true);
         Emitter.instance.emit(EventCode.GUN_SKILL.ON_SEND_FIRE_ONE_SHOT_GUN_SKILL, data);
