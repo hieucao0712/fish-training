@@ -45,7 +45,6 @@ export class Dragon2024 extends gfDragon {
             this.nodeElectro[i].setPosition(this.box[i].position);
         }
     }
-
 }
 
 
