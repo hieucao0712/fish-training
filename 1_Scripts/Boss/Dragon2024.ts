@@ -10,6 +10,9 @@ export class Dragon2024 extends gfDragon {
     arrSmoke: ParticleSystem2D[] = [];
     @property(ParticleSystem2D)
     arrElectro: ParticleSystem2D[] = [];
+
+    @property(Node)
+    box: Node[] = [];
     @property(Node)
     nodeDust: Node[] = [];
     @property(Node)
@@ -24,7 +27,25 @@ export class Dragon2024 extends gfDragon {
         In_L: "Swim In",
         In_R: "Swim In"
     }
+
     
+    update(dt: any): void {
+        this.updateSmokePos();
+        this.updateElectroPos();
+    }
+
+    updateSmokePos(){
+        for(let i = 0; i < this.nodeSmoke.length; i++){
+            this.nodeSmoke[i].setPosition(this.box[i].position);
+        }
+    }
+
+    updateElectroPos(){
+        for(let i = 0; i < this.nodeElectro.length; i++){
+            this.nodeElectro[i].setPosition(this.box[i].position);
+        }
+    }
+
 }
 
 
