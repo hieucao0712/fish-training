@@ -8,7 +8,12 @@ export class FishGroup4Extend2024 {
     static create() {
         const width = GameConfig.instance.AppSize.Width / 2;
         const height = GameConfig.instance.AppSize.Height / 2;
-        this.heartCallback(10, v2(width, height), 360 * 0.67, 20, 720);
+        const offsetX = 480 * 0.67 * FishGroupData.flipCoord;
+        const radismain = 360 * 0.67;
+
+        this.heartCallback(20, v2(width, height), radismain, 16, 720);
+        this.heartCallback(20, v2(width, height), radismain - 36, 18, 720 + 90);
+        this.heartCallback(18, v2(width, height), radismain - 36 - 56, 20, 720 + 90);
     }
 
     static heartCallback(index, center, radius, fishDuration, angle) {
@@ -38,7 +43,7 @@ export class FishGroup4Extend2024 {
     }
 
     static normalizeAngle(angle) {
-        angle %= Math.PI;
+        angle %= 2 * Math.PI;
         if (angle < 0) {
             return angle + 2 * Math.PI;
         }
