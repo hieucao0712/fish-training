@@ -7,6 +7,10 @@ export default class Config2024 extends gfBaseConfig {
         DRAGON: 'Dragon2024',
     };
 
+    SOUND_BACKGROUND_CONFIG_2024 = {
+        GODZILLA: "GODZILLA",
+    };
+
     constructor() {
         super();
         Config2024.instance = this;
@@ -27,6 +31,8 @@ export default class Config2024 extends gfBaseConfig {
         };
 
         this.SOUND_SLIDER = true;
+
+
     }
 
     destroy() {
