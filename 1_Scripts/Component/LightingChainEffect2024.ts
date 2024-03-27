@@ -25,7 +25,8 @@ export class LightningChainEffect2024 extends Component {
     playEffectLighting(rewardData) {
         const infoReward = rewardData;
 
-        const {ListFish, TargetFish, DeskStation} = rewardData;
+        let {ListFish, TargetFish, DeskStation} = rewardData;
+        if (!TargetFish) TargetFish = ListFish[0].FishID;
 
         const player = ReferenceManager.instance.getPlayerByDeskStation(DeskStation);
 
