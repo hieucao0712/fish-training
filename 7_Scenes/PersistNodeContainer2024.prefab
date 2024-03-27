@@ -20729,7 +20729,7 @@
     "defaultFontSize": 32,
     "defaultFont": null,
     "moneyFont": {
-      "__uuid__": "f7afd69f-9961-4321-8aa9-35302a55e9c5",
+      "__uuid__": "a97f9fce-d06b-44ca-a368-3df5fe8a631c",
       "__expectedType__": "cc.BitmapFont"
     },
     "speed": 320,
@@ -45188,7 +45188,6 @@
     "__prefab": {
       "__id__": 2036
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "d650335f-9703-4e12-b2e6-58172ce5904f",
       "__expectedType__": "cc.JsonAsset"
