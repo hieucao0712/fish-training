@@ -15,7 +15,7 @@ export default class Config2024 extends gfBaseConfig {
         super();
         Config2024.instance = this;
         this.GameId = '1990';
-        this.GameVersion = '0.0.1';
+        this.GameVersion = '0.0.2';
         this.IPMasterName = 'IPMaster7';
         this.RoomVersion = '10';
         this.RoomKind.VIP = '3';
