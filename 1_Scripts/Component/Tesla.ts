@@ -1,15 +1,16 @@
 import { _decorator, Component, Node, SkeletalAnimation, Skeleton, sp, tween } from 'cc';
 // import { gfLaserGun } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfLaserGun';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
-import DataStore from '../Common/DataStore2024';
+// import DataStore from '../Common/DataStore2024';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
-import { FishManager } from '../Common/FishManager2024';
+import FishManager from '../Common/FishManager2024';
 import GameConfig from '../Config/Config2024';
 import { gfBaseGunSkill } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfBaseGunSkill';
 import { gfLaserGun } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfLaserGun';
 import { getPostionInOtherNode } from '../../../../cc-common/cc-share/common/utils';
 import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
 import EventCode from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
+import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
 
 const { ccclass, property } = _decorator;
 @ccclass('Tesla')
