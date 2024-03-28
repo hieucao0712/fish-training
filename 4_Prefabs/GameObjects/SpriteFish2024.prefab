@@ -294,8 +294,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -338,7 +338,7 @@
     },
     "_premultipliedAlpha": false,
     "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultAnimation": "animation",
     "_enableBatch": false,
     "_sockets": [],
     "_debugMesh": false,
@@ -428,8 +428,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -472,7 +472,7 @@
     },
     "_premultipliedAlpha": false,
     "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultAnimation": "animation",
     "_enableBatch": false,
     "_sockets": [],
     "_debugMesh": false,
