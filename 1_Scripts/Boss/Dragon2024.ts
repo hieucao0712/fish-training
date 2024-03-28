@@ -4,9 +4,10 @@ import { gfDragon } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 import EventCode from '../Common/EventsCode2024';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
+import { gfBaseFish } from '../../../../cc-common/cc30-fishbase/Scripts/Components/Fishes/gfBaseFish';
 
 @ccclass('Dragon2024')
-export class Dragon2024 extends gfDragon {
+export class Dragon2024 extends gfBaseFish {
     @property(ParticleSystem2D)
     arrDust: ParticleSystem2D[] = [];
     @property(ParticleSystem2D)
@@ -35,8 +36,6 @@ export class Dragon2024 extends gfDragon {
     update(dt: any): void {
         this.updateSmokePos();
         this.updateElectroPos();
-        // this.playDropBall();
-        console.warn(this.listBox[0])
     }
 
     updateSmokePos(){
@@ -52,8 +51,8 @@ export class Dragon2024 extends gfDragon {
     }
 
     onHitState(data){
-        const {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
-
+        const {TypeWin = 3, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
+        
         switch(TypeWin) {
             case 0:
                 console.warn('ON_CASE_0')
@@ -74,6 +73,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     playDropBall (data) {
+        console.warn('ON DROP BALL')
         const {DeskStation, WinAmount, Wallet, BulletMultiple} = data;
         const dataInput = {
             BulletMultiple,
@@ -83,8 +83,7 @@ export class Dragon2024 extends gfDragon {
             Wallet: Wallet
         };
 
-        const worldPos = this.node.convertToWorldSpaceAR(this.listBox[0].offset);
-        console.warn(worldPos)
+        const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
         Emitter.instance.emit(EventCode.DRAGON.DROP_BALL);
         Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {

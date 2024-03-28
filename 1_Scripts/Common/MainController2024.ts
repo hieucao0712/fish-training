@@ -1,8 +1,18 @@
 import { v2 } from 'cc';
 import gfMainController from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfMainController';
 import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
+import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
+import EventCode from './EventsCode2024';
+import NetworkGameEvent from './NetworkGameEvent2024';
+import NetworkParser from '../../../../cc-common/cc30-fishbase/Scripts/Network/gfNetworkParser';
 
 export default class MainController2024 extends gfMainController {
+
+    ctor() {
+        gfMainController.instance = this;
+        NetworkParser.instance.registerEvent(NetworkGameEvent.GAME_ON_HIT_GODZILLA, this.onHitGodzilla.bind(this));
+        // NetworkParser.instance.registerEvent(NetworkGameEvent.GAME_DROP_ITEM, this.onGameDropItem.bind(this));
+    }
     onUpdateEventTray(data: any): void {
         const { DeskStation, skillInfo } = data;
         if (DataStore.instance.getSelfDeskStation() === DeskStation && skillInfo?.SkillID) {
@@ -13,5 +23,18 @@ export default class MainController2024 extends gfMainController {
                 pos: v2(),
             });
         }
+    }
+
+    onHitGodzilla(data){
+        const {WinAmount, DeskStation, Wallet} = data;
+        if(!WinAmount){
+            const wlData = {
+                DeskStation,
+                Wallet
+            };
+            // Emitter.instance.emit(EventCode.PLAYER_LAYER.GAME_UPDATE_WALLET, wlData);
+        }
+
+        Emitter.instance.emit(EventCode.GODZILLA.ON_HIT_GODZILLA, data);
     }
 }
