@@ -135,10 +135,4 @@ export class SpriteFish2024 extends gfSpriteFish {
             this.moveAction.start();
         }
     }
-
-    onShowDown() {
-        if (this.moveAction) {
-            this.moveAction.setSpeed(0.5);
-        }
-    }
 }
