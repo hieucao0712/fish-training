@@ -53,17 +53,17 @@ export default class FishManager2024 extends gfFishManager {
         }
     }
 
-    // onHitDragon(data) {
-    //     // if(!this.currentBoss) return;
-    //     const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-    //     if(player.isMe){
-    //         player.addGoldReward(data.WinAmount);
-    //     }else{
-    //         Emitter.instance.emit(EventCode.GAME_LAYER.UPDATE_WALLET_OTHER_USER, data);
-    //     }
+    onHitDragon(data) {
+        // if(!this.currentBoss) return;
+        const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
+        if(player.isMe){
+            player.addGoldReward(data.WinAmount);
+        }else{
+            Emitter.instance.emit(EventCode.GAME_LAYER.UPDATE_WALLET_OTHER_USER, data);
+        }
 
-    //     this.currentBoss.onHitState(data);
-    // }
+        this.currentBoss.onHitState(data);
+    }
 
     catchFishSkill(data, minDuration = 0) {
         const { ListFish } = data;
