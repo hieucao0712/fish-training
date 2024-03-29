@@ -5,6 +5,7 @@ import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import EventCode from '../Common/EventsCode2024';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import DragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
 
 const electroColor = [
     color(100, 200, 255),
@@ -37,7 +38,7 @@ export class Dragon2024 extends gfDragon {
 
     private isPlasma = false;
     private _oldState: any;
-    private _state: any;
+    private _state = 1;
 
     onLoad(): void {
         super.onLoad();
@@ -71,7 +72,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     onHitState(data){
-        console.warn('onHitGodizilla',data)
+        console.warn('onHitGodizilla', JSON.stringify(data))
         var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
         this._oldState = this._state;
         this._state = GodzillaState;
@@ -86,7 +87,7 @@ export class Dragon2024 extends gfDragon {
                 if(this._oldState !== GodzillaState){
                     this.changeColor();
                 }
-                this.playDropBall(data);
+                // this.playDropBall(data);
                 break;
             case 2: //Jackpot
                 this.playEffectDie();
@@ -94,6 +95,7 @@ export class Dragon2024 extends gfDragon {
             case 3: //Plasma
                 this.playPlasmaEffect(data);
         }
+                this.playDropBall(data);
     }
 
     changeColor(){
@@ -129,7 +131,6 @@ export class Dragon2024 extends gfDragon {
     }
 
     playDropBall (data) {
-        console.warn('ON DROP BALL')
         const {DeskStation, WinAmount, Wallet, BulletMultiple} = data;
         const dataInput = {
             BulletMultiple,
@@ -141,7 +142,7 @@ export class Dragon2024 extends gfDragon {
 
         const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-        Emitter.instance.emit(EventCode.DRAGON.DROP_BALL);
+        // Emitter.instance.emit(DragonEvent.DRAGON.ON_BALL_DROPPED);
         Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {
             data: dataInput,
             worldPos,
