@@ -1,16 +1,15 @@
-import { _decorator, instantiate, isValid, Prefab, UITransform, v3 } from 'cc';
-import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
-import { gfDragonEffectLayer } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEffectLayer';
+import { _decorator, instantiate, isValid, Prefab, UITransform, v3 } from "cc";
+import Emitter from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter";
 import {
     getPositionInOtherNode,
     registerEvent,
-} from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
-import EventCode from '../Common/EventsCode2024';
-import GameConfig from '../Config/Config2024';
-import { gfBossEffectLayer } from '../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossEffectLayer';
+} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
+import EventCode from "../Common/EventsCode2024";
+import GameConfig from "../Config/Config2024";
+import { gfBossEffectLayer } from "../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossEffectLayer";
 
 const { ccclass, property } = _decorator;
-@ccclass('EffectDragon2024')
+@ccclass("EffectDragon2024")
 export class EffectDragon2024 extends gfBossEffectLayer {
     @property(Prefab)
     crystal: Prefab = null;
@@ -20,10 +19,6 @@ export class EffectDragon2024 extends gfBossEffectLayer {
     initEvents(): void {
         super.initEvents();
         registerEvent(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, this.onDropCrystal, this);
-    }
-
-    showJackpotWinAmountPopup() {
-        // Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, 'JackpotWinPopup2024', this.endData);
     }
 
     onDropCrystal(dataInput) {
@@ -38,6 +33,7 @@ export class EffectDragon2024 extends gfBossEffectLayer {
             .convertToWorldSpaceAR(v3(0, 150 * (player.index > 1 ? -1 : 1)));
         gem.flyGemToPlayer(dest, () => {
             Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_REWARD_EFFECT, {
+
                 ...data,
                 fishKind: GameConfig.instance.FISH_KIND.DRAGON + '_1',
                 fishPos: coinDest,
