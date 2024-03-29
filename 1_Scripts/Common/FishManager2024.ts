@@ -73,13 +73,10 @@ export default class FishManager2024 extends gfFishManager {
                     fish.setDie(true);
                 }
             }
-
+            
             GameScheduler.scheduleOnce(() => {
                 Emitter.instance.emit(EventCode.LIGHTING_CHAIN.START_EFFECT, data);
             }, minDuration);
-            GameScheduler.scheduleOnce(() => {
-                Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_EFFECT_CATCH_LIST_FISH, data);
-            }, 2);
         }
     }
 

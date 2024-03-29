@@ -59,7 +59,7 @@ export class LightingChain2024 extends Component {
             
             tween(this.spine).
             sequence(
-                scaleTo(timeMove, 0.5, size),
+                scaleTo(timeMove, 0.7, size),
                 
                 call(() => {
                     if (isDie && infoTargetTo && (!infoTargetTo.checkDie() || isFishDead) && infoTargetTo.stop){

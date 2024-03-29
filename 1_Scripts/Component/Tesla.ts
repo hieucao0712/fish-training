@@ -4,10 +4,11 @@ import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common
 import FishManager from '../Common/FishManager2024';
 import { gfLaserGun } from '../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfLaserGun';
 import { getPostionInOtherNode } from '../../../../cc-common/cc-share/common/utils';
-import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
-import EventCode from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
+import EventsCode from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
 import EventsCode2024 from '../Common/EventsCode2024';
+import GameConfig from '../Config/Config2024';
+import gfGameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
 
 const { ccclass, property } = _decorator;
 @ccclass('Tesla')
@@ -43,7 +44,7 @@ export class Tesla extends gfLaserGun {
             TargetFish: idTargetFish,
         };
         DataStore.instance.setLockGun(true);
-        Emitter.instance.emit(EventCode.GUN_SKILL.ON_SEND_FIRE_ONE_SHOT_GUN_SKILL, data);
+        Emitter.instance.emit(EventsCode.GUN_SKILL.ON_SEND_FIRE_ONE_SHOT_GUN_SKILL, data);
         this.hideNodeCountDown();
     }
 
@@ -60,8 +61,8 @@ export class Tesla extends gfLaserGun {
             this._nodeParent.angle = data.Angle ? data.Angle : 0;
         }
 
-        Emitter.instance.emit(EventCode.SOUND.FIRE_LASER);
-        Emitter.instance.emit(EventCode.GUN_SKILL.CLEAR_EFFECT_RECEIVE_GUN_SKILL, data.DeskStation);
+        Emitter.instance.emit(EventsCode.SOUND.FIRE_LASER);
+        Emitter.instance.emit(EventsCode.GUN_SKILL.CLEAR_EFFECT_RECEIVE_GUN_SKILL, data.DeskStation);
         this.gun.getComponent(Animation).play();
 
         this.nodeEffect.active = true;
@@ -76,6 +77,9 @@ export class Tesla extends gfLaserGun {
         effectSpine.setAnimation(0, 'lazer_shoot', false);
         effectSpine.setCompleteListener(() => {
             DataStore.instance.setDataStore({ lisCatchLaser: [] });
+            gfGameScheduler.scheduleOnce(()=>{
+                Emitter.instance.emit(EventsCode2024.EFFECT_LAYER.PLAY_EFFECT_CATCH_LIST_FISH, data);
+            }, 2)
             this.onAfterGunFire(callback);
         });
     }
@@ -91,24 +95,20 @@ export class Tesla extends gfLaserGun {
         callback();
     }
 
-    // onAfterGunFire(infoReward) {
-    //     const {DeskStation} = infoReward;
-    //     const selfInfo = DataStore.instance.getSelfInfo();
-    //     const player = ReferenceManager.instance.getPlayerByDeskStation(DeskStation);
-    //     if(selfInfo.DeskStation === DeskStation){
-    //         this.nodeEffect.active = false;
-    //         DataStore.instance.setSelfInfo({"isLockGun": false});
-    //         Emitter.instance.emit(EventCode.EFFECT_LAYER.HIDE_NOTIFY_LOCK_FISH);
-    //         DataStore.instance.setDataStore({
-    //             targetState: GameConfig.instance.TARGET_LOCK.NONE,
-    //             currentTargetState: GameConfig.instance.TARGET_LOCK.NONE
-    //         });
-    //         Emitter.instance.emit(EventCode.GAME_LAYER.INTERACTABLE_HUD, true);
-    //         Emitter.instance.emit(EventCode.GAME_LAYER.RESUME_OLD_TARGET);
-    //     }
-    //     Emitter.instance.emit(EventCode.PLAYER_LAYER.CHECK_NEXT_GUN_SKILL, DeskStation);
-    //     if(player){
-    //         player.hideEffectIsMe && player.hideEffectIsMe();
-    //     }
-    // }
+    endEffectLighting(infoReward) {
+        const {DeskStation} = infoReward;
+        const selfInfo = DataStore.instance.getSelfInfo();
+        if(selfInfo.DeskStation === DeskStation){
+            this.nodeEffect.active = false;
+            DataStore.instance.setSelfInfo({"isLockGun": false});
+            Emitter.instance.emit(EventsCode.EFFECT_LAYER.HIDE_NOTIFY_LOCK_FISH);
+            DataStore.instance.setDataStore({
+                targetState: GameConfig.instance.TARGET_LOCK.NONE,
+                currentTargetState: GameConfig.instance.TARGET_LOCK.NONE
+            });
+            Emitter.instance.emit(EventsCode.GAME_LAYER.INTERACTABLE_HUD, true);
+            Emitter.instance.emit(EventsCode.GAME_LAYER.RESUME_OLD_TARGET);
+        }
+        Emitter.instance.emit(EventsCode.PLAYER_LAYER.CHECK_NEXT_GUN_SKILL, DeskStation);
+    }
 }

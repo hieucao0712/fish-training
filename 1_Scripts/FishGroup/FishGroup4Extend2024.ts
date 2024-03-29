@@ -52,7 +52,6 @@ export class FishGroup4Extend2024 {
 
     static heartFunction(center, radius, angle) {
         angle = FishGroup4Extend2024.normalizeAngle(angle);
-        console.warn(angle < 0);
         const c = Math.sqrt(2) / 2;
         const a = 5 * c;
         const b = 3 * c;
