@@ -4,7 +4,7 @@ import { gfDragon } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import EventCode from '../Common/EventsCode2024';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
-
+import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 
 const electroColor = [
     color(100, 200, 255),
@@ -77,16 +77,16 @@ export class Dragon2024 extends gfDragon {
         this._state = GodzillaState;
         switch(TypeWin){
             case 0: //normal hit
-                super.onHit()
-                if(this._oldState !== GodzillaState){
-                    this.changeColor();
-                }
-                break;
-            case 1: //drop crystal
+                // super.onHit()
                 // if(this._oldState !== GodzillaState){
                 //     this.changeColor();
                 // }
-                // this.playDropCrystal(data);
+                break;
+            case 1: //drop crystal
+                if(this._oldState !== GodzillaState){
+                    this.changeColor();
+                }
+                this.playDropBall(data);
                 break;
             case 2: //Jackpot
                 this.playEffectDie();
