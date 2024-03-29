@@ -32,7 +32,6 @@ export default class Config2024 extends gfBaseConfig {
 
         this.SOUND_SLIDER = true;
 
-
     }
 
     destroy() {

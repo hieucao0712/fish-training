@@ -8,6 +8,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('EffectDragon2024')
 export class EffectDragon2024 extends gfDragonEffectLayer {
+
     showJackpotWinAmountPopup() {
         Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, "JackpotWinPopup2024", this.endData);
     }
@@ -16,5 +17,6 @@ export class EffectDragon2024 extends gfDragonEffectLayer {
         Emitter.instance.emit(DragonEvent.SOUND.DRAGON_DROP_BALL);
         super.onDragonBallDropped(data);  
     }
+
 }
 
