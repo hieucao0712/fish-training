@@ -38,10 +38,10 @@ export class EffectDragon2024 extends gfBossEffectLayer {
             .convertToWorldSpaceAR(v3(0, 150 * (player.index > 1 ? -1 : 1)));
         gem.flyGemToPlayer(dest, () => {
             Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_REWARD_EFFECT, {
-                data,
+                ...data,
                 fishKind: GameConfig.instance.FISH_KIND.DRAGON + '_1',
                 fishPos: coinDest,
-                skipUpdateWallet: true,
+                // skipUpdateWallet: true,
             });
         });
         this._lstEffectGodzilla.push(gem);

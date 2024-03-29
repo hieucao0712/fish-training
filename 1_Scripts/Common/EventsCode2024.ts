@@ -5,7 +5,7 @@ import { mergeTwoObject } from '../../../../cc-common/cc30-fishbase/Scripts/Util
 let EventsCode2024 = {
     EFFECT_LAYER: {
         SHOW_POPUP_WIN_JACKPOT      :       "SHOW_POPUP_WIN_JACKPOT",
-        PLAY_REWARD_EFFECT: "PLAY_REWARD_EFFECT",
+        // PLAY_REWARD_EFFECT: "PLAY_REWARD_EFFECT",
     },
     SOUND:{
         ACTIVE_FREEZE               : "ACTIVE_FREEZE",
