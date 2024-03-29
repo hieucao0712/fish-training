@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, sp, Node, Skeleton } from 'cc';
 import { gfWheel } from '../../../../cc-common/cc30-fishbase/Scripts/Components/Effects/gfWheel';
 const { ccclass, property } = _decorator;
 @ccclass('SkinConfig2024')
@@ -30,10 +30,20 @@ export class AnimConfig2024 {
 }
 @ccclass('Wheel2024')
 export class Wheel2024 extends gfWheel {
-    
+    @property (sp.SkeletonData)
+    normalBigwin: Skeleton = null;
+    @property (sp.SkeletonData)
+    skillBigwin: Skeleton = null;
+    @property(Node)
+    mainFish: Node = null;
+    @property(Node)
+    ribbon: Node = null;
     protected skinName: SkinConfig2024 = new SkinConfig2024();
     protected animName: AnimConfig2024 = new AnimConfig2024();
 
+    setSpine(){
+        
+    }
     protected setupAnimSpine() {
         this.animName.appear = "AllAppear";
         this.animName.idle = "AllIdle";

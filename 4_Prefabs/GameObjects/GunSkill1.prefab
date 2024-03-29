@@ -453,7 +453,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 250,
+      "y": 270,
       "z": 0
     },
     "_lrot": {
@@ -541,7 +541,7 @@
     },
     "_premultipliedAlpha": true,
     "defaultSkin": "default",
-    "defaultAnimation": "",
+    "defaultAnimation": "animation",
     "_enableBatch": false,
     "_sockets": [],
     "_debugMesh": false,
@@ -588,7 +588,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 186.953,
+      "y": 220,
       "z": 0
     },
     "_lrot": {

@@ -141,10 +141,4 @@ export class SpineFish2024 extends gfSpineFish {
             this.moveAction.start();
         }
     }
-
-    onShowDown() {
-        if (this.moveAction) {
-            this.moveAction.setSpeed(0.5);
-        }
-    }
 }

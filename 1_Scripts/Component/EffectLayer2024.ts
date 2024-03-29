@@ -8,12 +8,8 @@ const { ccclass, property } = _decorator;
 
 @ccclass('EffectLayer2024')
 export class EffectLayer2024 extends gfEffectLayer {
-    start() {
-
-    }
-
-    update(deltaTime: number) {
-        
+    playFXCatchFishBySkill(SkillID, fishPos) {
+        // PoolManager.instance.createSmallExplosion({position: fishPos});
     }
 
     initEvents(): void {
