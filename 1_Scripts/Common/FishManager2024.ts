@@ -2,6 +2,7 @@ import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import gfFishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
 import GameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import gfBossController from '../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossController';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import { Dragon2024 } from '../Boss/Dragon2024';
 import GameConfig from '../Config/Config2024';
@@ -54,6 +55,18 @@ export default class FishManager2024 extends gfFishManager {
                 });
             }
         }
+    }
+
+    onHitDragon(data) {
+        // if(!this.currentBoss) return;
+        const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
+        if(player.isMe){
+            player.addGoldReward(data.WinAmount);
+        }else{
+            Emitter.instance.emit(EventCode.GAME_LAYER.UPDATE_WALLET_OTHER_USER, data);
+        }
+
+        this.currentBoss.onHitState(data);
     }
 
     catchFishSkill(data, minDuration = 0) {

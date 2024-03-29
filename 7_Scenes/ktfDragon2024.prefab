@@ -2452,6 +2452,10 @@
       "__uuid__": "f321b695-6c71-4b8d-9272-b85135b0de27",
       "__expectedType__": "cc.Prefab"
     },
+    "crystal": {
+      "__uuid__": "240e69eb-fe2d-484f-87fd-2cc96498b5e7",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": ""
   },
   {

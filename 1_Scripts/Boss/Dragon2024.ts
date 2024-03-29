@@ -1,4 +1,4 @@
-import { BoxCollider2D, Color, Node, ParticleSystem2D, Skeleton, UITransform, sp, _decorator, color, macro, sys, tween, v2, v3, UIOpacity, Prefab, instantiate } from 'cc';
+import { Node, ParticleSystem2D, UITransform, _decorator, color, tween, Prefab, instantiate } from 'cc';
 const { ccclass, property } = _decorator;
 import { gfDragon } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragon';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
@@ -7,7 +7,6 @@ import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utili
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 import gfDragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
 import { call } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
-
 
 const electroColor = [
     color(100, 200, 255),
@@ -24,6 +23,7 @@ const smokeColor = [
     color(255, 40, 0, 255),
 ]
 @ccclass('Dragon2024')
+
 export class Dragon2024 extends gfDragon {
 
     @property(Prefab) plasmaExplosion: Prefab = null;
@@ -39,7 +39,7 @@ export class Dragon2024 extends gfDragon {
 
     private isPlasma = false;
     private _oldState: any;
-    private _state: any;
+    private _state = 1;
 
     onLoad(): void {
         super.onLoad();
@@ -88,7 +88,6 @@ export class Dragon2024 extends gfDragon {
         this._state = GodzillaState;
         switch(TypeWin){
             case 0: //normal hit
-                super.onHit()
                 if(this._oldState !== GodzillaState){
                     this.changeColor();
                 }
@@ -97,7 +96,7 @@ export class Dragon2024 extends gfDragon {
             // if(this._oldState !== GodzillaState){
             //     this.changeColor();
             // }
-            // this.playDropBall(data);
+                this.playDropBall(data);
                 break;
             case 2: //Jackpot
                 this.playEffectDie();
@@ -115,6 +114,7 @@ export class Dragon2024 extends gfDragon {
             }
             this.playPlasmaEffect(data, callback);
         }
+        // this.playDropBall(data);
     }
 
     changeColor(){
@@ -151,7 +151,6 @@ export class Dragon2024 extends gfDragon {
     }
 
     playDropBall (data) {
-        console.warn('ON DROP BALL')
         const {DeskStation, WinAmount, Wallet, BulletMultiple} = data;
         const dataInput = {
             BulletMultiple,
@@ -161,9 +160,10 @@ export class Dragon2024 extends gfDragon {
             Wallet: Wallet
         };
 
-        const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
+        // const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
+        const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0].node.position);
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-        Emitter.instance.emit(EventCode.DRAGON.DROP_BALL);
+        // Emitter.instance.emit(DragonEvent.DRAGON.ON_BALL_DROPPED);
         Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {
             data: dataInput,
             worldPos,
@@ -172,5 +172,4 @@ export class Dragon2024 extends gfDragon {
         });
     }
 }
-
 
