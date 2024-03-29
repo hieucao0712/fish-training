@@ -156,7 +156,7 @@ export class Dragon2024 extends gfDragon {
             BulletMultiple,
             DeskStation: DeskStation,
             FishID: this._FishID,
-            GoldRewrad: WinAmount,
+            GoldReward: WinAmount,
             Wallet: Wallet
         };
 
