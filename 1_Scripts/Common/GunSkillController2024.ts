@@ -8,8 +8,5 @@ const { ccclass, property } = _decorator;
 
 @ccclass('GunSkillController2024')
 export class GunSkillController2024 extends gfGunSkillController {
-    initEvents(): void {
-        super.initEvents();
-    }
 }
 
