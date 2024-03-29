@@ -71,7 +71,7 @@ export class LightingChain2024 extends Component {
                     this.node.setPosition(this.node.position.x, -1);
                     this.node.setPosition(endPos);
                     tween(this.spine).sequence(
-                        delay(0.4),
+                        delay(0.3),
                         call(()=>{
                             this.spine.getComponent(sp.Skeleton).setAnimation(0, 'disappear', false);
                             let dt = getRandomInt(10, 20) * 0.1;
