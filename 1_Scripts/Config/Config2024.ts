@@ -32,6 +32,10 @@ export default class Config2024 extends gfBaseConfig {
 
         this.SOUND_SLIDER = true;
 
+        this.FISH_KIND = {
+            DRAGON: 45,
+        }
+
     }
 
     destroy() {

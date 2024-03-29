@@ -4,21 +4,24 @@ import { gfDragon } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import EventCode from '../Common/EventsCode2024';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
+import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import gfDragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
+import { call } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
 
 
 const electroColor = [
     color(100, 200, 255),
     color(255, 245, 125),
-    color(255, 200, 100),
-    color(255, 150, 100),
-    color(255, 50, 50),
+    color(255, 50, 0),
+    color(255, 50, 0),
+    color(255, 50, 0),
 ];
 const smokeColor = [
-    color(0, 165, 255, 150),
-    color(225, 255, 0, 40),
-    color(255, 175, 0, 45),
-    color(255, 90, 0, 65),
-    color(255, 40, 0, 100),
+    color(0, 165, 255, 255),
+    color(225, 255, 0, 255),
+    color(255, 175, 0, 255),
+    color(255, 90, 0, 255),
+    color(255, 40, 0, 255),
 ]
 @ccclass('Dragon2024')
 export class Dragon2024 extends gfDragon {
@@ -40,8 +43,7 @@ export class Dragon2024 extends gfDragon {
 
     onLoad(): void {
         super.onLoad();
-        registerEvent(EventCode.GODZILLA.ON_HIT_GODZILLA, this.onHitState, this);
-        this.changeColor();
+        registerEvent(EventCode.GODZILLA.ON_HIT_GODZILLA, this.onHitGodzilla, this);
     }
     ANIMATION = {
         In: "Swim In",
@@ -69,8 +71,18 @@ export class Dragon2024 extends gfDragon {
         }
     }
 
+    onHitGodzilla(data){
+        const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
+        if(player.isMe){
+            player.addGoldReward(data.WinAmount);
+        }else{
+            Emitter.instance.emit(EventCode.GAME_LAYER.UPDATE_WALLET_OTHER_USER, data);
+        }
+
+        this.onHitState(data);
+    }
+
     onHitState(data){
-        console.warn('onHitGodizilla',data)
         var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
         this._oldState = this._state;
         this._state = GodzillaState;
@@ -82,37 +94,47 @@ export class Dragon2024 extends gfDragon {
                 }
                 break;
             case 1: //drop crystal
-                // if(this._oldState !== GodzillaState){
-                //     this.changeColor();
-                // }
-                // this.playDropCrystal(data);
+            // if(this._oldState !== GodzillaState){
+            //     this.changeColor();
+            // }
+            // this.playDropBall(data);
                 break;
             case 2: //Jackpot
                 this.playEffectDie();
                 break;
             case 3: //Plasma
-                this.playPlasmaEffect(data);
+            let callback = ()=>{
+                const dataReward = {
+                    ListFish,
+                    WinAmount,
+                    DeskStation,
+                    BulletMultiple,
+                }
+                Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_PLASMA_EFFECT, dataReward);
+                Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
+            }
+            this.playPlasmaEffect(data, callback);
         }
     }
 
     changeColor(){
         for(let i = 0; i < this.nodeSmoke.length; i++){
-            this.nodeSmoke[i].getComponent(ParticleSystem2D).startColor = smokeColor[this._state];
+            this.nodeSmoke[i].getComponent(ParticleSystem2D).startColor = smokeColor[this._state-1];
         }
 
         for(let i = 0; i < this.nodeElectro.length; i++){
             this.nodeElectro[i].children.forEach(element => {
                 element.children.forEach(element => {
-                    element.getComponent(ParticleSystem2D).startColor = electroColor[this._state];
+                    element.getComponent(ParticleSystem2D).startColor = electroColor[this._state-1];
                 });
             });
         }
     }
 
-    playPlasmaEffect(data){
+    playPlasmaEffect(data, callback: Function){
         let plasma = instantiate(this.plasmaExplosion);
         plasma.parent = this.node;
-        plasma.position = this.box[1].position;
+        plasma.position = this.box[0].position;
         const dataInput = {
             DeskStation: data.DeskStation,
             BulletMultiple: data.BulletMultiple,
@@ -123,8 +145,31 @@ export class Dragon2024 extends gfDragon {
         .delay(1)
         .call(()=>{
             Emitter.instance.emit(EventCode.GAME_LAYER.CATCH_FISH_BY_PLASMA, dataInput);
+            callback();
         })
         .start()
+    }
+
+    playDropBall (data) {
+        console.warn('ON DROP BALL')
+        const {DeskStation, WinAmount, Wallet, BulletMultiple} = data;
+        const dataInput = {
+            BulletMultiple,
+            DeskStation: DeskStation,
+            FishID: this._FishID,
+            GoldRewrad: WinAmount,
+            Wallet: Wallet
+        };
+
+        const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
+        const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
+        Emitter.instance.emit(EventCode.DRAGON.DROP_BALL);
+        Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {
+            data: dataInput,
+            worldPos,
+            player,
+            GoldReward: WinAmount
+        });
     }
 }
 
