@@ -13223,7 +13223,7 @@
     "fileId": "a7HCDy/FVBWLQ8EIqkGpXA"
   },
   {
-    "__type__": "cf7b6/NqZFLR7A8yyH+aUu+",
+    "__type__": "1a4f01Pu/lP8IgeiFsyeC1B",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -13243,7 +13243,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "08OcF80xFK+p3lCMvBphw4"
+    "fileId": "3fI6AP8UFNt7Q0edaRukrc"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -45228,6 +45228,7 @@
     "__prefab": {
       "__id__": 2038
     },
+    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "d650335f-9703-4e12-b2e6-58172ce5904f",
       "__expectedType__": "cc.JsonAsset"

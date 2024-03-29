@@ -1,9 +1,9 @@
-import { _decorator, Component, Node, sp, sys, tween, v2, Skeleton, UITransform, v3 } from 'cc';
-import FishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
+import { _decorator, Component, Node, sp, sys, tween, UITransform, v3 } from 'cc';
+import { getRandomInt } from '../../../../cc-common/cc-share/common/utils';
+import { call, delay, scaleTo, stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
 import { getPositionInOtherNode, getRotation, registerEvent, removeEvents, v2Distance } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
-import { call, delay, scaleTo, stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
-import { getRandomInt } from '../../../../cc-common/cc-share/common/utils';
+import FishManager from '../Common/FishManager2024';
 const { ccclass, property } = _decorator;
 
 @ccclass('LightingChain2024')
@@ -11,6 +11,7 @@ export class LightingChain2024 extends Component {
     @property (Node)
     spine: Node = null;
     callBack = null;
+
     onLoad() {
         this.node["playEffectLight"] = this.playEffectLight.bind(this);
         this.node["reset"] = this.reset.bind(this);
@@ -58,7 +59,7 @@ export class LightingChain2024 extends Component {
             
             tween(this.spine).
             sequence(
-                scaleTo(timeMove, 0.5, size),
+                scaleTo(timeMove, 0.7, size),
                 
                 call(() => {
                     if (isDie && infoTargetTo && (!infoTargetTo.checkDie() || isFishDead) && infoTargetTo.stop){
@@ -70,7 +71,7 @@ export class LightingChain2024 extends Component {
                     this.node.setPosition(this.node.position.x, -1);
                     this.node.setPosition(endPos);
                     tween(this.spine).sequence(
-                        delay(0.4),
+                        delay(0.3),
                         call(()=>{
                             this.spine.getComponent(sp.Skeleton).setAnimation(0, 'disappear', false);
                             let dt = getRandomInt(10, 20) * 0.1;

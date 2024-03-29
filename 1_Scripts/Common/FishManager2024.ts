@@ -1,6 +1,6 @@
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import gfFishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
-import gfGameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
+import GameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
 import gfBossController from '../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossController';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
@@ -22,7 +22,6 @@ export default class FishManager2024 extends gfFishManager {
         registerEvent(EventCode.FISH_LAYER.CATCH_FISH_BY_SKILL, this.catchFishSkill, this);
         registerEvent(EventCode.GAME_LAYER.CATCH_FISH_BY_LIGHTING, this.catchFishByLightingChain, this);
         registerEvent(EventCode.GAME_LAYER.CATCH_FISH_BY_PLASMA, this.onPlasmaSkill, this);        
-        // registerEvent(gfBaseEvents.GAME_LAYER.CREATE_FISH, this.createListFish, this);
     }
 
     public destroy(): void {
@@ -72,23 +71,25 @@ export default class FishManager2024 extends gfFishManager {
 
     catchFishSkill(data, minDuration = 0) {
         const { ListFish } = data;
-        const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-        if (player.isMe) {
-            player.addGoldReward(data.TotalReward);
-        } else if (data.Wallet || data.Wallet === 0) {
-            player.updateWallet(data.Wallet);
-        }
-        let fish = null;
-        for (let i = 0; i < ListFish.length; i++) {
-            fish = this.getFishById(ListFish[i].FishID);
-            if (fish && ListFish[i].GoldReward > 0) {
-                fish.setDie(true);
+        if (data.SkillID && data.SkillID === GameConfig.instance.SKILL_CONFIG.ONE_SHOT_GUN.SkillID) {
+            const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
+            if (player.isMe) {
+                player.addGoldReward(data.TotalReward);
+            } else if (data.Wallet || data.Wallet === 0) {
+                player.updateWallet(data.Wallet);
             }
+            let fish = null;
+            for (let i = 0; i < ListFish.length; i++) {
+                fish = this.getFishById(ListFish[i].FishID);
+                if (fish && ListFish[i].GoldReward > 0) {
+                    fish.setDie(true);
+                }
+            }
+            
+            GameScheduler.scheduleOnce(() => {
+                Emitter.instance.emit(EventCode.LIGHTING_CHAIN.START_EFFECT, data);
+            }, minDuration);
         }
-
-        gfGameScheduler.scheduleOnce(() => {
-            Emitter.instance.emit(EventCode.LIGHTING_CHAIN.START_EFFECT, data);
-        }, minDuration);
     }
 
     catchFishByLightingChain(data) {

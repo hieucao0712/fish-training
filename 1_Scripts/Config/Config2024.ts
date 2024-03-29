@@ -32,6 +32,18 @@ export default class Config2024 extends gfBaseConfig {
 
         this.SOUND_SLIDER = true;
 
+        this.FISH_KIND = {
+            LASER_CRAB: 27,
+            KING_LOBSTER: 34,
+            LANTERN: 36,
+            BOMB: 43,
+            BOMB_M: 44,
+            DRILL: 46,
+            DRILL_M: 47,
+            FIRE_STORM: 49,
+            KING_CRAB: 50,
+            DRAGON: 45,
+        };
     }
 
     destroy() {

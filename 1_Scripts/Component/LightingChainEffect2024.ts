@@ -1,10 +1,10 @@
-import { _decorator, Component, instantiate, Prefab, v2, v3, UITransform } from 'cc';
+import { _decorator, Component, instantiate, Prefab, UITransform, v2, v3 } from 'cc';
+import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
+import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import BaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseConfig';
 import { getPositionInOtherNode, getRotation, registerEvent, removeEvents } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
-import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
-import FishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
-import BaseConfig from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseConfig';
-import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import FishManager from '../Common/FishManager2024';
 
 const { ccclass, property } = _decorator;
 
@@ -33,7 +33,7 @@ export class LightningChainEffect2024 extends Component {
             const startPos = getPositionInOtherNode(this.node, player.gun);
             player.gun.angle = getRotation(endPos, startPos);
             const lighting = this._getLighting();
-            lighting.setPosition(this.node.getComponent(UITransform).convertToNodeSpaceAR(player.gun.getComponent(UITransform).convertToWorldSpaceAR(v3(0, 0))));
+            lighting.setPosition(this.getComponent(UITransform).convertToNodeSpaceAR(player.gun.getComponent(UITransform).convertToWorldSpaceAR(v3(0, 0))));
             lighting["playEffectLight"](null, fishTarget, this._onCompleteFirstLighting.bind(this, fishTarget, listFishRight, listFishLeft, infoReward, fishTarget, ListFish.length), isDie);
         } else {
             this._sendEndEffect(infoReward);
@@ -46,7 +46,7 @@ export class LightningChainEffect2024 extends Component {
         listBonusFish.forEach(info => {
             const fish = FishManager.instance.getFishById(info.FishID);
             const lighting = this._getLighting();
-            lighting.setPosition(this.node.getComponent(UITransform).convertToNodeSpaceAR(infoTargetFrom.node.convertToWorldSpaceAR(v2(0, 0))));
+            lighting.setPosition(this.getComponent(UITransform).convertToNodeSpaceAR(infoTargetFrom.node.getComponent(UITransform).convertToWorldSpaceAR(v3(0, 0))));
             lighting["playEffectLight"](infoTargetFrom, fish, null, true, true);
         });
     }
