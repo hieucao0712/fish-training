@@ -21,7 +21,6 @@ export default class FishManager2024 extends gfFishManager {
         registerEvent(EventCode.FISH_LAYER.CATCH_FISH_BY_SKILL, this.catchFishSkill, this);
         registerEvent(EventCode.GAME_LAYER.CATCH_FISH_BY_LIGHTING, this.catchFishByLightingChain, this);
         registerEvent(EventCode.GAME_LAYER.CATCH_FISH_BY_PLASMA, this.onPlasmaSkill, this);        
-        // registerEvent(gfBaseEvents.GAME_LAYER.CREATE_FISH, this.createListFish, this);
     }
 
     public destroy(): void {

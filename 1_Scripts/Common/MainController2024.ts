@@ -30,7 +30,7 @@ export default class MainController2024 extends gfMainController {
                 DeskStation,
                 Wallet
             };
-            // Emitter.instance.emit(EventCode.PLAYER_LAYER.GAME_UPDATE_WALLET, wlData);
+            Emitter.instance.emit(EventCode.PLAYER_LAYER.GAME_UPDATE_WALLET, wlData);
         }
 
         Emitter.instance.emit(EventCode.GODZILLA.ON_HIT_GODZILLA, data);
