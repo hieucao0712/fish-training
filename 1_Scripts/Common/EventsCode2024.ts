@@ -4,7 +4,8 @@ import { mergeTwoObject } from '../../../../cc-common/cc30-fishbase/Scripts/Util
 
 let EventsCode2024 = {
     EFFECT_LAYER: {
-        SHOW_POPUP_WIN_JACKPOT      :       "SHOW_POPUP_WIN_JACKPOT"
+        SHOW_POPUP_WIN_JACKPOT      :       "SHOW_POPUP_WIN_JACKPOT",
+        PLAY_REWARD_EFFECT: "PLAY_REWARD_EFFECT",
     },
     SOUND:{
         ACTIVE_FREEZE               : "ACTIVE_FREEZE",
@@ -68,6 +69,7 @@ let EventsCode2024 = {
     GAME_LAYER: {
         REMOVE_FISH: "REMOVE_FISH",
         CATCH_FISH_BY_LIGHTING: "CATCH_FISH_BY_LIGHTING",
+        CATCH_FISH_BY_PLASMA: "CATCH_FISH_BY_PLASMA"
     }
 };
 
