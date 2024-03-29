@@ -5,8 +5,7 @@ import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import EventCode from '../Common/EventsCode2024';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
-import gfDragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
-import { call } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
+
 
 
 const electroColor = [
@@ -40,6 +39,12 @@ export class Dragon2024 extends gfDragon {
     private isPlasma = false;
     private _oldState: any;
     private _state: any;
+
+    initFishData(data: any): void {
+        super.initFishData(data);
+        this._state = data.GodzillaState;
+        this.changeColor();
+    }
 
     onLoad(): void {
         super.onLoad();
@@ -111,13 +116,16 @@ export class Dragon2024 extends gfDragon {
                     BulletMultiple,
                 }
                 Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_PLASMA_EFFECT, dataReward);
-                Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
+                // Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
             }
             this.playPlasmaEffect(data, callback);
         }
     }
 
     changeColor(){
+        if(this._state < 0){
+            this._state = 0;
+        }
         for(let i = 0; i < this.nodeSmoke.length; i++){
             this.nodeSmoke[i].getComponent(ParticleSystem2D).startColor = smokeColor[this._state-1];
         }
