@@ -1,24 +1,29 @@
-import { _decorator, Component, instantiate, Node, Prefab, UITransform, v3 } from 'cc';
+import { _decorator, instantiate, isValid, Prefab, UITransform, v3 } from 'cc';
 import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter';
 import { gfDragonEffectLayer } from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEffectLayer';
-import DragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
-import { getPositionInOtherNode, registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
+import {
+    getPositionInOtherNode,
+    registerEvent,
+} from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import EventCode from '../Common/EventsCode2024';
-import ReferenceManager from '../Common/ReferenceManager2024';
 import GameConfig from '../Config/Config2024';
+import { gfBossEffectLayer } from '../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossEffectLayer';
 
 const { ccclass, property } = _decorator;
 @ccclass('EffectDragon2024')
-export class EffectDragon2024 extends gfDragonEffectLayer {
+export class EffectDragon2024 extends gfBossEffectLayer {
     @property(Prefab)
     crystal: Prefab = null;
 
-    onLoad() {
+    private _lstEffectGodzilla: any[] = [];
+
+    initEvents(): void {
+        super.initEvents();
         registerEvent(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, this.onDropCrystal, this);
     }
 
     showJackpotWinAmountPopup() {
-        Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, "JackpotWinPopup2024", this.endData);
+        // Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, 'JackpotWinPopup2024', this.endData);
     }
 
     onDropCrystal(dataInput) {
@@ -39,6 +44,16 @@ export class EffectDragon2024 extends gfDragonEffectLayer {
                 skipUpdateWallet: true,
             });
         });
-        // this._lstEffectGodzilla.push(gem);
+        this._lstEffectGodzilla.push(gem);
+    }
+
+    resetOnExit(): void {
+        this._lstEffectGodzilla.forEach((gem) => {
+            if (isValid(gem)) {
+                gem.destroy();
+                gem.removeFromParent();
+            }
+        });
+        this._lstEffectGodzilla.length = 0;
     }
 }

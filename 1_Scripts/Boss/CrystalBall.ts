@@ -26,11 +26,11 @@ export class CrystalBall extends Component {
         const tweenEffect = tween(this.eff1)
             .to(appearTime, { scale: v3(1.2, 1.2) });     // delete set opacity 255
         const tweenMainItem = tween(this.mainItem)
-            .to(appearTime, { scale: v3(2, 2) });
+            .to(appearTime, { scale: v3(1, 1) });
         const tweenEffect2 = tween(this.eff1)
             .to(moveTime, { scale: v3(0.6, 0.6)});
         const tweenMainItem2 = tween(this.mainItem)
-            .to(moveTime, { scale: v3(1, 1) });
+            .to(moveTime, { scale: v3(0.5, 0.5) });
         tween(this.node)
             .parallel(
                 tween()
@@ -56,16 +56,15 @@ export class CrystalBall extends Component {
     }
 
     calculateMovePoint(){
-        let x = this.node.position.x;
-        let y = this.node.position.y;
+        let { x, y } = this.node.getPosition();
 
-        let pos = v3(this.node.position.x, GameConfig.instance.AppSize.Height / 2);
+        let pos = v3(x, GameConfig.instance.AppSize.Height / 2);
 
         while(!isPointInScreen(pos)){
             pos.x = pos.x < GameConfig.instance.AppSize.Width / 2 ? pos.x + 150 : pos.x - 150;
         }
         x = pos.x;
-        pos = v3(GameConfig.instance.AppSize.Width / 2, this.node.position.y);
+        pos = v3(GameConfig.instance.AppSize.Width / 2, y);
 
         while(!isPointInScreen(pos)){
             pos.y = pos.y < GameConfig.instance.AppSize.Height / 2 ? pos.y + 150 : pos.y - 150;
