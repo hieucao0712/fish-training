@@ -1,15 +1,19 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Button, Component, Node } from 'cc';
 import gfFishGroupMgr from '../../../../cc-common/cc30-fishbase/Modules/FishGroup/gfFishGroupMgr';
 import { FishGroup1Extend2024 } from '../FishGroup/FishGroup1Extend2024';
 import { FishGroup2Extend2024 } from '../FishGroup/FishGroup2Extend2024';
 import { FishGroup3Extend2024 } from '../FishGroup/FishGroup3Extend2024';
 import { FishGroup4Extend2024 } from '../FishGroup/FishGroup4Extend2024';
+import gfFishGroup13 from '../../../../cc-common/cc30-fishbase/Modules/FishGroup/Groups/gfFishGroup13';
 const { ccclass, property } = _decorator;
 
 @ccclass('FishGroup2024')
+
 export class FishGroup2024 extends gfFishGroupMgr {
+
     createFishGroup1(){
         FishGroup1Extend2024.create(); // parabol
+        console.warn('on-fishgroup-1')
     }
     createFishGroup2(){
         FishGroup2Extend2024.create(); // 2 duong song song 
