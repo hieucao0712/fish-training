@@ -56,14 +56,14 @@ export class FishGroup4Extend2024 {
         const a = 5 * c;
         const b = 3 * c;
         const d = Math.sqrt(a * a + b * b);
-        const x = center.x + ((a * Math.cos(angle) - b * Math.sin(angle)) / d) * radius;
+        const x = center.x + ((a * Math.cos(angle) - b * Math.sin(angle)) / d) * radius * FishGroupData.flipCoord;
         const alpha = Math.atan2(a, b);
         let y = 0;
         if (angle > alpha && angle < alpha + Math.PI) {
             angle = 2 * alpha + Math.PI - angle;
-            y = center.y - ((a * Math.cos(angle) + b * Math.sin(angle)) / d) * radius;
+            y = center.y - ((a * Math.cos(angle) + b * Math.sin(angle)) / d) * radius * FishGroupData.flipCoord;
         } else {
-            y = center.y + ((a * Math.cos(angle) + b * Math.sin(angle)) / d) * radius;
+            y = center.y + ((a * Math.cos(angle) + b * Math.sin(angle)) / d) * radius * FishGroupData.flipCoord;
         }
         return { x, y };
     }
