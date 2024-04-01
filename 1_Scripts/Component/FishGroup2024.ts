@@ -13,7 +13,6 @@ export class FishGroup2024 extends gfFishGroupMgr {
 
     createFishGroup1(){
         FishGroup1Extend2024.create(); // parabol
-        console.warn('on-fishgroup-1')
     }
     createFishGroup2(){
         FishGroup2Extend2024.create(); // 2 duong song song 
