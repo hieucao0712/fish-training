@@ -74,7 +74,7 @@ export default class FishManager2024 extends gfFishManager {
         if (data.SkillID && data.SkillID === GameConfig.instance.SKILL_CONFIG.ONE_SHOT_GUN.SkillID) {
             const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
             if (player.isMe) {
-                player.addGoldReward(data.TotalReward);
+                // player.addGoldReward(data.TotalReward);
             } else if (data.Wallet || data.Wallet === 0) {
                 player.updateWallet(data.Wallet);
             }
@@ -89,6 +89,10 @@ export default class FishManager2024 extends gfFishManager {
             GameScheduler.scheduleOnce(() => {
                 Emitter.instance.emit(EventCode.LIGHTING_CHAIN.START_EFFECT, data);
             }, minDuration);
+
+            GameScheduler.scheduleOnce(()=>{
+                Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_EFFECT_CATCH_LIST_FISH, data);
+            }, 2)
         }
     }
 

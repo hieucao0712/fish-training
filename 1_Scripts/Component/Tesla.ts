@@ -9,10 +9,17 @@ import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfData
 import EventsCode2024 from '../Common/EventsCode2024';
 import GameConfig from '../Config/Config2024';
 import gfGameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
+import { SetZIndex } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
+import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
 
 const { ccclass, property } = _decorator;
 @ccclass('Tesla')
 export class Tesla extends gfLaserGun {
+
+    onLoad(): void {
+        super.onLoad();
+        this.node['endEffectLighting'] = this.endEffectLighting.bind(this);
+    }
     sendFireGun() {
         const myDeskStation = DataStore.instance.getSelfDeskStation();
         const player = ReferenceManager.instance.getPlayerByDeskStation(myDeskStation);
@@ -77,9 +84,6 @@ export class Tesla extends gfLaserGun {
         effectSpine.setAnimation(0, 'lazer_shoot', false);
         effectSpine.setCompleteListener(() => {
             DataStore.instance.setDataStore({ lisCatchLaser: [] });
-            gfGameScheduler.scheduleOnce(()=>{
-                Emitter.instance.emit(EventsCode2024.EFFECT_LAYER.PLAY_EFFECT_CATCH_LIST_FISH, data);
-            }, 2)
             this.onAfterGunFire(callback);
         });
     }
@@ -95,10 +99,12 @@ export class Tesla extends gfLaserGun {
         callback();
     }
 
+
     endEffectLighting(infoReward) {
-        const {DeskStation} = infoReward;
+        const myDeskStation = DataStore.instance.getSelfDeskStation();
         const selfInfo = DataStore.instance.getSelfInfo();
-        if(selfInfo.DeskStation === DeskStation){
+        const player = ReferenceManager.instance.getPlayerByDeskStation(myDeskStation);
+        if(selfInfo.DeskStation === myDeskStation){
             this.nodeEffect.active = false;
             DataStore.instance.setSelfInfo({"isLockGun": false});
             Emitter.instance.emit(EventsCode.EFFECT_LAYER.HIDE_NOTIFY_LOCK_FISH);
@@ -109,6 +115,9 @@ export class Tesla extends gfLaserGun {
             Emitter.instance.emit(EventsCode.GAME_LAYER.INTERACTABLE_HUD, true);
             Emitter.instance.emit(EventsCode.GAME_LAYER.RESUME_OLD_TARGET);
         }
-        Emitter.instance.emit(EventsCode.PLAYER_LAYER.CHECK_NEXT_GUN_SKILL, DeskStation);
+        Emitter.instance.emit(EventsCode.PLAYER_LAYER.CHECK_NEXT_GUN_SKILL, myDeskStation);
+        if(player){
+            player.hideIsMe && player.hideIsMe();
+        }
     }
 }

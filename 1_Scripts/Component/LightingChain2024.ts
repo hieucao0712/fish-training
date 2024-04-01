@@ -52,14 +52,14 @@ export class LightingChain2024 extends Component {
         this.spine.setScale(this.spine.scale.x, 0);
         if (data && point) {
             let duration = this.spine.getComponent(sp.Skeleton).findAnimation('animation').duration;
-            let dt = getRandomInt(0, duration * 10) / 10;
+            let dt = getRandomInt(0, duration * 10) / 15;
             this.spine.getComponent(sp.Skeleton).setAnimation(0, 'animation', true);
             this.spine.getComponent(sp.Skeleton).timeScale = size;
             sys.isNative ? this.spine.getComponent(sp.Skeleton)['_updateRealtime'](dt) : this.spine.getComponent(sp.Skeleton).updateAnimation(dt);
             
             tween(this.spine).
             sequence(
-                scaleTo(timeMove, 0.7, size),
+                scaleTo(timeMove, 0.4, size),
                 
                 call(() => {
                     if (isDie && infoTargetTo && (!infoTargetTo.checkDie() || isFishDead) && infoTargetTo.stop){
@@ -71,7 +71,7 @@ export class LightingChain2024 extends Component {
                     this.node.setPosition(this.node.position.x, -1);
                     this.node.setPosition(endPos);
                     tween(this.spine).sequence(
-                        delay(0.3),
+                        delay(0.2),
                         call(()=>{
                             this.spine.getComponent(sp.Skeleton).setAnimation(0, 'disappear', false);
                             let dt = getRandomInt(10, 20) * 0.1;
