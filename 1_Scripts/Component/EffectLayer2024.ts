@@ -19,12 +19,14 @@ export class EffectLayer2024 extends gfEffectLayer {
 
     playPlasmaEffect(data) {
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-        this.onPlayBigWinWheelEffect({
-            player: player,
-            GoldReward: data.WinAmount,
-            bet: data.BulletMultiple,
-            fishKind: GameConfig.instance.FISH_KIND.DRAGON,
-        });
+        this.scheduleOnce(()=>{
+            this.onPlayBigWinWheelEffect({
+                player: player,
+                GoldReward: data.WinAmount,
+                bet: data.BulletMultiple,
+                fishKind: GameConfig.instance.FISH_KIND.DRAGON,
+            });
+        },3);
     }
 }
 

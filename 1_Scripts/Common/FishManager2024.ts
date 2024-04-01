@@ -29,13 +29,13 @@ export default class FishManager2024 extends gfFishManager {
         FishManager2024.instance = null;
     }
 
-    onPlasmaSkill(data) {
+    onPlasmaSkill(data){
         const listFish = data.ListFish;
-        console.warn('lis', listFish);
         let fish = null;
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
         for (let i = 0; i < listFish.length; i++) {
             const fishInfo = listFish[i];
+            if (fishInfo.FishID === 0) continue;
             const infoDetail = {
                 DeskStation: data.DeskStation,
                 FishID: fishInfo.FishID,
@@ -44,14 +44,14 @@ export default class FishManager2024 extends gfFishManager {
                 isSkill: true,
                 skipUpdateWallet: true,
             };
-            fish = this.getFishById(infoDetail.FishID);
+            fish  = this.getFishById(infoDetail.FishID);
 
             if (fish) {
                 fish.onCatch(infoDetail);
-            } else if (player.isMe) {
-                Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_REWARD_EFFECT, {
+            }else if(player.isMe){
+                Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_REWARD_EFFECT, { 
                     data: infoDetail,
-                    fishKind: infoDetail['fishKind'],
+                    fishKind: infoDetail.fishKind
                 });
             }
         }
