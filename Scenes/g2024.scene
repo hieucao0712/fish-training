@@ -170,7 +170,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 360,
+    "_orthoHeight": 553.5135135135135,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -326,7 +326,7 @@
     "_enabled": true,
     "__prefab": null,
     "persistNodeContainer": {
-      "__uuid__": "7a6bc4c5-8a93-4021-8e1c-c6e782feb93c",
+      "__uuid__": "41f325e9-b6b0-4568-80a9-1eda93538b58",
       "__expectedType__": "cc.Prefab"
     },
     "Loading": {
