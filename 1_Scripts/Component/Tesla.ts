@@ -88,17 +88,6 @@ export class Tesla extends gfLaserGun {
         });
     }
 
-    playAnimationShow(data, callback) {
-        if (this._isMe) {
-            this.nodeEffect.active = true;
-            const spine = this.nodeEffect.getComponent(sp.Skeleton);
-            spine.setAnimation(0, 'lazer_idle', true);
-            this.showNodeTitle();
-            this.showNodeCountDown();
-        }
-        callback();
-    }
-
 
     endEffectLighting(infoReward) {
         const myDeskStation = DataStore.instance.getSelfDeskStation();
