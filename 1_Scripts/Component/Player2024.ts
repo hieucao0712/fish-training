@@ -107,4 +107,8 @@ export class Player2024 extends gfPlayer {
             .to(0.02, { scale: v3(1, 1, 1) })
             .start();
     }
+
+    reset() {
+        
+    }
 }
