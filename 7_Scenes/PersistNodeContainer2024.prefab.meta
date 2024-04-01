@@ -1,13 +1,1 @@
-{
-  "ver": "1.1.43",
-  "importer": "prefab",
-  "imported": true,
-  "uuid": "7a6bc4c5-8a93-4021-8e1c-c6e782feb93c",
-  "files": [
-    ".json"
-  ],
-  "subMetas": {},
-  "userData": {
-    "syncNodeName": "PersistNodeContainer2024"
-  }
-}
+{"ver":"1.1.43","importer":"prefab","imported":true,"uuid":"41f325e9-b6b0-4568-80a9-1eda93538b58","files":[".json"],"subMetas":{},"userData":{"syncNodeName":"PersistNodeContainer2024"}}
