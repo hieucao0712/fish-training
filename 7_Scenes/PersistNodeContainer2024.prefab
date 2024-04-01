@@ -39,23 +39,24 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 2046
+        "__id__": 2032
       },
       {
-        "__id__": 2048
+        "__id__": 2034
       },
       {
-        "__id__": 2050
+        "__id__": 2036
       },
       {
-        "__id__": 2052
+        "__id__": 2038
       },
       {
-        "__id__": 2054
+        "__id__": 2040
       }
     ],
     "_prefab": {
-      "__id__": 2056
+      "__id__": 2042
+
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -13283,8 +13284,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -640,
+      "y": -360,
       "z": 0
     },
     "_lrot": {
@@ -13323,8 +13324,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 100
+      "width": 0,
+      "height": 0
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -45416,7 +45417,14 @@
         "__id__": 2044
       },
       {
-        "__id__": 2045
+        "__id__": 2028
+      },
+      {
+        "__id__": 2029
+      },
+      {
+        "__id__": 2031
+
       }
     ],
     "removedComponents": []
@@ -45484,6 +45492,39 @@
     }
   },
   {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 2030
+    },
+    "propertyPath": [
+      "sfxList",
+      "5",
+      "audioFile"
+    ],
+    "value": {
+      "__uuid__": "8f480e2f-d7ff-4dab-ae2d-3c0b7a976839",
+      "__expectedType__": "cc.AudioClip"
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "158lXCxxBI07ULvB8wDI/V"
+    ]
+  },
+  {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 2030
+    },
+    "propertyPath": [
+      "sfxList",
+      "5",
+      "soundId"
+    ],
+    "value": "sfxFire_laser"
+  },
+  {
     "__type__": "cc.UITransform",
     "_name": "",
     "_objFlags": 0,
@@ -45492,7 +45533,8 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 2047
+      "__id__": 2033
+
     },
     "_contentSize": {
       "__type__": "cc.Size",
@@ -45519,7 +45561,8 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 2049
+      "__id__": 2035
+
     },
     "_alignFlags": 45,
     "_target": null,
@@ -45554,7 +45597,8 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 2051
+      "__id__": 2037
+
     },
     "_cameraComponent": null,
     "_alignCanvasWithScreen": true,
@@ -45573,7 +45617,8 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 2053
+      "__id__": 2039
+
     },
     "notifyController": {
       "__id__": 924
@@ -45605,7 +45650,8 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 2055
+      "__id__": 2041
+
     },
     "jsonGameVersion": null,
     "jsonLocalize": {
