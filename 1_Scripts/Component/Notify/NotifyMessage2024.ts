@@ -1,13 +1,17 @@
 import { _decorator } from 'cc';
 import gfDataStore from '../../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
-import GameConfig from '../../Config/Config2024'
+import GameConfig from '../../Config/Config2024';
 import { GfNotifyMessage } from '../../../../../cc-common/cc30-fishbase/Scripts/Components/gfNotifyMessage';
 const { ccclass } = _decorator;
 
 @ccclass('NotifyMessage2024')
 export class NotifyMessage2024 extends GfNotifyMessage {
     protected validateData(data: any): boolean {
-        return data.type !== GameConfig.instance.NOTIFY_TYPE.MESSAGE_EVENT && super.validateData(data);
+        return (
+            GameConfig.instance.NOTIFY_CONFIG[data.type] &&
+            data.type !== GameConfig.instance.NOTIFY_TYPE.MESSAGE_EVENT &&
+            super.validateData(data)
+        );
     }
 
     public onBeforeSceneChange() {
