@@ -75,6 +75,10 @@ let EventsCode2024 = {
 
     PLAYER_LAYER: {
         GAME_UPDATE_WALLET: "GAME_UPDATE_WALLET",
+    },
+
+    JACKPOT : {
+        SHOW_JACKPOT: "SHOW_JACKPOT"
     }
 };
 

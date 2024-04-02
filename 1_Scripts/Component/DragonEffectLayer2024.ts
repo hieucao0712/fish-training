@@ -15,6 +15,8 @@ import gfDataStore from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfDa
 import NetworkGameEvent2024 from "../Common/NetworkGameEvent2024";
 import { gfGunSkillController } from "../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfGunSkillController";
 import ReferenceManager from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager";
+import { JackpotWinPopup2024 } from "./Notify/JackpotWinPopup2024";
+import EventsCode2024 from "../Common/EventsCode2024";
 const { ccclass, property } = _decorator;
 
 interface IDataDragon {
@@ -66,6 +68,8 @@ export class DragonEffectLayer2024 extends gfBossEffectLayer {
         registerEvent(BaseEvents.COMMON.EXIT_GAME_ROOM, this.onExitGameRoom, this);
         registerEvent(BaseEvents.BOSS.JACKPOT_WIN_AMOUNT_POPUP_CLOSE, this.updatePlayerWallet, this);
         registerEvent(BaseEvents.GAME_LAYER.PLAYER_CHANGE_GUN, this.playerChangeGun, this);
+
+        registerEvent(EventsCode2024.JACKPOT.SHOW_JACKPOT, this.showJackpotWinAmountPopup, this);
     }
 
     protected onEnterGameRoom(data): void {
@@ -233,7 +237,7 @@ export class DragonEffectLayer2024 extends gfBossEffectLayer {
         const gunSkillController = ReferenceManager.instance.getPlayerLayer().getComponent(gfGunSkillController);
         const gunSkill = gunSkillController.getGunSkillNodeActiveByDeskStation(DeskStation);
     }
-    showJackpotWinAmountPopup() {
-        Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, "JackpotWinPopup2024", this.endData);
+    showJackpotWinAmountPopup(endData) {
+        Emitter.instance.emit(EventCode.CUT_SCENE.SHOW_CUT_SCENE, this.cutSceneJackpotPrefab, endData);
     }
 }
