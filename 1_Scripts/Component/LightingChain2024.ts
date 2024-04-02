@@ -47,6 +47,7 @@ export class LightingChain2024 extends Component {
             }
             return;
         }
+        console.warn(data)
         const {timeMove, angle, point, size, endPos} = data;
         this.node.angle = angle;
         this.spine.setScale(this.spine.scale.x, 0);
@@ -59,7 +60,7 @@ export class LightingChain2024 extends Component {
             
             tween(this.spine).
             sequence(
-                scaleTo(timeMove, 0.4, size),
+                scaleTo(timeMove, 0.5, size),
                 
                 call(() => {
                     if (isDie && infoTargetTo && (!infoTargetTo.checkDie() || isFishDead) && infoTargetTo.stop){
@@ -68,7 +69,8 @@ export class LightingChain2024 extends Component {
                     if (infoTargetTo && infoTargetTo.onHitLighting){
                         infoTargetTo.onHitLighting(angle);
                     }
-                    this.node.setPosition(this.node.position.x, -1);
+                    // this.node.setPosition(this.node.position.x, -1);
+                    this.spine.setScale(this.spine.scale.x, -1);
                     this.node.setPosition(endPos);
                     tween(this.spine).sequence(
                         delay(0.2),
