@@ -65,9 +65,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     updateSmokePos(){
-        for(let i = 0; i < this.nodeSmoke.length; i++){
-            this.nodeSmoke[i].setPosition(this.box[i].position);
-        }
+        this.nodeSmoke[0].setPosition(this.listBox[0].node.position);
     }
 
     updateElectroPos(){

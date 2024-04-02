@@ -26,11 +26,13 @@ export class EffectDragon2024 extends gfBossEffectLayer {
     }
 
     playPlasmaEffect(data){
+        if(this.node.name == 'DragonEffectLayer') return;
         let plasmaEffect = instantiate(this.plasmaExplosion);
         plasmaEffect.parent = this.node;
         plasmaEffect.setScale(1.5, 1.5, 1.5);
         plasmaEffect.active = true;
-        plasmaEffect.position = this.node.getComponent(UITransform).convertToNodeSpaceAR(data.EffectPos);
+        plasmaEffect.position = this.node.getComponent(UITransform).convertToNodeSpaceAR(data.bodyPos);
+
         plasmaEffect.getComponent(sp.Skeleton).setAnimation(0, "animation", false);
         const duration = plasmaEffect.getComponent(sp.Skeleton).findAnimation('animation').duration * 0.67;
         let callback = ()=>{
@@ -51,7 +53,7 @@ export class EffectDragon2024 extends gfBossEffectLayer {
         this.scheduleOnce(callback, duration);
         this._lstEffectGodzilla.push(plasmaEffect);
     }
-    
+
     onDropCrystal(dataInput) {
         const { data, worldPos, player } = dataInput;
         const gem = instantiate(this.crystal);
