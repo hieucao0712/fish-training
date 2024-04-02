@@ -7,18 +7,12 @@ import { getPostionInOtherNode } from '../../../../cc-common/cc-share/common/uti
 import EventsCode from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 import DataStore from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore';
 import EventsCode2024 from '../Common/EventsCode2024';
-import GameConfig from '../Config/Config2024';
-import gfGameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
-import { SetZIndex } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
-import { stopAllActions } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
-
 const { ccclass, property } = _decorator;
 @ccclass('Tesla')
 export class Tesla extends gfLaserGun {
 
     onLoad(): void {
         super.onLoad();
-        this.node['endEffectLighting'] = this.endEffectLighting.bind(this);
     }
     sendFireGun() {
         const myDeskStation = DataStore.instance.getSelfDeskStation();
@@ -87,27 +81,5 @@ export class Tesla extends gfLaserGun {
             DataStore.instance.setDataStore({ lisCatchLaser: [] });
             this.onAfterGunFire(callback);
         });
-    }
-
-
-    endEffectLighting(infoReward) {
-        const myDeskStation = DataStore.instance.getSelfDeskStation();
-        const selfInfo = DataStore.instance.getSelfInfo();
-        const player = ReferenceManager.instance.getPlayerByDeskStation(myDeskStation);
-        if(selfInfo.DeskStation === myDeskStation){
-            this.nodeEffect.active = false;
-            DataStore.instance.setSelfInfo({"isLockGun": false});
-            Emitter.instance.emit(EventsCode.EFFECT_LAYER.HIDE_NOTIFY_LOCK_FISH);
-            DataStore.instance.setDataStore({
-                targetState: GameConfig.instance.TARGET_LOCK.NONE,
-                currentTargetState: GameConfig.instance.TARGET_LOCK.NONE
-            });
-            Emitter.instance.emit(EventsCode.GAME_LAYER.INTERACTABLE_HUD, true);
-            Emitter.instance.emit(EventsCode.GAME_LAYER.RESUME_OLD_TARGET);
-        }
-        Emitter.instance.emit(EventsCode.PLAYER_LAYER.CHECK_NEXT_GUN_SKILL, myDeskStation);
-        if(player){
-            player.hideIsMe && player.hideIsMe();
-        }
     }
 }
