@@ -4988,8 +4988,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -5212,8 +5212,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -7274,8 +7274,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -7584,8 +7584,8 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": null,
-      "y": null
+      "x": 0,
+      "y": 0
     },
     "_id": ""
   },
@@ -19841,6 +19841,10 @@
     },
     "crystal": {
       "__uuid__": "240e69eb-fe2d-484f-87fd-2cc96498b5e7",
+      "__expectedType__": "cc.Prefab"
+    },
+    "plasmaExplosion": {
+      "__uuid__": "fc299e66-66bf-47e8-9920-bc02d138673a",
       "__expectedType__": "cc.Prefab"
     },
     "_id": ""
@@ -45269,7 +45273,6 @@
     "__prefab": {
       "__id__": 2041
     },
-    "jsonGameVersion": null,
     "jsonLocalize": {
       "__uuid__": "d650335f-9703-4e12-b2e6-58172ce5904f",
       "__expectedType__": "cc.JsonAsset"
