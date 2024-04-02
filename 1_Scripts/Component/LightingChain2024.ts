@@ -47,7 +47,6 @@ export class LightingChain2024 extends Component {
             }
             return;
         }
-        console.warn(data)
         const {timeMove, angle, point, size, endPos} = data;
         this.node.angle = angle;
         this.spine.setScale(this.spine.scale.x, 0);
