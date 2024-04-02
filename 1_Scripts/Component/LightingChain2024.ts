@@ -68,11 +68,10 @@ export class LightingChain2024 extends Component {
                     if (infoTargetTo && infoTargetTo.onHitLighting){
                         infoTargetTo.onHitLighting(angle);
                     }
-                    // this.node.setPosition(this.node.position.x, -1);
-                    this.spine.setScale(this.spine.scale.x, -1);
+                    this.node.setScale(this.node.scale.x, -1);
                     this.node.setPosition(endPos);
                     tween(this.spine).sequence(
-                        delay(0.2),
+                        delay(0.4),
                         call(()=>{
                             this.spine.getComponent(sp.Skeleton).setAnimation(0, 'disappear', false);
                             let dt = getRandomInt(10, 20) * 0.1;
