@@ -27,7 +27,8 @@ export class Tesla extends gfLaserGun {
         const listCatchLaser = [];
         let idTargetFish = -1;
         const mousePoint = DataStore.instance.getMousePos();
-        if (mousePoint) {
+        const isCountingDown = this.nodeCountDown.active;
+        if (mousePoint && isCountingDown) {
             const fish = FishManager.instance.getFishByPoint(mousePoint);
             if (fish) {
                 idTargetFish = fish.getId();
