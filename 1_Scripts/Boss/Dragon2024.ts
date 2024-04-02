@@ -88,7 +88,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     onHitState(data){
-        var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
+        var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish, Wallet} = data;
         this._oldState = this._state;
         this._state = GodzillaState;
         switch(TypeWin){
@@ -108,16 +108,19 @@ export class Dragon2024 extends gfDragon {
                 break;
             case 3: //Plasma
             let callback = ()=>{
+                const bodyPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0].node.position);
                 const dataReward = {
                     ListFish,
                     WinAmount,
+                    Wallet,
                     DeskStation,
                     BulletMultiple,
+                    bodyPos
                 }
                 Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_PLASMA_EFFECT, dataReward);
                 // Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
             }
-            this.playPlasmaEffect(data, callback);
+            this.playPlasmaEffect(callback);
         }
         // this.playDropBall(data);
     }
@@ -139,23 +142,8 @@ export class Dragon2024 extends gfDragon {
         }
     }
 
-    playPlasmaEffect(data, callback: Function){
-        let plasma = instantiate(this.plasmaExplosion);
-        plasma.parent = this.node;
-        plasma.position = this.box[0].position;
-        const dataInput = {
-            DeskStation: data.DeskStation,
-            BulletMultiple: data.BulletMultiple,
-            ListFish: data.ListFish,
-            skillID: 99
-        };
-        tween(this.node)
-        .delay(1)
-        .call(()=>{
-            Emitter.instance.emit(EventCode.GAME_LAYER.CATCH_FISH_BY_PLASMA, dataInput);
-            callback();
-        })
-        .start()
+    playPlasmaEffect(callback: Function){
+        callback();
     }
 
     playDropBall (data) {
