@@ -88,7 +88,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     onHitState(data){
-        var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
+        var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish, Wallet} = data;
         this._oldState = this._state;
         this._state = GodzillaState;
         switch(TypeWin){
@@ -112,6 +112,7 @@ export class Dragon2024 extends gfDragon {
                 const dataReward = {
                     ListFish,
                     WinAmount,
+                    Wallet,
                     DeskStation,
                     BulletMultiple,
                     EffectPos: bodyPos

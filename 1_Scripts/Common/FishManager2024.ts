@@ -49,10 +49,7 @@ export default class FishManager2024 extends gfFishManager {
             if (fish) {
                 fish.onCatch(infoDetail);
             }else if(player.isMe){
-                Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_REWARD_EFFECT, { 
-                    data: infoDetail,
-                    fishKind: infoDetail.fishKind
-                });
+                Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_REWARD_EFFECT, infoDetail);
             }
         }
     }
