@@ -73,7 +73,7 @@ export class LightningChainEffect2024 extends Component {
                 if (fish.getId() === idTargetFish) {
                     fishTarget = fish;
                 } else {
-                    if (fish.node.x > BaseConfig.instance.AppSize.Width / 2) {
+                    if (fish.node.position.x > BaseConfig.instance.AppSize.Width / 2) {
                         listFishRight.push(fish);
                     } else {
                         listFishLeft.push(fish);
@@ -84,10 +84,10 @@ export class LightningChainEffect2024 extends Component {
         }
 
         listFishRight.sort((function (a, b) {
-            return a.node.x - b.node.x;
+            return a.node.position.x - b.node.position.x;
         }));
         listFishLeft.sort((function (a, b) {
-            return b.node.x - a.node.x;
+            return b.node.position.x - a.node.position.x;
         }));
 
         if (fishTarget === null) {

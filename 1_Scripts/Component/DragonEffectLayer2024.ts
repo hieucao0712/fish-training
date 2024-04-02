@@ -5,7 +5,6 @@ import { gfBossEffectLayer } from "../../../../cc-common/cc30-fishbase/Scripts/C
 import { registerEvent, SetZIndex } from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
 import DragonEvent from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent";
 import BaseEvents from "../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents";
-import ReferenceManager from "../Common/ReferenceManager2024";
 import BossController from "../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossController";
 import gfDragonConfig from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonConfig";
 import PoolManager from "../Common/PoolManager2024";
@@ -15,6 +14,7 @@ import { WheelType } from '../../../../cc-common/cc30-fishbase/Scripts/Common/gf
 import gfDataStore from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfDataStore";
 import NetworkGameEvent2024 from "../Common/NetworkGameEvent2024";
 import { gfGunSkillController } from "../../../../cc-common/cc30-fishbase/Scripts/Components/GunSkill/gfGunSkillController";
+import ReferenceManager from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager";
 const { ccclass, property } = _decorator;
 
 interface IDataDragon {
