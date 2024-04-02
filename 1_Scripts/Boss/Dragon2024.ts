@@ -5,6 +5,7 @@ import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import EventCode from '../Common/EventsCode2024';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
+import DragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
 
 
 const electroColor = [
@@ -142,6 +143,11 @@ export class Dragon2024 extends gfDragon {
 
     playPlasmaEffect(callback: Function){
         callback();
+    }
+
+    playEffectDie(){
+        super.playEffectDie();
+        Emitter.instance.emit(DragonEvent.DRAGON.SHOW_JACKPOT_WINAMOUNT);
     }
 
     playDropBall (data) {
