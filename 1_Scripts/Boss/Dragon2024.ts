@@ -5,8 +5,7 @@ import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import EventCode from '../Common/EventsCode2024';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
-import gfDragonEvent from '../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent';
-import { call } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper';
+
 
 const electroColor = [
     color(100, 200, 255),
@@ -41,6 +40,12 @@ export class Dragon2024 extends gfDragon {
     private _oldState: any;
     private _state = 1;
 
+    initFishData(data: any): void {
+        super.initFishData(data);
+        this._state = data.GodzillaState;
+        this.changeColor();
+    }
+
     onLoad(): void {
         super.onLoad();
         registerEvent(EventCode.GODZILLA.ON_HIT_GODZILLA, this.onHitGodzilla, this);
@@ -60,9 +65,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     updateSmokePos(){
-        for(let i = 0; i < this.nodeSmoke.length; i++){
-            this.nodeSmoke[i].setPosition(this.box[i].position);
-        }
+        this.nodeSmoke[0].setPosition(this.listBox[0].node.position);
     }
 
     updateElectroPos(){
@@ -83,7 +86,7 @@ export class Dragon2024 extends gfDragon {
     }
 
     onHitState(data){
-        var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish} = data;
+        var {TypeWin, WinAmount, GodzillaState, BulletMultiple, DeskStation, ListFish, Wallet} = data;
         this._oldState = this._state;
         this._state = GodzillaState;
         switch(TypeWin){
@@ -103,21 +106,27 @@ export class Dragon2024 extends gfDragon {
                 break;
             case 3: //Plasma
             let callback = ()=>{
+                const bodyPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0].node.position);
                 const dataReward = {
                     ListFish,
                     WinAmount,
+                    Wallet,
                     DeskStation,
                     BulletMultiple,
+                    bodyPos
                 }
                 Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_PLASMA_EFFECT, dataReward);
-                Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
+                // Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
             }
-            this.playPlasmaEffect(data, callback);
+            this.playPlasmaEffect(callback);
         }
         // this.playDropBall(data);
     }
 
     changeColor(){
+        if(this._state < 0){
+            this._state = 0;
+        }
         for(let i = 0; i < this.nodeSmoke.length; i++){
             this.nodeSmoke[i].getComponent(ParticleSystem2D).startColor = smokeColor[this._state-1];
         }
@@ -131,23 +140,8 @@ export class Dragon2024 extends gfDragon {
         }
     }
 
-    playPlasmaEffect(data, callback: Function){
-        let plasma = instantiate(this.plasmaExplosion);
-        plasma.parent = this.node;
-        plasma.position = this.box[0].position;
-        const dataInput = {
-            DeskStation: data.DeskStation,
-            BulletMultiple: data.BulletMultiple,
-            ListFish: data.ListFish,
-            skillID: 99
-        };
-        tween(this.node)
-        .delay(1)
-        .call(()=>{
-            Emitter.instance.emit(EventCode.GAME_LAYER.CATCH_FISH_BY_PLASMA, dataInput);
-            callback();
-        })
-        .start()
+    playPlasmaEffect(callback: Function){
+        callback();
     }
 
     playDropBall (data) {

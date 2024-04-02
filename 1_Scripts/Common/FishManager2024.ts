@@ -31,7 +31,6 @@ export default class FishManager2024 extends gfFishManager {
 
     onPlasmaSkill(data) {
         const listFish = data.ListFish;
-        console.warn('lis', listFish);
         let fish = null;
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
         for (let i = 0; i < listFish.length; i++) {
