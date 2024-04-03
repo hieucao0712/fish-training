@@ -3,7 +3,7 @@ const { ccclass, property } = _decorator;
 import { gfDragon } from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragon";
 import Emitter from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter";
 import EventCode from "../Common/EventsCode2024";
-import { registerEvent } from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
+import { registerEvent, removeEvents } from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
 import ReferenceManager from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager";
 import {stopAllActions, gfMoveBy, fadeOut} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper";
 import gfDragonEvent from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent";
@@ -49,6 +49,11 @@ export class Dragon2024 extends gfDragon {
         super.onLoad();
         registerEvent(EventCode.GODZILLA.ON_HIT_GODZILLA, this.onHitGodzilla, this);
     }
+
+    onDestroy(): void {
+        removeEvents(this);
+    }
+
     ANIMATION = {
         In: "Swim In",
         Loop: "Swim Loop",
@@ -227,8 +232,7 @@ export class Dragon2024 extends gfDragon {
             Wallet: Wallet,
         };
 
-        // const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
-        const worldPos = this.node?.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0]?.node.position);
+        const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0].node.position);
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
         // Emitter.instance.emit(DragonEvent.DRAGON.ON_BALL_DROPPED);
         Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {
