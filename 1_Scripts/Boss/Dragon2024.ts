@@ -100,14 +100,22 @@ export class Dragon2024 extends gfDragon {
             case 2: //Jackpot
                 this.playEffectDie();
                 const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-                const endData = {
+                const jackpotData = {
                     wonJackpot: true,
                     DeskStation: DeskStation,
                     Result: [],
                     jackpotAmount: WinAmount,
                 };
+                const bigWinData = {
+                    TotalReward: WinAmount,
+                    DeskStation: DeskStation,
+                    BulletMultiple: BulletMultiple,
+                    fishKind: 45,
+                };
                 if (player.isMe) {
-                    Emitter.instance.emit(EventCode.JACKPOT.SHOW_JACKPOT, endData);
+                    Emitter.instance.emit(EventCode.JACKPOT.SHOW_JACKPOT, jackpotData);
+                } else {
+                    Emitter.instance.emit(EventCode.EFFECT_LAYER.PLAY_EFFECT_CATCH_LIST_FISH, bigWinData);
                 }
                 break;
             case 3: //Plasma
