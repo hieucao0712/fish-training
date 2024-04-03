@@ -1,10 +1,12 @@
-import { Node, ParticleSystem2D, UITransform, _decorator, color, tween, Prefab, instantiate } from "cc";
+import { _decorator, Node, Color, UITransform, tween, v3, color, Prefab,ParticleSystem2D } from "cc";
 const { ccclass, property } = _decorator;
 import { gfDragon } from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragon";
 import Emitter from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventEmitter";
 import EventCode from "../Common/EventsCode2024";
 import { registerEvent } from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
 import ReferenceManager from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager";
+import {stopAllActions, gfMoveBy, fadeOut} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper";
+import gfDragonEvent from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent";
 
 const electroColor = [
     color(100, 200, 255),
@@ -23,7 +25,7 @@ const smokeColor = [
 @ccclass("Dragon2024")
 export class Dragon2024 extends gfDragon {
     @property(Prefab) plasmaExplosion: Prefab = null;
-
+    
     @property(Node)
     box: Node[] = [];
     @property(Node)
@@ -160,6 +162,61 @@ export class Dragon2024 extends gfDragon {
         callback();
     }
 
+    public playEffectDie() {
+        this.unschedule(this.checkOutScreen);
+        if(this.fishAnim){
+            this.fishAnim.timeScale = 0;
+        }
+        stopAllActions(this.fishAnim.node);
+        this.fishAnim.setCompleteListener(() => {});
+        this.fishAnim.clearTrack(0);
+        const explosionBones = [0, 14, 6, 17, 9];
+        const explosionPositions = [];
+        for (let i = 0; i < explosionBones.length; ++i) {
+            explosionPositions.push(v3(this.bone[explosionBones[i]].worldX, this.bone[explosionBones[i]].worldY));
+        }
+        Emitter.instance.emit(gfDragonEvent.DRAGON.SMALL_EXPLOSION, explosionPositions);
+
+        tween(this.node)
+            .then(gfMoveBy(0.1, 0, 10))
+            .then(gfMoveBy(0.1, 0, -10))
+            .then(gfMoveBy(0.1, 0, -10))
+            .then(gfMoveBy(0.1, 10, 10))
+            .then(gfMoveBy(0.1, -10, 0))
+            .then(gfMoveBy(0.1, -10, 0))
+            .then(gfMoveBy(0.1, 10, 0))
+            .then(gfMoveBy(0.1, 0, 10))
+            .then(gfMoveBy(0.1, 0, -10))
+            .then(gfMoveBy(0.1, 0, -10))
+            .then(gfMoveBy(0.1, 10, 10))
+            .then(gfMoveBy(0.1, -10, 0))
+            .then(gfMoveBy(0.1, -10, 0))
+            .then(gfMoveBy(0.1, 10, 0))
+            .start();
+
+        this.fishAnim.color = Color.RED;
+
+        tween(this.node)
+            .call(() => {
+                this.fishAnim.color = Color.WHITE;
+            })
+            .delay(0.35)
+            .call(() => {
+                this.fishAnim.color = Color.RED;
+            })
+            .delay(0.35)
+            .call(() => {
+                Emitter.instance.emit(EventCode.COMMON.SHAKE_SCREEN, { timeOneStep: 0.1, amplitude: 10 });
+                Emitter.instance.emit(gfDragonEvent.DRAGON.BIG_EXPLOSION, this.node.position);
+            })
+            .then(fadeOut(0.1))
+            .delay(0.75)
+            .call(() => {
+                this.onDie();
+            })
+            .start();
+    }
+
     playDropBall(data) {
         const { DeskStation, WinAmount, Wallet, BulletMultiple } = data;
         const dataInput = {
@@ -171,7 +228,7 @@ export class Dragon2024 extends gfDragon {
         };
 
         // const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(v3(this.listBox[0].offset.x, this.listBox[0].offset.y, 0));
-        const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0].node.position);
+        const worldPos = this.node?.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0]?.node.position);
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
         // Emitter.instance.emit(DragonEvent.DRAGON.ON_BALL_DROPPED);
         Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {
