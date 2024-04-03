@@ -7,8 +7,12 @@ export default class Config2024 extends gfBaseConfig {
         DRAGON: 'Dragon2024',
     };
 
+    BOSS_CONFIG = {
+        DRAGON: 45,
+    };
+
     SOUND_BACKGROUND_CONFIG_2024 = {
-        GODZILLA: "GODZILLA",
+        GODZILLA: 'GODZILLA',
     };
 
     constructor() {
@@ -44,6 +48,10 @@ export default class Config2024 extends gfBaseConfig {
             KING_CRAB: 50,
             DRAGON: 45,
         };
+
+        this.PRIORITY_FISH = [
+            this.FISH_KIND.DRAGON,
+        ]
     }
 
     destroy() {

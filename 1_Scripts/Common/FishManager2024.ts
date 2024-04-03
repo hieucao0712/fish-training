@@ -2,16 +2,13 @@ import Emitter from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import gfFishManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfFishManager';
 import GameScheduler from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfGameScheduler';
 import ReferenceManager from '../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager';
-import gfBossController from '../../../../cc-common/cc30-fishbase/Scripts/Components/Boss/gfBossController';
 import { registerEvent } from '../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities';
-import { Dragon2024 } from '../Boss/Dragon2024';
 import GameConfig from '../Config/Config2024';
 import EventCode from './EventsCode2024';
-import gfBaseEvents from '../../../../cc-common/cc30-fishbase/Scripts/Config/gfBaseEvents';
 
 export default class FishManager2024 extends gfFishManager {
     public static instance: FishManager2024 = null;
-    public listFishArr = [];
+
     constructor() {
         super();
         FishManager2024.instance = this;
@@ -120,23 +117,5 @@ export default class FishManager2024 extends gfFishManager {
                 });
             }
         }
-    }
-
-    protected createListFish(data): void {
-       super.createListFish(data);
-       for(let i = 0; i < data.length; i++){
-            if(data[i].FishID != 450000) {
-                let isSame = false
-                for(let j = 0; j < this.listFishArr.length; j++){
-                    if(this.listFishArr[j].FishID == data[i].FishID){
-                        isSame = true;
-                        break;
-                    }
-                }
-                if(!isSame) {
-                    this.listFishArr.push(data[i]);
-                }
-            }
-       }
     }
 }
