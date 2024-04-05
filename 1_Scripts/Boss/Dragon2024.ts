@@ -139,7 +139,7 @@ export class Dragon2024 extends gfDragon {
                         bodyPos,
                     };
                     Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_PLASMA_EFFECT, dataReward);
-                    // Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
+                    Emitter.instance.emit(EventCode.SOUND.GODZILLA_PLASMA);
                 };
                 this.playPlasmaEffect(callback);
         }
@@ -188,7 +188,7 @@ export class Dragon2024 extends gfDragon {
 
         const worldPos = this.node.getComponent(UITransform).convertToWorldSpaceAR(this.listBox[0].node.position);
         const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
-        // Emitter.instance.emit(DragonEvent.DRAGON.ON_BALL_DROPPED);
+        Emitter.instance.emit(gfDragonEvent.SOUND.DRAGON_DROP_BALL);
         Emitter.instance.emit(EventCode.GODZILLA.GODZILLA_DROP_CRYSTAL, {
             data: dataInput,
             worldPos,
