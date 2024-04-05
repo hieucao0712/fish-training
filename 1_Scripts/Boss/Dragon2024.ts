@@ -22,6 +22,7 @@ const smokeColor = [
     color(255, 90, 0, 255),
     color(255, 40, 0, 255),
 ];
+
 @ccclass("Dragon2024")
 export class Dragon2024 extends gfDragon {
     @property(Prefab) plasmaExplosion: Prefab = null;
@@ -35,7 +36,6 @@ export class Dragon2024 extends gfDragon {
     @property(Node)
     nodeElectro: Node[] = [];
 
-    private isPlasma = false;
     private _oldState: any;
     private _state = 1;
 
@@ -105,7 +105,7 @@ export class Dragon2024 extends gfDragon {
                 this.playDropBall(data);
                 break;
             case 2: //Jackpot
-                this.playEffectDie();
+                this.onCatch(data);
                 const player = ReferenceManager.instance.getPlayerByDeskStation(data.DeskStation);
                 const jackpotData = {
                     wonJackpot: true,
@@ -163,63 +163,17 @@ export class Dragon2024 extends gfDragon {
         }
     }
 
-    playPlasmaEffect(callback: Function) {
-        callback();
+    protected startMoving(timeRemain: number): void {
+        super.startMoving(timeRemain);
+        this.fishAnim.setCompleteListener((trackEntry) => {
+            if (trackEntry.animation.name === this.ANIMATION.Out) {
+                this.onDie();
+            }
+        });
     }
 
-    public playEffectDie() {
-        this.unschedule(this.checkOutScreen);
-        if(this.fishAnim){
-            this.fishAnim.timeScale = 0;
-        }
-        stopAllActions(this.fishAnim.node);
-        this.fishAnim.setCompleteListener(() => {});
-        this.fishAnim.clearTrack(0);
-        const explosionBones = [0, 14, 6, 17, 9];
-        const explosionPositions = [];
-        for (let i = 0; i < explosionBones.length; ++i) {
-            explosionPositions.push(v3(this.bone[explosionBones[i]].worldX, this.bone[explosionBones[i]].worldY));
-        }
-        Emitter.instance.emit(gfDragonEvent.DRAGON.SMALL_EXPLOSION, explosionPositions);
-
-        tween(this.node)
-            .then(gfMoveBy(0.1, 0, 10))
-            .then(gfMoveBy(0.1, 0, -10))
-            .then(gfMoveBy(0.1, 0, -10))
-            .then(gfMoveBy(0.1, 10, 10))
-            .then(gfMoveBy(0.1, -10, 0))
-            .then(gfMoveBy(0.1, -10, 0))
-            .then(gfMoveBy(0.1, 10, 0))
-            .then(gfMoveBy(0.1, 0, 10))
-            .then(gfMoveBy(0.1, 0, -10))
-            .then(gfMoveBy(0.1, 0, -10))
-            .then(gfMoveBy(0.1, 10, 10))
-            .then(gfMoveBy(0.1, -10, 0))
-            .then(gfMoveBy(0.1, -10, 0))
-            .then(gfMoveBy(0.1, 10, 0))
-            .start();
-
-        this.fishAnim.color = Color.RED;
-
-        tween(this.node)
-            .call(() => {
-                this.fishAnim.color = Color.WHITE;
-            })
-            .delay(0.35)
-            .call(() => {
-                this.fishAnim.color = Color.RED;
-            })
-            .delay(0.35)
-            .call(() => {
-                Emitter.instance.emit(EventCode.COMMON.SHAKE_SCREEN, { timeOneStep: 0.1, amplitude: 10 });
-                Emitter.instance.emit(gfDragonEvent.DRAGON.BIG_EXPLOSION, this.node.position);
-            })
-            .then(fadeOut(0.1))
-            .delay(0.75)
-            .call(() => {
-                this.onDie();
-            })
-            .start();
+    playPlasmaEffect(callback: Function) {
+        callback();
     }
 
     playDropBall(data) {

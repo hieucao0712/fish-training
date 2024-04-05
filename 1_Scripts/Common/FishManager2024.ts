@@ -8,6 +8,7 @@ import EventCode from './EventsCode2024';
 
 export default class FishManager2024 extends gfFishManager {
     public static instance: FishManager2024 = null;
+
     constructor() {
         super();
         FishManager2024.instance = this;
