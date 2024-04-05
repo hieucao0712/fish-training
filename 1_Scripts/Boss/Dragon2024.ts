@@ -5,7 +5,6 @@ import Emitter from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfEventE
 import EventCode from "../Common/EventsCode2024";
 import { registerEvent, removeEvents } from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfUtilities";
 import ReferenceManager from "../../../../cc-common/cc30-fishbase/Scripts/Common/gfReferenceManager";
-import {stopAllActions, gfMoveBy, fadeOut} from "../../../../cc-common/cc30-fishbase/Scripts/Utilities/gfActionHelper";
 import gfDragonEvent from "../../../../cc-common/cc30-fishbase/Modules/cc30-fish-module-boss/Dragon/Scripts/gfDragonEvent";
 
 const electroColor = [
@@ -30,23 +29,27 @@ export class Dragon2024 extends gfDragon {
     @property(Node)
     box: Node[] = [];
     @property(Node)
-    nodeDust: Node[] = [];
-    @property(Node)
     nodeSmoke: Node[] = [];
     @property(Node)
     nodeElectro: Node[] = [];
 
     private _oldState: any;
     private _state = 1;
+    private listParticleElectro: Array<ParticleSystem2D> = [];
 
     initFishData(data: any): void {
         super.initFishData(data);
         this._state = data.GodzillaState;
+        this.nodeSmoke[0].getComponent(ParticleSystem2D).resetSystem();
+        this.listParticleElectro.forEach(electroParticleSys => {
+            electroParticleSys.resetSystem();
+        });
         this.changeColor();
     }
 
     onLoad(): void {
         super.onLoad();
+        this.getListParticle();
         registerEvent(EventCode.GODZILLA.ON_HIT_GODZILLA, this.onHitGodzilla, this);
     }
 
@@ -61,6 +64,16 @@ export class Dragon2024 extends gfDragon {
         In_L: "Swim In",
         In_R: "Swim In",
     };
+
+    getListParticle(){
+        this.nodeElectro.forEach(electro => {
+            electro.children.forEach((element) => {
+                element.children.forEach((element) => {
+                    this.listParticleElectro.push(element.getComponent(ParticleSystem2D));
+                });
+            });
+        });
+    }
 
     update(dt: any): void {
         this.updateSmokePos();
@@ -99,9 +112,6 @@ export class Dragon2024 extends gfDragon {
                 }
                 break;
             case 1: //drop crystal
-                // if(this._oldState !== GodzillaState){
-                //     this.changeColor();
-                // }
                 this.playDropBall(data);
                 break;
             case 2: //Jackpot
@@ -143,7 +153,6 @@ export class Dragon2024 extends gfDragon {
                 };
                 this.playPlasmaEffect(callback);
         }
-        // this.playDropBall(data);
     }
 
     changeColor() {
@@ -153,13 +162,8 @@ export class Dragon2024 extends gfDragon {
         for (let i = 0; i < this.nodeSmoke.length; i++) {
             this.nodeSmoke[i].getComponent(ParticleSystem2D).startColor = smokeColor[this._state - 1];
         }
-
-        for (let i = 0; i < this.nodeElectro.length; i++) {
-            this.nodeElectro[i].children.forEach((element) => {
-                element.children.forEach((element) => {
-                    element.getComponent(ParticleSystem2D).startColor = electroColor[this._state - 1];
-                });
-            });
+        for (let i = 0; i < this.listParticleElectro.length; i++) {
+            this.listParticleElectro[i].startColor = electroColor[this._state - 1];
         }
     }
 
