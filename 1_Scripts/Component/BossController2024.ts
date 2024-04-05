@@ -13,7 +13,6 @@ export class BossController2024 extends gfBossController {
         if (bossAsset) {
             if (!this.boss) {
                 this.boss = instantiate(bossAsset.bossPrefab);
-                // this['listBoss'].push(this.boss.getComponent(gfBaseFish));
             }
             this.boss.setParent(ReferenceManager.instance.getNodeFishLayer());
             const fish = this.boss.getComponent(gfBaseFish);
